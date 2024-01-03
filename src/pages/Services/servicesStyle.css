@@ -1,0 +1,133 @@
+
+#servicesHero {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+
+#serviceHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#servicesSection {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+#servicesInner {
+    margin-top: 65px;
+    max-width: var(--maxWidthMain);
+    width: 95%;
+    display: flex;
+}
+
+#servicesGrid {
+    width: 65%;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Change this line */
+    grid-gap: 20px 20px;
+}
+
+.serviceItem {
+    width: calc(100% - 60px);
+    height: 300px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.serviceItemTitle {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--blueMain);
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.serviceDescription {
+    margin-top: 25px;
+    line-height: 22px;
+}
+
+.serviceBtnFlex {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.serviceBtn {
+    padding: 10px;
+    background-color: var(--blueMain);
+    color: white;
+    width: 120px;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+#servicesSideArea {
+    width: calc(35% - 55px);
+    margin-left: 15px;
+    position: relative;
+    /* background-color: red; */
+}
+
+#servicesForm {
+    width: 100%;
+    height: 250px;
+    border: solid 1px var(--blueMain);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.serviceFormInputFlex {
+    width: 100%;
+    height: 35px;
+    border: solid 1px var(--blueMain);
+    border-radius: 4px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serviceFormInput {
+    width: calc(100% - 6px);
+}
+
+#servicesFormTitle {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: var(--blueMain);
+}
+
+#serviceFormSubmit {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--blueMain);
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.sidebarImg {
+    width: 110%;
+    margin-left: 5px;
+    object-fit: cover;
+    margin-top: 20px;
+}

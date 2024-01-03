@@ -1,0 +1,128 @@
+
+#topStrip {
+    width: 100vw;
+    height: 55px;
+    background-color: var(--blueMain);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#topStripInner {
+    max-width: calc(var(--maxWidthMain) - 20px);
+    width: 95%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    color: white;
+}
+
+#rightStrip {
+    display: flex;
+    align-items: center;
+}
+
+#leftStrip {
+    display: flex;
+    align-items: center;
+}
+
+#stripIcon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#closeStripIcon {
+    position: absolute;
+    right: 20px;
+    width: 20px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+
+
+
+
+
+
+#headerMain {
+    width: 100vw;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: var(--blueMain); */
+}
+
+#headerInner {
+    max-width: var(--maxWidthMain);
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+#headerLogo {
+    height: 90px;
+}
+
+#headerLinks {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    align-items: center;
+}
+
+.headerLink {
+    margin-left: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#locationsMenu {
+    position: absolute;
+    width: 180px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+    top: 40px;
+    overflow: scroll;
+}
+
+.locationMenuItem {
+    width: calc(100% - 20px);
+    border-bottom: solid 1px gray;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#headerDown {
+    width: 20px;
+    margin-left: 5px;
+}
+
+#selectedPage {
+    color: var(--blueMain);
+}
+
+#contactBtnHeader {
+    margin-left: 30px;
+    cursor: pointer;
+    background-color: var(--blueMain);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}

@@ -1,0 +1,171 @@
+
+
+#locationHero {
+    width: 100vw;
+    height: 400px;
+    position: relative;
+}
+
+#locationHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#locationArea {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+#locationAreaInner {
+    width: 95%;
+    max-width: var(--maxWidthMain);
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    position: relative;
+}
+
+#LocationLeft {
+    width: calc(100% - 500px);
+    height: 100%;
+}
+
+#locationTitle {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--blueMain);
+    margin-bottom: 40px;
+}
+
+#locationTitle2 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--blueMain);
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+.locationServiceItem {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#serviceIcon {
+    width: 80px;
+    color: var(--blueMain);
+    margin-left: 30px;
+}
+
+.locationItemText {
+    margin-left: 20px;
+}
+
+.locationItemTitle {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--blueMain);
+}
+
+.locationItemDescription {
+    margin-top: 5px;
+}
+
+#rightLocation {
+    height: 45px;
+    margin-right: 20px;
+    /* color: var(--blueMain); */
+    /* background-color: red; */
+}
+
+#servicesForm2 {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    margin-top: 110px;
+    height: 250px;
+    border: solid 1px var(--blueMain);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+#locationRight {
+    /* background-color: red; */
+    width: 500px;
+    /* height: 100%; */
+}
+
+#blocker {
+    width: calc(100% - 40px);
+    margin-left: 40px;
+    /* margin: auto; */
+    height: 400px;
+    position: relative;
+    margin-top: 20px;
+}
+
+#locationFlagOuter {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#locationFlag {
+    width: 95%;
+    max-width: var(--maxWidthMain);
+    height: 120px;
+    border-radius: 8px;
+    background-color: var(--blueMain);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#flagIcon {
+    height: 65px;
+    margin-left: 20px;
+    color: white;
+}
+
+#flagTextArea {
+    margin-left: 15px;
+}
+
+#flagTitle {
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+}
+
+#flagBtn {
+    position: absolute;
+    right: 35px;
+    width: 120px;
+    height: 36px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blueMain);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#flagDescription {
+    color: white;
+    margin-top: 5px;
+}
+

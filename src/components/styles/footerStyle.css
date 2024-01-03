@@ -1,0 +1,59 @@
+
+#footer {
+    width: 100vw;
+    height: 240px;
+    background-color: var(--blueMain);
+    display: flex;
+    justify-content: center;
+}
+
+#footerInner {
+    max-width: 600px;
+    width: 95%;
+    color: white;
+    text-align: center;
+}
+
+#footerBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#footerText1 {
+    margin-top: 40px;
+}
+
+#footerText2 {
+    margin-top: 20px;
+}
+
+#logoflex {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+#logoFlexInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+}
+
+.footerLogoBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLogoImg {
+    width: 20px;
+}

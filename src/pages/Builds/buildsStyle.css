@@ -1,0 +1,185 @@
+#buildsSectionHero {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 65px;
+    background-color: black;
+}
+
+#wave {
+    position: absolute;
+    bottom: 0px;
+    display: none;
+}
+
+#waveItem {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    object-fit: cover;
+    position: absolute;
+    display: none;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI2MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzA5NjQ5MyI+PHBhdGggZD0iTTMyMCAyOGMzMjAgMCAzMjAgODQgNjQwIDg0IDE2MCAwIDI0MC0yMSAzMjAtNDJ2NzBIMFY3MGM4MC0yMSAxNjAtNDIgMzIwLTQyeiIvPjwvZz48L3N2Zz4=);
+}
+
+#buildsSectionHeroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#buildsHeroFlex {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+}
+
+#buildsHeroLeft {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.486) 0, rgba(0, 0, 0, 0) 100%)
+}
+
+#buildsHeroLeftInner {
+    width: 60%;
+}
+
+#buildsHeroTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#buildsHeroSub {
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#buildsHeroRight {}
+
+
+#buildsSection {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#buildsSectionInner {
+    width: 95%;
+    max-width: var(--maxWidthMain);
+    margin-top: 0px;
+}
+
+.buildRow {
+    display: flex;
+    align-items: center;
+    height: 280px;
+    margin-bottom: 40px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.buildRowLeft {
+    width: calc(50% - 40px);
+    height: 100%;
+    position: relative;
+}
+
+.buildImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.buildRowRight {
+    width: 50%;
+    margin-left: 40px;
+}
+
+.buildRowTitle {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.buildRowDescription {
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+.learnMoreBuilds {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#learnMoreBuildsIcon {
+    width: 20px;
+    margin-left: 5px;
+}
+
+#buildRowReverse {
+    flex-direction: row-reverse;
+}
+
+#buildRowReverse .buildRowLeft {
+    width: 50%;
+}
+
+#buildRowReverse .buildRowRight {
+    width: calc(50% - 40px);
+    margin-left: 0px;
+}
+
+#slidesArea {
+    position: absolute;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.mySlides {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slidesImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+  /* transition: all 4s ease-in-out; */
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
