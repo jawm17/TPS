@@ -101,7 +101,14 @@
     color: white;
 }
 
+/* SUB HERO SECTION ====================================================================== */
+#subHeroSection {
+    width: 100vw;
+    height: 100vh;
+}
 
+
+/* INFO SECTION ====================================================================== */
 #infoSectionTitle {
     margin-top: 80px;
     text-align: center;

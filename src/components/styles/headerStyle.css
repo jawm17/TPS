@@ -47,7 +47,21 @@
 
 
 
-
+#waveDash {
+    width: 100%;
+    position: absolute;
+    bottom: -120px;
+    height: 200px;
+    transform: rotate(180deg);
+    /* display: none; */
+}
+#waveDash2 {
+    width: 100%;
+    position: absolute;
+    bottom: -120px;
+    height: 200px;
+    transform: rotate(180deg);
+}
 
 #headerMain {
     width: 100vw;
@@ -56,6 +70,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 10;
+    background-color: rgba(0, 112, 255, 1);
     /* background-color: var(--blueMain); */
 }
 
@@ -71,6 +87,7 @@
 
 #headerLogo {
     height: 90px;
+    cursor: pointer;
 }
 
 #headerLinks {
@@ -78,6 +95,7 @@
     position: absolute;
     right: 0px;
     align-items: center;
+    z-index: 11;
 }
 
 .headerLink {
@@ -87,6 +105,12 @@
     display: flex;
     align-items: center;
     position: relative;
+    color: white;
+}
+
+#headerIcon {
+    width: 20px;
+    margin-right: 10px;
 }
 
 #locationsMenu {
@@ -121,8 +145,8 @@
 #contactBtnHeader {
     margin-left: 30px;
     cursor: pointer;
-    background-color: var(--blueMain);
-    color: white;
+    background-color: white;
+    color: var(--blueMain);
     padding: 10px;
     border-radius: 4px;
 }

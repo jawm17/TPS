@@ -9,12 +9,11 @@ export default function Landing() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        scrollBox();
+        // scrollBox();
     }, []);
 
 
     function scrollBox() {
- 
             const scrollContainer = document.getElementById("infoSectionReview");
             let currentIndex = 0;
             // Function to scroll to the next element
@@ -29,15 +28,8 @@ export default function Landing() {
                     behavior: "smooth"
                 });
             }
-
             // Set up a timer to scroll every ten seconds
             setInterval(scrollToNextElement, 4000);
-
-            // Optionally, you can clear the interval when needed (e.g., when the user interacts with the container)
-            // scrollContainer.addEventListener("scroll", function () {
-            //   clearInterval(scrollInterval);
-            // });
-   
     }
 
 
@@ -58,7 +50,7 @@ export default function Landing() {
                 <div id="heroServiceFlex">
                     <div id="heroService">
                         <div id="heroServiceFlag">
-                            Request Service Today
+                            Request Free Consultation
                         </div>
 
                         <div id="serviceInputs">
@@ -82,7 +74,11 @@ export default function Landing() {
                 </div>
             </div>
 
-            <div id="infoSectionTitle">
+            <div id="subHeroSection">
+
+            </div>
+
+            {/* <div id="infoSectionTitle">
                 Why Choose Us?
             </div>
             <div id="infoSection">
@@ -113,7 +109,7 @@ export default function Landing() {
                             </div>
                             <div className="infoSectionItemRight">
                                 <div className="infoSectionItemTitle">
-                                   Tons of Experience
+                                   Years of Experience
                                 </div>
                                 <div className="infoSectionItemSub">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
@@ -237,7 +233,7 @@ export default function Landing() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div id="serviceSectionTitle">
                 Our Services
