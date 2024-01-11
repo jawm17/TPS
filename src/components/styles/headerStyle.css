@@ -50,9 +50,10 @@
 #waveDash {
     width: 100%;
     position: absolute;
-    bottom: -120px;
+    bottom: -110px;
     height: 200px;
     transform: rotate(180deg);
+    /* color: red; */
     /* display: none; */
 }
 #waveDash2 {
@@ -71,23 +72,25 @@
     align-items: center;
     position: relative;
     z-index: 10;
-    background-color: rgba(0, 112, 255, 1);
+    background-color: var(--blueMain);
     /* background-color: var(--blueMain); */
 }
 
 #headerInner {
     max-width: var(--maxWidthMain);
-    width: 95%;
+    width: 90%;
     height: 100%;
     display: flex;
     align-items: center;
     position: relative;
+    z-index: 5;
     
 }
 
 #headerLogo {
     height: 90px;
     cursor: pointer;
+    z-index: 2;
 }
 
 #headerLinks {
@@ -139,14 +142,116 @@
 }
 
 #selectedPage {
-    color: var(--blueMain);
+    /* color: var(--blueMain); */
 }
 
 #contactBtnHeader {
     margin-left: 30px;
     cursor: pointer;
-    background-color: white;
-    color: var(--blueMain);
+    background-color: var(--blueThird);
+    color: white;
     padding: 10px;
     border-radius: 4px;
+}
+
+#menuIcon {
+    display: none;
+    color: white;
+    width: 35px;
+    cursor: pointer;
+}
+
+#mobileMenu {
+    width: 100%;
+    height: 100%;
+    background-color: var(--blueMain);
+    /* backdrop-filter: blur(4px); */
+    position: absolute;
+    top: -800px;
+    transition: top 0.2s ease-out;
+    /* z-index: 5; */
+}
+
+#mobileMenuOpen {
+    width: 100%;
+    height: 800px;
+    background-color: var(--blueMain);
+    /* background-color: red; */
+    position: absolute;
+    top: 90px;
+    transition: top 0.2s ease-out;
+    z-index: 50;
+    padding-top: 10px;
+}
+
+.mobileMenuItem {
+    border-bottom: solid 1px white;
+    padding: 15px;
+    width: calc(100% - 60px);
+    margin-left: 15px;
+    color: white;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.mobileMenuItemTop {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#menuDropDownArea {
+    margin-top: 15px;
+}
+
+.dropDownOption {
+    margin-top: 15px;
+}
+
+#mobileMenuContactBtn {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blueThird);
+    color: white;
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#mobileMenuDropIcon {
+    width: 20px;
+    position: absolute;
+    right: 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #menuIcon {
+        display: block;
+    }
+    .headerLink {
+        display: none;
+    }
+
+    #contactBtnHeader {
+        margin-right: 25px;
+        display: none;
+    }
+
+    #headerMain {
+        height: 90px;
+    }
+    #headerLogo {
+        height: 75px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #waveDash {
+        /* bottom: -110px; */
+        bottom: -90px;
+    }
 }

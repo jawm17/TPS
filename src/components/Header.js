@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import logo from "../assets/TPS_logo.png";
+import logo from "../assets/tpsLogo.png";
 import "./styles/headerStyle.css";
 
 export default function Header(props) {
     const navigate = useNavigate();
     const [locationsOpen, setLocationsOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [dropOpen1, setDropOpen1] = useState(false);
+    const [dropOpen2, setDropOpen2] = useState(false);
+    const [dropOpen3, setDropOpen3] = useState(false);
 
     function navigateMenu(loc) {
         setLocationsOpen(false);
+        setMenuOpen(false);
         navigate("/location/" + loc);
+    }
+
+    function navigateMobileMenu(loc) {
+        setMenuOpen(false);
+        navigate(loc);
     }
 
     return (
@@ -39,7 +49,8 @@ export default function Header(props) {
             </div> */}
             <div id="headerMain">
                 <div id="headerInner">
-                    <img src={logo} id="headerLogo" alt="pool logo" onClick={() => navigate("/")}></img>
+                    <img src={logo} id="headerLogo" alt="pool logo" onClick={() => navigateMobileMenu("/")}></img>
+
                     <div id="headerLinks">
                         {/* <div className="headerLink" id={props.page === "landing" ? "selectedPage" : ""} onClick={() => navigate("/")}>
 
@@ -70,7 +81,7 @@ export default function Header(props) {
                                 </svg>
                             }
                             <div>
-                                BUILDS
+                                POOL CONSTRUCTION
                             </div>
                         </div>
                         <div className="headerLink" id={props.page === "services" ? "selectedPage" : ""} onClick={() => navigate("/services")}>
@@ -86,7 +97,7 @@ export default function Header(props) {
                                 </svg>
                             }
                             <div>
-                                SERVICES
+                                POOL SERVICES
                             </div>
                         </div>
                         <div className="headerLink" id={props.page === "remodling" ? "selectedPage" : ""} onClick={locationsOpen ? () => setLocationsOpen(false) : () => setLocationsOpen(true)} onMouseEnter={() => setLocationsOpen(true)}>
@@ -99,8 +110,6 @@ export default function Header(props) {
                                     <path fill-rule="evenodd" d="M8.161 2.58a1.875 1.875 0 0 1 1.678 0l4.993 2.498c.106.052.23.052.336 0l3.869-1.935A1.875 1.875 0 0 1 21.75 4.82v12.485c0 .71-.401 1.36-1.037 1.677l-4.875 2.437a1.875 1.875 0 0 1-1.676 0l-4.994-2.497a.375.375 0 0 0-.336 0l-3.868 1.935A1.875 1.875 0 0 1 2.25 19.18V6.695c0-.71.401-1.36 1.036-1.677l4.875-2.437ZM9 6a.75.75 0 0 1 .75.75V15a.75.75 0 0 1-1.5 0V6.75A.75.75 0 0 1 9 6Zm6.75 3a.75.75 0 0 0-1.5 0v8.25a.75.75 0 0 0 1.5 0V9Z" clip-rule="evenodd" />
                                 </svg>
                             }
-
-
                             <div>
                                 LOCATIONS
                             </div>
@@ -149,9 +158,131 @@ export default function Header(props) {
                         <div id="contactBtnHeader">
                             CALL NOW
                         </div>
+                        {menuOpen ?
+                            <svg onClick={() => setMenuOpen(false)} id="menuIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                            :
+                            <svg onClick={() => setMenuOpen(true)} id="menuIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+
+                        }
                     </div>
                 </div>
-                <svg id="waveDash" viewBox="0 0 1440 100" version="1.1" xmlns="https://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 112.461, 255, 1)" offset="0%"></stop><stop stop-color="rgba(0, 0.157, 255, 1)" offset="100%"></stop></linearGradient></defs><path fill="url(#sw-gradient-0)" d="M0,60L80,51.7C160,43,320,27,480,30C640,33,800,57,960,68.3C1120,80,1280,80,1440,80C1600,80,1760,80,1920,80C2080,80,2240,80,2400,80C2560,80,2720,80,2880,68.3C3040,57,3200,33,3360,33.3C3520,33,3680,57,3840,68.3C4000,80,4160,80,4320,75C4480,70,4640,60,4800,51.7C4960,43,5120,37,5280,30C5440,23,5600,17,5760,13.3C5920,10,6080,10,6240,16.7C6400,23,6560,37,6720,48.3C6880,60,7040,70,7200,75C7360,80,7520,80,7680,66.7C7840,53,8000,27,8160,15C8320,3,8480,7,8640,13.3C8800,20,8960,30,9120,28.3C9280,27,9440,13,9600,10C9760,7,9920,13,10080,28.3C10240,43,10400,67,10560,63.3C10720,60,10880,30,11040,15C11200,0,11360,0,11440,0L11520,0L11520,100L11440,100C11360,100,11200,100,11040,100C10880,100,10720,100,10560,100C10400,100,10240,100,10080,100C9920,100,9760,100,9600,100C9440,100,9280,100,9120,100C8960,100,8800,100,8640,100C8480,100,8320,100,8160,100C8000,100,7840,100,7680,100C7520,100,7360,100,7200,100C7040,100,6880,100,6720,100C6560,100,6400,100,6240,100C6080,100,5920,100,5760,100C5600,100,5440,100,5280,100C5120,100,4960,100,4800,100C4640,100,4480,100,4320,100C4160,100,4000,100,3840,100C3680,100,3520,100,3360,100C3200,100,3040,100,2880,100C2720,100,2560,100,2400,100C2240,100,2080,100,1920,100C1760,100,1600,100,1440,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg>
+                {/* <svg id="waveDash" viewBox="0 0 1440 100" version="1.1" xmlns="https://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 112.461, 255, 1)" offset="0%"></stop><stop stop-color="rgba(0, 0.157, 255, 1)" offset="100%"></stop></linearGradient></defs><path fill="url(#sw-gradient-0)" d="M0,60L80,51.7C160,43,320,27,480,30C640,33,800,57,960,68.3C1120,80,1280,80,1440,80C1600,80,1760,80,1920,80C2080,80,2240,80,2400,80C2560,80,2720,80,2880,68.3C3040,57,3200,33,3360,33.3C3520,33,3680,57,3840,68.3C4000,80,4160,80,4320,75C4480,70,4640,60,4800,51.7C4960,43,5120,37,5280,30C5440,23,5600,17,5760,13.3C5920,10,6080,10,6240,16.7C6400,23,6560,37,6720,48.3C6880,60,7040,70,7200,75C7360,80,7520,80,7680,66.7C7840,53,8000,27,8160,15C8320,3,8480,7,8640,13.3C8800,20,8960,30,9120,28.3C9280,27,9440,13,9600,10C9760,7,9920,13,10080,28.3C10240,43,10400,67,10560,63.3C10720,60,10880,30,11040,15C11200,0,11360,0,11440,0L11520,0L11520,100L11440,100C11360,100,11200,100,11040,100C10880,100,10720,100,10560,100C10400,100,10240,100,10080,100C9920,100,9760,100,9600,100C9440,100,9280,100,9120,100C8960,100,8800,100,8640,100C8480,100,8320,100,8160,100C8000,100,7840,100,7680,100C7520,100,7360,100,7200,100C7040,100,6880,100,6720,100C6560,100,6400,100,6240,100C6080,100,5920,100,5760,100C5600,100,5440,100,5280,100C5120,100,4960,100,4800,100C4640,100,4480,100,4320,100C4160,100,4000,100,3840,100C3680,100,3520,100,3360,100C3200,100,3040,100,2880,100C2720,100,2560,100,2400,100C2240,100,2080,100,1920,100C1760,100,1600,100,1440,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg> */}
+                {/* <svg id="waveDash" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 112, 255, 1)" offset="0%"></stop><stop stop-color="rgba(0, 112, 255, 1)" offset="100%"></stop></linearGradient></defs><path fill="url(#sw-gradient-0)" d="M0,0L80,13.3C160,27,320,53,480,63.3C640,73,800,67,960,55C1120,43,1280,27,1440,16.7C1600,7,1760,3,1920,16.7C2080,30,2240,60,2400,70C2560,80,2720,70,2880,68.3C3040,67,3200,73,3360,63.3C3520,53,3680,27,3840,23.3C4000,20,4160,40,4320,51.7C4480,63,4640,67,4800,71.7C4960,77,5120,83,5280,85C5440,87,5600,83,5760,78.3C5920,73,6080,67,6240,65C6400,63,6560,67,6720,63.3C6880,60,7040,50,7200,50C7360,50,7520,60,7680,55C7840,50,8000,30,8160,30C8320,30,8480,50,8640,55C8800,60,8960,50,9120,48.3C9280,47,9440,53,9600,51.7C9760,50,9920,40,10080,45C10240,50,10400,70,10560,75C10720,80,10880,70,11040,68.3C11200,67,11360,73,11440,76.7L11520,80L11520,100L11440,100C11360,100,11200,100,11040,100C10880,100,10720,100,10560,100C10400,100,10240,100,10080,100C9920,100,9760,100,9600,100C9440,100,9280,100,9120,100C8960,100,8800,100,8640,100C8480,100,8320,100,8160,100C8000,100,7840,100,7680,100C7520,100,7360,100,7200,100C7040,100,6880,100,6720,100C6560,100,6400,100,6240,100C6080,100,5920,100,5760,100C5600,100,5440,100,5280,100C5120,100,4960,100,4800,100C4640,100,4480,100,4320,100C4160,100,4000,100,3840,100C3680,100,3520,100,3360,100C3200,100,3040,100,2880,100C2720,100,2560,100,2400,100C2240,100,2080,100,1920,100C1760,100,1600,100,1440,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg> */}
+                <svg id="waveDash" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 112, 255, 1)" offset="0%"></stop><stop stop-color="rgba(0, 0.157, 255, 1)" offset="100%"></stop></linearGradient></defs><path fill="url(#sw-gradient-0)" d="M0,50L80,51.7C160,53,320,57,480,53.3C640,50,800,40,960,38.3C1120,37,1280,43,1440,53.3C1600,63,1760,77,1920,71.7C2080,67,2240,43,2400,33.3C2560,23,2720,27,2880,38.3C3040,50,3200,70,3360,75C3520,80,3680,70,3840,65C4000,60,4160,60,4320,58.3C4480,57,4640,53,4800,43.3C4960,33,5120,17,5280,15C5440,13,5600,27,5760,36.7C5920,47,6080,53,6240,61.7C6400,70,6560,80,6720,83.3C6880,87,7040,83,7200,83.3C7360,83,7520,87,7680,76.7C7840,67,8000,43,8160,33.3C8320,23,8480,27,8640,31.7C8800,37,8960,43,9120,46.7C9280,50,9440,50,9600,56.7C9760,63,9920,77,10080,80C10240,83,10400,77,10560,65C10720,53,10880,37,11040,38.3C11200,40,11360,60,11440,70L11520,80L11520,100L11440,100C11360,100,11200,100,11040,100C10880,100,10720,100,10560,100C10400,100,10240,100,10080,100C9920,100,9760,100,9600,100C9440,100,9280,100,9120,100C8960,100,8800,100,8640,100C8480,100,8320,100,8160,100C8000,100,7840,100,7680,100C7520,100,7360,100,7200,100C7040,100,6880,100,6720,100C6560,100,6400,100,6240,100C6080,100,5920,100,5760,100C5600,100,5440,100,5280,100C5120,100,4960,100,4800,100C4640,100,4480,100,4320,100C4160,100,4000,100,3840,100C3680,100,3520,100,3360,100C3200,100,3040,100,2880,100C2720,100,2560,100,2400,100C2240,100,2080,100,1920,100C1760,100,1600,100,1440,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg>
+                {/* <svg id="waveDash" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(36, 51, 122, 1)" offset="0%"></stop><stop stop-color="rgba(0, 0.157, 255, 1)" offset="100%"></stop></linearGradient></defs><path fill="url(#sw-gradient-0)" d="M0,50L80,51.7C160,53,320,57,480,53.3C640,50,800,40,960,38.3C1120,37,1280,43,1440,53.3C1600,63,1760,77,1920,71.7C2080,67,2240,43,2400,33.3C2560,23,2720,27,2880,38.3C3040,50,3200,70,3360,75C3520,80,3680,70,3840,65C4000,60,4160,60,4320,58.3C4480,57,4640,53,4800,43.3C4960,33,5120,17,5280,15C5440,13,5600,27,5760,36.7C5920,47,6080,53,6240,61.7C6400,70,6560,80,6720,83.3C6880,87,7040,83,7200,83.3C7360,83,7520,87,7680,76.7C7840,67,8000,43,8160,33.3C8320,23,8480,27,8640,31.7C8800,37,8960,43,9120,46.7C9280,50,9440,50,9600,56.7C9760,63,9920,77,10080,80C10240,83,10400,77,10560,65C10720,53,10880,37,11040,38.3C11200,40,11360,60,11440,70L11520,80L11520,100L11440,100C11360,100,11200,100,11040,100C10880,100,10720,100,10560,100C10400,100,10240,100,10080,100C9920,100,9760,100,9600,100C9440,100,9280,100,9120,100C8960,100,8800,100,8640,100C8480,100,8320,100,8160,100C8000,100,7840,100,7680,100C7520,100,7360,100,7200,100C7040,100,6880,100,6720,100C6560,100,6400,100,6240,100C6080,100,5920,100,5760,100C5600,100,5440,100,5280,100C5120,100,4960,100,4800,100C4640,100,4480,100,4320,100C4160,100,4000,100,3840,100C3680,100,3520,100,3360,100C3200,100,3040,100,2880,100C2720,100,2560,100,2400,100C2240,100,2080,100,1920,100C1760,100,1600,100,1440,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path></svg> */}
+
+            </div>
+            <div id={menuOpen ? "mobileMenuOpen" : "mobileMenu"}>
+                <div className="mobileMenuItem">
+                    <div className="mobileMenuItemTop" onClick={() => setDropOpen1(!dropOpen1)}>
+                        <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                        </svg>
+                        <div>
+                            POOL CONSTRUCTION
+                        </div>
+                        <svg id="mobileMenuDropIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    {dropOpen1 ?
+                        <div id="menuDropDownArea">
+                            <div className="dropDownOption" onClick={() => navigateMobileMenu("/builds")}>
+                                New Pool Construction
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMobileMenu("/builds")}>
+                                Pool Renovation
+                            </div>
+                        </div>
+                        :
+                        null
+                    }
+                </div>
+                <div className="mobileMenuItem">
+                    <div className="mobileMenuItemTop" onClick={() => setDropOpen2(!dropOpen2)}>
+                        <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                        </svg>
+                        <div>
+                            POOL SERVICES
+                        </div>
+                        <svg id="mobileMenuDropIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    {dropOpen2 ?
+                        <div id="menuDropDownArea">
+                            <div className="dropDownOption" onClick={() => navigateMobileMenu("/services")}>
+                                Repairs
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMobileMenu("/services")}>
+                                Cleaning
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMobileMenu("/services")}>
+                                Chemical Tests
+                            </div>
+                        </div>
+                        :
+                        null
+                    }
+                </div>
+                <div className="mobileMenuItem">
+                    <div className="mobileMenuItemTop" onClick={() => setDropOpen3(!dropOpen3)}>
+                        <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                        </svg>
+                        <div>
+                            LOCATIONS
+                        </div>
+                        <svg id="mobileMenuDropIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    {dropOpen3 ?
+                        <div id="menuDropDownArea">
+                                <div className="dropDownOption" onClick={() => navigateMenu("1")}>
+                                        Marble Falls
+                                    </div>
+                                    <div className="dropDownOption" onClick={() => navigateMenu("2")}>
+                                        Westlake
+                                    </div>
+                                    <div className="dropDownOption" onClick={() => navigateMenu("3")}>
+                                        The Hills
+                                    </div>
+                                    <div className="dropDownOption" onClick={() => navigateMenu("4")}>
+                                        Spicewood
+                                    </div>
+                                    <div className="dropDownOption" onClick={() => navigateMenu("5")}>
+                                        Dripping Springs
+                                    </div>
+                                    <div className="dropDownOption" onClick={() => navigateMenu("6")}>
+                                        Lago Vista
+                                    </div>
+                                    <div className="dropDownOption" onClick={() => navigateMenu("7")}>
+                                        Lakeway
+                                    </div>
+                        </div>
+                        :
+                        null
+                    }
+                </div>
+                <div className="mobileMenuItem">
+                    <div className="mobileMenuItemTop" onClick={() => navigateMobileMenu("/about")}>
+                        <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                            <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                        </svg>
+                        <div>
+                            ABOUT
+                        </div>
+                    </div>
+                </div>
+                <div id="mobileMenuContactBtn">
+                    CALL NOW
+                </div>
             </div>
         </>
     );

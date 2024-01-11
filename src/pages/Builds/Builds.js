@@ -55,23 +55,17 @@ export default function Builds() {
                                 New Pool Builds
                             </div>
                             <div id="buildsHeroSub">
-                                Texas Pool Services offers custom pool construction or a series of pre designed builds to fit all budgetary needs! We offer geometric pools, freeform pools, and negative edge pool builds to meet all backyard dreams!
+                                Texas Pool Services offers custom pool construction or a series of pre designed builds to fit all budgetary needs! <mark id="mobileNoneBuilds">We offer geometric pools, freeform pools, and negative edge pool builds to meet all backyard dreams!</mark>
                             </div>
                         </div>
                     </div>
-                    <div id="buildsHeroRight">
-
-                    </div>
                 </div>
-                <div id="waveItem">
-
-                </div>
-                <svg id="wave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L48,165.3C96,139,192,85,288,85.3C384,85,480,139,576,186.7C672,235,768,277,864,245.3C960,213,1056,107,1152,80C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
+                {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
+                {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
             </div>
-            
-            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L48,112C96,96,192,64,288,53.3C384,43,480,53,576,90.7C672,128,768,192,864,202.7C960,213,1056,171,1152,165.3C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> */}
-            {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L48,266.7C96,277,192,299,288,261.3C384,224,480,128,576,101.3C672,75,768,117,864,154.7C960,192,1056,224,1152,213.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> */}
-      
+
+
             <div id="buildsSection">
                 <div id="buildsSectionInner">
                     {/* <div className="buildRow">
@@ -90,6 +84,9 @@ export default function Builds() {
                         </div>
                     </div> */}
                     <div className="buildRow" id="buildRowReverse">
+                        <div className="buildRowTitleMobile">
+                            New Build Standard
+                        </div>
                         <div className="buildRowLeft">
                             <img className="buildImg" alt="new pool build" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/pool%202.jpeg/:/rs=w:1200,h:600,cg:true,m/cr=w:1200,h:600"></img>
                         </div>
@@ -113,6 +110,9 @@ export default function Builds() {
                         </div>
                     </div>
                     <div className="buildRow">
+                        <div className="buildRowTitleMobile">
+                            Geometric Pools
+                        </div>
                         <div className="buildRowLeft">
                             <img className="buildImg" alt="new pool build" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Plaster%20tile%20coping.jpg/:/rs=w:1200,h:600,cg:true,m/cr=w:1200,h:600"></img>
                         </div>
@@ -134,6 +134,9 @@ export default function Builds() {
                         </div>
                     </div>
                     <div className="buildRow" id="buildRowReverse">
+                        <div className="buildRowTitleMobile">
+                            Freeform Pools
+                        </div>
                         <div className="buildRowLeft">
                             <img className="buildImg" alt="new pool build" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Zumwalt%20New.jpg/:/rs=w:1200,h:600,cg:true,m/cr=w:1200,h:600"></img>
                         </div>
@@ -155,6 +158,9 @@ export default function Builds() {
                         </div>
                     </div>
                     <div className="buildRow">
+                        <div className="buildRowTitleMobile">
+                            Native Edge Pools
+                        </div>
                         <div className="buildRowLeft">
                             <img className="buildImg" alt="new pool build" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/blob-646fbb9.png/:/cr=t:33.26%25,l:0%25,w:100%25,h:50%25/rs=w:1200,h:600,cg:true"></img>
                         </div>
@@ -177,7 +183,7 @@ export default function Builds() {
                     </div>
                 </div>
             </div>
-            <div id="fullSection">
+            {/* <div id="fullSection">
                 <div id="fullSectionLeft">
                     <img id="fullSectionImg" alt="inifinity edge pool" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/blob-646fbb9.png/:/cr=t:33.26%25,l:0%25,w:100%25,h:50%25/rs=w:1200,h:600,cg:true"></img>
                     <div id="fullSectionBlock">
@@ -201,12 +207,12 @@ export default function Builds() {
                 </div>
                 <div id="fullSectionRight">
                 </div>
-            </div>
-            <div id="bookNowTitle">
-                Contact us
-            </div>
+            </div> */}
             <div id="formSection">
                 <div id="formInner">
+                    <div id="bookNowTitle">
+                        Contact us
+                    </div>
                     <div className="homeFormFlex">
                         <input className="homeFormInput" placeholder="Name"></input>
                     </div>

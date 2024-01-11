@@ -131,3 +131,22 @@
     object-fit: cover;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 1100px) {
+    #servicesSideArea {
+        display: none;
+    }
+
+    #servicesGrid {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 695px) {
+    #servicesGrid {
+        /* background-color: red; */
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Change this line */
+        grid-gap: 20px 0px;
+    }
+}

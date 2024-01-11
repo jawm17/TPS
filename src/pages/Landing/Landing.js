@@ -14,22 +14,22 @@ export default function Landing() {
 
 
     function scrollBox() {
-            const scrollContainer = document.getElementById("infoSectionReview");
-            let currentIndex = 0;
-            // Function to scroll to the next element
-            function scrollToNextElement() {
-                const scrollWidth = scrollContainer.scrollWidth;
-                const itemWidth = scrollContainer.offsetWidth;
-                currentIndex = (currentIndex + 1) % (scrollWidth / itemWidth);
-                const scrollToPosition = currentIndex * itemWidth;
-                // Scroll to the next element
-                scrollContainer.scrollTo({
-                    left: scrollToPosition,
-                    behavior: "smooth"
-                });
-            }
-            // Set up a timer to scroll every ten seconds
-            setInterval(scrollToNextElement, 4000);
+        const scrollContainer = document.getElementById("infoSectionReview");
+        let currentIndex = 0;
+        // Function to scroll to the next element
+        function scrollToNextElement() {
+            const scrollWidth = scrollContainer.scrollWidth;
+            const itemWidth = scrollContainer.offsetWidth;
+            currentIndex = (currentIndex + 1) % (scrollWidth / itemWidth);
+            const scrollToPosition = currentIndex * itemWidth;
+            // Scroll to the next element
+            scrollContainer.scrollTo({
+                left: scrollToPosition,
+                behavior: "smooth"
+            });
+        }
+        // Set up a timer to scroll every ten seconds
+        setInterval(scrollToNextElement, 4000);
     }
 
 
@@ -72,10 +72,66 @@ export default function Landing() {
                         </div>
                     </div>
                 </div>
+                <div id="mobileServiceBtn">
+                    <svg id="mobileServiceBtnIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+                    <div>
+                        Request Free Consultation
+                    </div>
+                </div>
             </div>
 
             <div id="subHeroSection">
+                <div id="subHeroInner">
+                    <div id="subHeroTop">
+                        WELCOME TO TEXAS POOL SERVICES, AUSTIN'S PREMIER LUXURY POOL BUILDERS
+                    </div>
+                    <div id="subHeroMiddle">
+                        <mark id="subHeroBold">Redefining luxury,</mark> one pool at a time.
+                    </div>
+                    <div id="subHeroBottom">
+                        At Texas Pool Services, we transform backyards into personal paradises. Centrally based in the vibrant city of Austin, Texas, we are at the forefront of custom pool design and construction. We are dedicated to bringing the luxury of the world’s finest resorts directly to your home, creating an oasis of tranquility and enjoyment in your own backyard. <mark id="mobileNone">Our commitment to perfection is reflected in every project, from intimate plunge pools to expansive infinity-edge designs. We specialize in creating uniquely tailored, high-end swimming pools that reflect not only the beauty and ambiance of a five-star resort but also your personal style and preferences. Every Texas Pool Service Pool is a testament to craftsmanship, quality, and attention to detail that is simply unparalleled.</mark>
+                    </div>
+                </div>
+            </div>
 
+            <div id="smallGallerySection">
+                <div id="smallGalleryInner">
+                    <div id="smallGalleryLeft">
+                        <div id="smallGalleryTitle">
+                            Imagine The Possibilities
+                        </div>
+                        <div id="smallGalleryDescription">
+                            Immerse yourself in luxury and relaxation. With Texas Pool Services, your dream backyard is just one click away.
+                        </div>
+                        <div id="smallGalleryBtn">
+                            learn more
+                            <svg id="learnMoreBtnGallery" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="smallGalleryImgArea">
+                        <div id="smallGalleryFlex" class="scroll-container">
+
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             {/* <div id="infoSectionTitle">
@@ -413,11 +469,11 @@ export default function Landing() {
             </div>
 
 
-            <div id="bookNowTitle">
-                Contact us
-            </div>
             <div id="formSection">
                 <div id="formInner">
+                    <div id="bookNowTitle">
+                        Contact us
+                    </div>
                     <div className="homeFormFlex">
                         <input className="homeFormInput" placeholder="Name"></input>
                     </div>

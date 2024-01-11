@@ -101,12 +101,245 @@
     color: white;
 }
 
+#mobileServiceBtn {
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    background-color: var(--blueThird);
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    bottom: 0px;
+    left: calc(50% - 145px);
+    display: none;
+    align-items: center;
+}
+
+#mobileServiceBtnIcon {
+    width: 18px;
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    #heroServiceFlex {
+        display: none;
+    }
+
+    #mobileServiceBtn {
+        display: flex;
+    }
+
+    #heroTextArea {
+        top: 45%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #heroSection {
+        width: 100vw;
+        height: calc(100vh - 180px);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #heroTextArea {
+        width: 80%;
+    }
+    #heroTextMain {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    
+    #heroTextSub {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
+
 /* SUB HERO SECTION ====================================================================== */
 #subHeroSection {
     width: 100vw;
-    height: 100vh;
+    /* height: 600px; */
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    /* align-items: center; */
 }
 
+#subHeroInner {
+    width: 85%;
+    max-width: var(--maxWidthMain);
+    text-align: center;
+}
+
+#subHeroTop {
+    color: gray;
+    font-size: 20px;
+}
+
+#subHeroMiddle {
+    margin-top: 35px;
+    font-size: 48px;
+    color: var(--blueMain);
+}
+
+#subHeroBold {
+    font-weight: bold;
+    background-color: transparent;
+    color: var(--blueThird);
+}
+
+#subHeroBottom {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 35px;
+}
+
+#mobileNone {
+    background-color: transparent;
+    color: black;
+}
+
+@media only screen and (max-width: 650px) {
+    #subHeroSection {
+        margin-top: 60px;
+    }
+    #subHeroTop {
+        font-size: 16px;
+    }
+
+    #subHeroMiddle {
+        font-size: 35px;
+    }
+
+    #mobileNone {
+        display: none;
+    }
+}
+
+/* SMALL GALLERY SECTION ====================================================================== */
+#smallGallerySection {
+    width: 100vw;
+    height: 280px;
+    background-color: var(--blueThird);
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#smallGalleryInner {
+    width: 95%;
+    max-width: var(--maxWidthMain);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#smallGalleryLeft {
+    width: 500px;
+}
+
+#smallGalleryTitle {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#smallGalleryDescription {
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+#smallGalleryBtn {
+    padding: 15px;
+    background-color: white;
+    border-radius: 4px;
+    color: var(--blueThird);
+    cursor: pointer;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#learnMoreBtnGallery {
+    position: absolute;
+    right: 15px;
+    height: 20px;
+}
+
+#smallGalleryImgArea {
+    width: calc(100% - 540px);
+    margin-left: 40px;
+    height: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    /* background-color: red; */
+    position: relative;
+}
+
+#smallGalleryFlex {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    height: 100%;
+    width: 100%;
+}
+
+.smallGalleryImg {
+    width: 100%;
+    /* Set the width to a percentage value */
+    height: 100%;
+    object-fit: cover;
+    margin-right: 2%;
+    /* Adjust the margin as needed */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+/* Additional styling for smooth scrolling */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar in IE/Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in WebKit browsers */
+}
+
+@media only screen and (max-width: 800px) {
+    #smallGalleryInner {
+        display: block;
+    }
+
+    #smallGalleryImgArea {
+        width: 90%;
+        height: 300px;
+        margin-top: 20px;
+        margin-left: 5%;
+    }
+
+    #smallGalleryLeft {
+        margin-left: calc(45% - 200px);
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    #smallGallerySection {
+        height: 550px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+}
 
 /* INFO SECTION ====================================================================== */
 #infoSectionTitle {
@@ -277,19 +510,23 @@
     color: var(--blueMain);
 }
 
-/* SERVICE SECTION ========================================== */
+
+
+
+/* SERVICE SECTION ====================================================================== */
 #serviceSectionTitle {
     margin-top: 0px;
     text-align: center;
     font-weight: bold;
     font-size: 36px;
-    color: var(--blueMain);
+    color: var(--blueThird);
+    margin-top: 80px;
 }
 
 #serviceSection {
     margin-top: 45px;
     width: 100vw;
-    height: 460px;
+    /* height: 460px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,14 +535,14 @@
 
 #serviceSectionInner {
     max-width: var(--maxWidthMain);
-    width: 95%;
+    width: 90%;
     /* width: 100vw; */
 
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .serviceSectionItem {
@@ -313,7 +550,7 @@
     border-radius: 4px;
     /* width: 34%; */
 
-    height: 100%;
+    height: 500px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -360,10 +597,28 @@
     width: 18px;
 }
 
+@media only screen and (max-width: 900px) {
+    #serviceSectionTitle {
+        margin-top: 50px;
+    }
+
+    #serviceSectionInner {
+        display: block;
+    }
+
+    .serviceSectionItem {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    #serviceSectionTitle {
+        font-size: 30px;
+    }
+}
 
 
 
-
+/* FULL SECTION ====================================================================== */
 #fullSection {
     margin-top: 80px;
     width: 100vw;
@@ -383,7 +638,8 @@
 #fullSectionBlock {
     position: absolute;
     right: -200px;
-    width: 440px;
+    max-width: 440px;
+    width: calc(90% - 80px);
     height: 270px;
     padding: 40px;
     top: 40px;
@@ -392,12 +648,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
 }
 
 #fullTitle {
     font-weight: 600;
     font-size: 24px;
-    color: var(--blueMain);
+    color: var(--blueThird);
     /* border-left: solid 4px var(--blueMain); */
     /* padding-left: 10px; */
 }
@@ -409,7 +666,7 @@
 #fullBookBtn {
     margin-top: 25px;
     padding: 15px;
-    background-color: var(--blueMain);
+    background-color: var(--blueThird);
     color: white;
     cursor: pointer;
     border-radius: 4px;
@@ -431,13 +688,37 @@
 
 #fullSectionRight {
     width: 30%;
-    background-color: var(--blueMain);
+    background-color: var(--blueThird);
     height: 100%;
+}
+
+@media only screen and (max-width: 860px) {
+    #fullSection {
+        margin-top: 40px;
+    }
+
+    #fullSectionBlock {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        height: 220px;
+    }
+
+    #fullSectionLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #fullSectionRight {
+        display: none;
+    }
 }
 
 
 
-
+/* REVIEW SECTION ====================================================================== */
 #reviewSub {
     text-align: center;
     color: var(--blueThird);
@@ -503,42 +784,62 @@
     color: gold;
 }
 
+@media only screen and (max-width: 700px) {
+    #reviewSectionInner {
+        display: block;
+    }
+    .reviewTile {
+        width: calc(100% - 40px);
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #reviewTitle {
+        font-size: 30px;
+    }
+    #reviewSub {
+        font-size: 20px;
+    }
+}
 
 
 
 
-
-
+/* FORM SECTION ====================================================================== */
 #bookNowTitle {
     margin-top: 65px;
+    margin-bottom: 35px;
     text-align: center;
     font-weight: bold;
     font-size: 36px;
-    color: var(--blueMain);
+    color: white;
 }
 
 #formSection {
-    margin-top: 40px;
+    margin-top: 80px;
     width: 100vw;
     padding-bottom: 80px;
     display: flex;
     justify-content: center;
+    background-color: var(--blueThird);
 }
 
 #formInner {
     max-width: 800px;
-    width: 95%;
+    width: 85%;
 }
 
 .homeFormFlex {
     width: 100%;
-    height: 30px;
+    height: 35px;
     border: solid 1px var(--blueMain);
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: white;
 }
 
 .homeFormInput {

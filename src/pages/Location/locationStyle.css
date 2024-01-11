@@ -31,7 +31,6 @@
 
 #LocationLeft {
     width: calc(100% - 500px);
-    height: 100%;
 }
 
 #locationTitle {
@@ -167,5 +166,23 @@
 #flagDescription {
     color: white;
     margin-top: 5px;
+}
+
+@media only screen and (max-width: 950px) {
+    #locationAreaInner {
+        display: block;
+    }
+
+    #LocationLeft {
+        width: 100%;
+    }
+
+    .locationItemDescription {
+        font-size: 14px;
+    }
+    #locationRight {
+        width: 100%;
+        margin-left: -20px;
+    }
 }
 
