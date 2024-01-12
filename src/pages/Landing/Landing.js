@@ -3,18 +3,19 @@ import { useNavigate } from 'react-router-dom';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import quotation from "../../assets/quotation.png";
+import CallBtn from "../../components/CallBtn";
 import "./landingStyle.css";
 
 export default function Landing() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // scrollBox();
+        scrollBox();
     }, []);
 
 
     function scrollBox() {
-        const scrollContainer = document.getElementById("infoSectionReview");
+        const scrollContainer = document.getElementById("smallGalleryFlex");
         let currentIndex = 0;
         // Function to scroll to the next element
         function scrollToNextElement() {
@@ -29,14 +30,14 @@ export default function Landing() {
             });
         }
         // Set up a timer to scroll every ten seconds
-        setInterval(scrollToNextElement, 4000);
+        setInterval(scrollToNextElement, 2500);
     }
 
 
     return (
         <div>
             <Header page={"landing"} />
-
+            <CallBtn />
             <div id="heroSection">
                 <img id="heroImg" alt="big pool" src="https://pools-by-design.com/wp-content/uploads/2021/04/houston-texas-vacation.jpg"></img>
                 <div id="heroTextArea">
@@ -72,7 +73,7 @@ export default function Landing() {
                         </div>
                     </div>
                 </div>
-                <div id="mobileServiceBtn">
+                <div id="mobileServiceBtn" onClick={() => window.location.href = `tel:${5128207434}`}>
                     <svg id="mobileServiceBtnIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                     </svg>
@@ -116,17 +117,17 @@ export default function Landing() {
                         <div id="smallGalleryFlex" class="scroll-container">
 
                             <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-9-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-10-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-11-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-13-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-17-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-swimming-pool-builder-2-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-14-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/texas-custom-pool-builder-bg-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-4-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-5-400x284.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/06/pool-service-company-austin03-1.jpg" class="smallGalleryImg red-square"></img>
 
                         </div>
                     </div>

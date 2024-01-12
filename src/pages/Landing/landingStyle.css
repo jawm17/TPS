@@ -500,14 +500,14 @@
     margin-top: 5px;
     font-weight: 600;
     font-size: 18px;
-    color: var(--blueMain);
+    color: var(--blueThird);
 }
 
 #reviewLocation {
     margin-top: 5px;
     font-size: 16px;
     font-weight: 600;
-    color: var(--blueMain);
+    color: var(--blueThird);
 }
 
 
@@ -774,7 +774,7 @@
 
 .reviewUser {
     font-weight: bold;
-    color: var(--blueMain);
+    color: var(--blueThird);
     /* font-size: 20px; */
     margin-top: 20px;
 }

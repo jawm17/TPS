@@ -6,6 +6,7 @@ import "./styles/headerStyle.css";
 export default function Header(props) {
     const navigate = useNavigate();
     const [locationsOpen, setLocationsOpen] = useState(false);
+    const [buildsMenuOpen, setBuildsMenuOpen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropOpen1, setDropOpen1] = useState(false);
     const [dropOpen2, setDropOpen2] = useState(false);
@@ -19,6 +20,7 @@ export default function Header(props) {
 
     function navigateMobileMenu(loc) {
         setMenuOpen(false);
+        setBuildsMenuOpen(false)
         navigate(loc);
     }
 
@@ -69,7 +71,7 @@ export default function Header(props) {
                                 HOME
                             </div>
                         </div> */}
-                        <div className="headerLink" id={props.page === "builds" ? "selectedPage" : ""} onClick={() => navigate("/builds")}>
+                        <div className="headerLink" id={props.page === "builds" ? "selectedPage" : ""} onClick={buildsMenuOpen ? () => setBuildsMenuOpen(false) : () => setBuildsMenuOpen(true)} onMouseEnter={() => setBuildsMenuOpen(true)}>
                             {props.page !== "builds" ?
                                 <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
@@ -79,10 +81,24 @@ export default function Header(props) {
                                 <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                     <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
                                 </svg>
+
                             }
                             <div>
                                 POOL CONSTRUCTION
                             </div>
+                            <svg id="headerDown" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                            {buildsMenuOpen ?
+                                <div id="buildsMenu">
+                                    <div className="buildsMenuItem" onClick={() => navigateMobileMenu("/builds")}>
+                                        New Pool Construction
+                                    </div>
+                                    <div className="buildsMenuItem" onClick={() => navigateMobileMenu("/renovation")}>
+                                        Pool Renovation
+                                    </div>
+                                </div>
+                                : null}
                         </div>
                         <div className="headerLink" id={props.page === "services" ? "selectedPage" : ""} onClick={() => navigate("/services")}>
                             {props.page !== "services" ?
@@ -155,7 +171,7 @@ export default function Header(props) {
 
                             ABOUT
                         </div>
-                        <div id="contactBtnHeader">
+                        <div id="contactBtnHeader" onClick={() => window.location.href = `tel:${5128207434}`}>
                             CALL NOW
                         </div>
                         {menuOpen ?
@@ -194,7 +210,7 @@ export default function Header(props) {
                             <div className="dropDownOption" onClick={() => navigateMobileMenu("/builds")}>
                                 New Pool Construction
                             </div>
-                            <div className="dropDownOption" onClick={() => navigateMobileMenu("/builds")}>
+                            <div className="dropDownOption" onClick={() => navigateMobileMenu("/renovation")}>
                                 Pool Renovation
                             </div>
                         </div>
@@ -205,7 +221,9 @@ export default function Header(props) {
                 <div className="mobileMenuItem">
                     <div className="mobileMenuItemTop" onClick={() => setDropOpen2(!dropOpen2)}>
                         <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                            <path d="M3.375 4.5C2.339 4.5 1.5 5.34 1.5 6.375V13.5h12V6.375c0-1.036-.84-1.875-1.875-1.875h-8.25ZM13.5 15h-12v2.625c0 1.035.84 1.875 1.875 1.875h.375a3 3 0 1 1 6 0h3a.75.75 0 0 0 .75-.75V15Z" />
+                            <path d="M8.25 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0ZM15.75 6.75a.75.75 0 0 0-.75.75v11.25c0 .087.015.17.042.248a3 3 0 0 1 5.958.464c.853-.175 1.522-.935 1.464-1.883a18.659 18.659 0 0 0-3.732-10.104 1.837 1.837 0 0 0-1.47-.725H15.75Z" />
+                            <path d="M19.5 19.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
                         </svg>
                         <div>
                             POOL SERVICES
@@ -233,7 +251,7 @@ export default function Header(props) {
                 <div className="mobileMenuItem">
                     <div className="mobileMenuItemTop" onClick={() => setDropOpen3(!dropOpen3)}>
                         <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M8.161 2.58a1.875 1.875 0 0 1 1.678 0l4.993 2.498c.106.052.23.052.336 0l3.869-1.935A1.875 1.875 0 0 1 21.75 4.82v12.485c0 .71-.401 1.36-1.037 1.677l-4.875 2.437a1.875 1.875 0 0 1-1.676 0l-4.994-2.497a.375.375 0 0 0-.336 0l-3.868 1.935A1.875 1.875 0 0 1 2.25 19.18V6.695c0-.71.401-1.36 1.036-1.677l4.875-2.437ZM9 6a.75.75 0 0 1 .75.75V15a.75.75 0 0 1-1.5 0V6.75A.75.75 0 0 1 9 6Zm6.75 3a.75.75 0 0 0-1.5 0v8.25a.75.75 0 0 0 1.5 0V9Z" clip-rule="evenodd" />
                         </svg>
                         <div>
                             LOCATIONS
@@ -244,27 +262,27 @@ export default function Header(props) {
                     </div>
                     {dropOpen3 ?
                         <div id="menuDropDownArea">
-                                <div className="dropDownOption" onClick={() => navigateMenu("1")}>
-                                        Marble Falls
-                                    </div>
-                                    <div className="dropDownOption" onClick={() => navigateMenu("2")}>
-                                        Westlake
-                                    </div>
-                                    <div className="dropDownOption" onClick={() => navigateMenu("3")}>
-                                        The Hills
-                                    </div>
-                                    <div className="dropDownOption" onClick={() => navigateMenu("4")}>
-                                        Spicewood
-                                    </div>
-                                    <div className="dropDownOption" onClick={() => navigateMenu("5")}>
-                                        Dripping Springs
-                                    </div>
-                                    <div className="dropDownOption" onClick={() => navigateMenu("6")}>
-                                        Lago Vista
-                                    </div>
-                                    <div className="dropDownOption" onClick={() => navigateMenu("7")}>
-                                        Lakeway
-                                    </div>
+                            <div className="dropDownOption" onClick={() => navigateMenu("1")}>
+                                Marble Falls
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMenu("2")}>
+                                Westlake
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMenu("3")}>
+                                The Hills
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMenu("4")}>
+                                Spicewood
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMenu("5")}>
+                                Dripping Springs
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMenu("6")}>
+                                Lago Vista
+                            </div>
+                            <div className="dropDownOption" onClick={() => navigateMenu("7")}>
+                                Lakeway
+                            </div>
                         </div>
                         :
                         null
@@ -273,14 +291,14 @@ export default function Header(props) {
                 <div className="mobileMenuItem">
                     <div className="mobileMenuItemTop" onClick={() => navigateMobileMenu("/about")}>
                         <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
+                            <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
                         </svg>
                         <div>
                             ABOUT
                         </div>
                     </div>
                 </div>
-                <div id="mobileMenuContactBtn">
+                <div id="mobileMenuContactBtn" onClick={() => window.location.href = `tel:${5128207434}`}>
                     CALL NOW
                 </div>
             </div>
