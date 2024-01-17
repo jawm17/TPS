@@ -90,7 +90,7 @@ export default function Header(props) {
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
                             {buildsMenuOpen ?
-                                <div id="buildsMenu">
+                                <div id="buildsMenu" onMouseLeave={() => setBuildsMenuOpen(false)}>
                                     <div className="buildsMenuItem" onClick={() => navigateMobileMenu("/builds")}>
                                         New Pool Construction
                                     </div>
@@ -133,7 +133,7 @@ export default function Header(props) {
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
                             {locationsOpen ?
-                                <div id="locationsMenu">
+                                <div id="locationsMenu" onMouseLeave={() => setLocationsOpen(false)}>
                                     <div className="locationMenuItem" onClick={() => navigateMenu("1")}>
                                         Marble Falls
                                     </div>

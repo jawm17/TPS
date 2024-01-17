@@ -1,0 +1,54 @@
+#renovationIntro {
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #F9F9FD;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#renovationIntroInner {
+    width: 90%;
+    max-width: 1000px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#renovationIntroTitle {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    color: var(--blueThird);
+}
+
+#renovationIntroDescription {
+    margin-top: 35px;
+    font-size: 18px;
+    color: gray;
+}
+
+#renovationOptionsArea {
+    width: 100vw;
+    height: 400px;
+    position: relative;
+    background-attachment:fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url(https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Plaster%20tile%20coping.jpg/:/rs=w:1200,h:600,cg:true,m/cr=w:1200,h:600);
+}
+
+#renovationOptionsImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    display: none;
+}
+
+#renovationDark {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.737);
+}

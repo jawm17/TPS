@@ -64,6 +64,19 @@ export default function Builds() {
                 {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
                 {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
             </div>
+            <div id="buildsIntro">
+                <div id="buildsIntroInner">
+                    <div id="buildsIntroLeft">
+                        <div id="buildsIntroTitle">
+                            We Build the Best Pools
+                        </div>
+                        <div id="buildsIntroDescription">
+                            Texas Pool Services offers custom pool construction or a series of pre designed builds to fit all budgetary needs! We offer geometric pools, freeform pools, and negative edge pool builds to meet all backyard dreams!
+                        </div>
+                    </div>
+                    <img id="googleBadge" src="https://www.longhornpools.com/wp-content/uploads/2023/11/google_badge.png"></img>
+                </div>
+            </div>
             <div id="buildsSection">
                 <div id="buildsSectionInner">
                     {/* <div className="buildRow">

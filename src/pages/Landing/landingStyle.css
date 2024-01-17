@@ -222,7 +222,7 @@
 #smallGallerySection {
     width: 100vw;
     height: 280px;
-    background-color: var(--blueThird);
+    background-color: var(--blueMain);
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -256,7 +256,7 @@
     padding: 15px;
     background-color: white;
     border-radius: 4px;
-    color: var(--blueThird);
+    color: var(--blueMain);
     cursor: pointer;
     margin-top: 25px;
     display: flex;
@@ -278,6 +278,7 @@
     scroll-snap-type: x mandatory;
     /* background-color: red; */
     position: relative;
+    border-radius: 8px;
 }
 
 #smallGalleryFlex {
@@ -285,6 +286,7 @@
     scroll-snap-type: x mandatory;
     height: 100%;
     width: 100%;
+    border-radius: 8px;
 }
 
 .smallGalleryImg {
@@ -342,8 +344,14 @@
 }
 
 /* INFO SECTION ====================================================================== */
+#infoSectionOuter {
+    padding-top: 80px;
+    background-image: radial-gradient(circle at center,#ffffff 0%,rgba(255,255,255,0.77) 99%),url(https://www.longhornpools.com/wp-content/uploads/2023/05/background-tile-5.jpg)!important;
+
+}
+
 #infoSectionTitle {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     text-align: center;
     font-weight: bold;
     font-size: 36px;
@@ -357,6 +365,7 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+ 
 }
 
 #infoSectionInner {
@@ -514,13 +523,19 @@
 
 
 /* SERVICE SECTION ====================================================================== */
+#servicesSectionOuter {
+    background-color: var(--blueMain);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
 #serviceSectionTitle {
     margin-top: 0px;
     text-align: center;
     font-weight: bold;
     font-size: 36px;
-    color: var(--blueThird);
-    margin-top: 80px;
+    color: white;
+    /* margin-top: 80px; */
 }
 
 #serviceSection {
@@ -620,7 +635,7 @@
 
 /* FULL SECTION ====================================================================== */
 #fullSection {
-    margin-top: 80px;
+    /* margin-top: 80px; */
     width: 100vw;
     height: 450px;
     display: flex;
@@ -654,7 +669,7 @@
 #fullTitle {
     font-weight: 600;
     font-size: 24px;
-    color: var(--blueThird);
+    color: var(--blueMain);
     /* border-left: solid 4px var(--blueMain); */
     /* padding-left: 10px; */
 }
@@ -666,7 +681,7 @@
 #fullBookBtn {
     margin-top: 25px;
     padding: 15px;
-    background-color: var(--blueThird);
+    background-color: var(--blueMain);
     color: white;
     cursor: pointer;
     border-radius: 4px;
@@ -688,7 +703,7 @@
 
 #fullSectionRight {
     width: 30%;
-    background-color: var(--blueThird);
+    background-color: var(--blueMain);
     height: 100%;
 }
 
@@ -716,6 +731,15 @@
     }
 }
 
+
+/* BUILD PREVIEW SECTION ====================================================================== */
+#buildPreview {
+    width: 100vw;
+    height: 600px;
+    /* background-color: var(--blueMain); */
+    /* background-image: radial-gradient(circle at center,#ffffff 0%,rgba(255,255,255,0.77) 99%),url(https://www.longhornpools.com/wp-content/uploads/2023/05/background-tile-5.jpg)!important; */
+
+}
 
 
 /* REVIEW SECTION ====================================================================== */

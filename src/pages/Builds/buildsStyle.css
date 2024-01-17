@@ -64,8 +64,42 @@
     font-size: 18px;
 }
 
-#buildsHeroRight {}
+#buildsIntro {
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #F9F9FD;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
 
+#buildsIntroInner {
+    width: 90%;
+    max-width: var(--maxWidthMain);
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#buildsIntroLeft {
+    /* width: 70%; */
+}
+
+#googleBadge {
+    width: 190px;
+}
+
+#buildsIntroTitle {
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--blueThird);
+}
+
+#buildsIntroDescription {
+    margin-top: 15px;
+}
 
 #buildsSection {
     width: 100vw;
