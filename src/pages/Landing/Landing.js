@@ -141,7 +141,7 @@ export default function Landing() {
                 </div>
                 <div id="infoSection">
                     <div id="infoSectionInner">
-                        <div className="infoSectionSide">
+                        <div className="infoSectionSide" id="infoSectionLeft">
 
                             <div className="infoSectionItem">
                                 <div className="infoSectionItemLeft">
@@ -192,7 +192,7 @@ export default function Landing() {
                             </div>
 
                         </div>
-                        <div className="infoSectionSide">
+                        <div className="infoSectionSide" id="infoSectionRight">
                             <img id="infoSectionImg" alt="pool guy" src="https://s3-media0.fl.yelpcdn.com/bphoto/hd5ZtKiy-Q2T4iLm53Wbow/1000s.jpg"></img>
                             <div id="infoSectionReview">
                                 <div id="reviewScrollBox">
@@ -361,7 +361,62 @@ export default function Landing() {
 
             <div id="buildPreview">
                 <div id="buildPreviewInner">
+                    <div id="buildPreviewTitle">
+                        Our Build Process
+                    </div>
+                    <div id="processOptionsArea">
+                        <div className="processOption">
+                            <div className="processOptionTop">
+                                <svg id="processOptionIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                                </svg>
+                                <div>
+                                    consultation
+                                </div>
+                            </div>
+                            <div className="proccessOptionDescription">
+                                We give customers a 3d visual representation of their pool and what it will look like.                                 We give customers a 3d visual representation of their pool and what it will look like.
+                            </div>
+                        </div>
+                        <div className="processOption">
+                            <div className="processOptionTop">
+                                <svg id="processOptionIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                </svg>
+                                <div>
+                                    3d modeling
+                                </div>
+                            </div>
+                            <div className="proccessOptionDescription">
+                                We give customers a 3d visual representation of their pool and what it will look like.                                 We give customers a 3d visual representation of their pool and what it will look like.
+                            </div>
+                        </div>
+                        <div className="processOption">
+                            <div className="processOptionTop">
+                                <svg id="processOptionIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.867 19.125h.008v.008h-.008v-.008Z" />
+                                </svg>
 
+                                <div>
+                                    pool construction
+                                </div>
+                            </div>
+                            <div className="proccessOptionDescription">
+                                We give customers a 3d visual representation of their pool and what it will look like.                                 We give customers a 3d visual representation of their pool and what it will look like.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="processVideo">
+                        <div id="thumbnailGradient">
+                            <div id="playBtnBg">
+                                <svg id="playBtnIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                        <img id="processVideoThumbnail" src="https://www.thespruce.com/thmb/_FZqg8AROnHRzD1FLXGvd1eyHFw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KeyResidentialFtns-5a9470d218ba010037643a30.jpg"></img>
+                    </div>
                 </div>
             </div>
 

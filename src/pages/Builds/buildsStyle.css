@@ -1,6 +1,6 @@
 #buildsSectionHero {
     width: 100%;
-    height: 400px;
+    height: 600px;
     position: relative;
     overflow: hidden;
     background-color: black;
@@ -14,13 +14,24 @@
 
 #waveItem {
     width: 100%;
-    height: 100px;
+
     position: absolute;
-    bottom: 0px;
+    bottom: -250px;
     object-fit: cover;
     position: absolute;
-    display: none;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI2MHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzA5NjQ5MyI+PHBhdGggZD0iTTMyMCAyOGMzMjAgMCAzMjAgODQgNjQwIDg0IDE2MCAwIDI0MC0yMSAzMjAtNDJ2NzBIMFY3MGM4MC0yMSAxNjAtNDIgMzIwLTQyeiIvPjwvZz48L3N2Zz4=);
+}
+
+#waveItem2 {
+    width: 100%;
+
+    position: absolute;
+    bottom: -200px;
+    object-fit: cover;
+    position: absolute;
+}
+
+#buildWave3 {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIzOHB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzA5NjQ5MyI+PHBhdGggZD0iTTMyMCAyOGMzMjAgMCAzMjAgODQgNjQwIDg0IDE2MCAwIDI0MC0yMSAzMjAtNDJ2NzBIMFY3MGM4MC0yMSAxNjAtNDIgMzIwLTQyeiIvPjwvZz48L3N2Zz4=);
 }
 
 #buildsSectionHeroImg {
@@ -65,53 +76,81 @@
 }
 
 #buildsIntro {
-    width: 100vw;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    background-color: #F9F9FD;
-    display: flex;
-    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+    text-align: center;
     position: relative;
+    /* background-color: red; */
 }
 
-#buildsIntroInner {
-    width: 90%;
-    max-width: var(--maxWidthMain);
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#buildsIntroLeft {
-    /* width: 70%; */
-}
-
-#googleBadge {
-    width: 190px;
+#buildsIntroTop {
+    color: #999999;
+    font-size: 18px;
 }
 
 #buildsIntroTitle {
-    font-weight: 600;
-    font-size: 28px;
-    color: var(--blueThird);
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--blueMain);
 }
 
-#buildsIntroDescription {
-    margin-top: 15px;
+#buildsIntroBottom {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    color: #666666;
+    font-size: 16px;
+    line-height: 26px;
 }
+
+#googleBadge {
+    width: 240px;
+    margin-top: 40px;
+    display: none;
+}
+
+#awardsFlexOuter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#awardsFlex {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.awardItem {
+    width: 120px;
+}
+
+#award3 {
+    width: 110px;
+}
+
+
+
 
 #buildsSection {
     width: 100vw;
     display: flex;
     justify-content: center;
     position: relative;
+    /* background-color: #F9F9F9;
+    background-image: radial-gradient(circle at center, #ffffff 0%, rgba(255, 255, 255, 0.77) 99%), url(https://www.longhornpools.com/wp-content/uploads/2023/05/background-tile-5.jpg) !important; */
+    background-color: var(--blueMain);
 }
 
 #buildsSectionInner {
     width: 90%;
     max-width: var(--maxWidthMain);
-    margin-top: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .buildRow {
@@ -120,10 +159,11 @@
     margin-bottom: 40px;
     position: relative;
     justify-content: space-between;
+    color: white;
 }
 
 .buildRowLeft {
-    width: calc(50% - 40px);
+    width: calc(50%  - 0px);
     height: 100%;
     position: relative;
 }
@@ -133,6 +173,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .buildRowRight {
@@ -294,4 +335,73 @@
     .text {
         font-size: 11px
     }
+}
+
+
+
+
+
+
+
+#poolRenovationSection {
+    width: 100vw;
+    height: 150vh;
+    position: relative;
+}
+
+#renovationImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#renovationImgBlur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+
+
+
+#partnersSection {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+#partnerSectionInner {
+    max-width: 1000px;
+    width: 95%;
+}
+
+#partnersTitle {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--blueMain);
+    text-align: center;
+}
+
+#partnersFlex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 45px;
+    /* background-color: red; */
+}
+
+.partnersLogo {
+    width: 200px;
+}
+
+#logo1 {
+    width: 160px;
+}
+
+#logo2 {
+    width: 160px;
 }

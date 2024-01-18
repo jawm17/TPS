@@ -52,10 +52,10 @@ export default function Builds() {
                     <div id="buildsHeroLeft">
                         <div id="buildsHeroLeftInner">
                             <div id="buildsHeroTitle">
-                                New Pool Builds
+                                New Pool Construction
                             </div>
                             <div id="buildsHeroSub">
-                                Texas Pool Services offers custom pool construction or a series of pre designed builds to fit all budgetary needs! <mark id="mobileNoneBuilds">We offer geometric pools, freeform pools, and negative edge pool builds to meet all backyard dreams!</mark>
+                                Texas Pool Services offers custom pool construction or a series of pre designed builds to fit all budgetary needs!
                             </div>
                         </div>
                     </div>
@@ -63,20 +63,34 @@ export default function Builds() {
                 {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
                 {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
                 {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
+
+
             </div>
+            <svg id="waveItem2" width="100%" height="100%" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 133.7333333333333,125.46666666666667 267.4666666666666,100.93333333333332 436,113 C 604.5333333333334,125.06666666666668 807.8666666666668,173.73333333333332 981,186 C 1154.1333333333332,198.26666666666668 1297.0666666666666,174.13333333333333 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+            <svg id="waveItem" width="100%" height="100%" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 133.7333333333333,125.46666666666667 267.4666666666666,100.93333333333332 436,113 C 604.5333333333334,125.06666666666668 807.8666666666668,173.73333333333332 981,186 C 1154.1333333333332,198.26666666666668 1297.0666666666666,174.13333333333333 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fff" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+
+
             <div id="buildsIntro">
-                <div id="buildsIntroInner">
-                    <div id="buildsIntroLeft">
-                        <div id="buildsIntroTitle">
-                            We Build the Best Pools
-                        </div>
-                        <div id="buildsIntroDescription">
-                            Texas Pool Services offers custom pool construction or a series of pre designed builds to fit all budgetary needs! We offer geometric pools, freeform pools, and negative edge pool builds to meet all backyard dreams!
-                        </div>
-                    </div>
-                    <img id="googleBadge" src="https://www.longhornpools.com/wp-content/uploads/2023/11/google_badge.png"></img>
+                <div id="buildsIntroTop">
+                    CRAFTING EXTRAORDINARY POOLSCAPES
                 </div>
+                <div id="buildsIntroTitle">
+                    Texas Pool Services, Your Premier Pool Builders
+                </div>
+                <div id="buildsIntroBottom">
+                    Texas Pool Services is the trusted name in pool construction, renowned for creating exceptional swimming pools that surpass expectations. As the leading pool builder in Austin and Buda, we are dedicated to bringing your pool dreams to life. Our team of expert pool builders combines innovative design, quality craftsmanship, and personalized service to deliver pools that exceed your wildest imagination.
+                </div>
+                <div id="awardsFlexOuter">
+                    <div id="awardsFlex">
+                        <img className="awardItem" src="https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/google-guarantee-service-400x403.png"></img>
+                        <img className="awardItem" src="https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/CBPofficial.png"></img>
+                        <img className="awardItem" id="award3" src="https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/Top502023-150x150.png"></img>
+                    </div>
+                </div>
+
+
             </div>
+
             <div id="buildsSection">
                 <div id="buildsSectionInner">
                     {/* <div className="buildRow">
@@ -195,6 +209,35 @@ export default function Builds() {
                     </div>
                 </div>
             </div>
+
+            <div id="partnersSection">
+                <div id="partnerSectionInner">
+                    <div id="partnersTitle">
+                        Our Partners
+                    </div>
+                    <div id="partnersFlex">
+                        <img className="partnersLogo" id="logo1" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/FF-blends-alternate-for-print.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:376,h:200,cg:true"></img>
+                        <img className="partnersLogo" id="logo2" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/npt-logo.svg/:/cr=t:0%25,l:0.09%25,w:99.82%25,h:100%25/rs=w:288,h:164,cg:true"></img>
+                        <img className="partnersLogo" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/pentair.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:200,cg:true"></img>
+                        <img className="partnersLogo" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/NPC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true"></img>
+                    </div>
+                </div>
+            </div>
+
+
+
+            {/* <div id="poolRenovationSection">
+                <img id="renovationImg" src="https://www.longhornpools.com/wp-content/uploads/2023/06/pool-renovation-company-austin-tx01.jpg"></img>
+                <div id="renovationImgBlur"></div>
+                <div id="poolRenovationSectionOuter">
+                    <div id="poolRenovationSectionInner">
+
+                    </div>
+                </div>
+                <div id="renovationSectionTitle">
+                    Pool Renovations
+                </div>
+            </div> */}
             {/* <div id="fullSection">
                 <div id="fullSectionLeft">
                     <img id="fullSectionImg" alt="inifinity edge pool" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/blob-646fbb9.png/:/cr=t:33.26%25,l:0%25,w:100%25,h:50%25/rs=w:1200,h:600,cg:true"></img>
