@@ -32,7 +32,7 @@
     width: 100vw;
     height: 400px;
     position: relative;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-image: url(https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Plaster%20tile%20coping.jpg/:/rs=w:1200,h:600,cg:true,m/cr=w:1200,h:600);
@@ -59,7 +59,7 @@
 #renSection {
     width: 100vw;
     background-color: var(--blueMain);
-    height: 120vh;
+    min-height: 120vh;
     display: flex;
     justify-content: center;
 }
@@ -69,6 +69,7 @@
     width: 95%;
     position: relative;
     padding-top: 112px;
+    padding-bottom: 40px;
 }
 
 #renTitle {
@@ -93,7 +94,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px 40px;
+    grid-gap: 80px 40px;
     margin-top: 60px;
 }
 
@@ -123,4 +124,29 @@
     margin-top: 10px;
     font-size: 15px;
     line-height: 26px;
+}
+
+@media only screen and (max-width: 900px) {
+    #renovationIntroTitle {
+        font-size: 30px;
+    }
+
+    #renGrid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0px 40px;
+        margin-top: 60px;
+    }
+
+    .renGridItem {
+        text-align: center;
+        /* margin-bottom: 40px; */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .renGridItem {
+        margin-bottom: 40px;
+    }
 }
