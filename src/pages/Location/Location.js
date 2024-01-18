@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import MapComponent from "../../components/MapComponent";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import CallBtn from "../../components/CallBtn";
 import "./locationStyle.css";
 
 export default function Location(props) {
@@ -65,7 +66,8 @@ export default function Location(props) {
     return (
         <div>
             <Header />
-            <div id="locationHero">
+            <CallBtn />
+            {/* <div id="locationHero">
                 <img alt={locationData?.name + " pool"} src={locationData?.image} id="locationHeroImg"></img>
                 <div id="buildsHeroFlex">
                     <div id="buildsHeroLeft">
@@ -79,8 +81,10 @@ export default function Location(props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div id="locationArea">
+            <img alt={locationData?.name + " pool"} src={locationData?.image} id="locationHeroImg"></img>
+                <div id="locationBlur"></div>
                 <div id="locationAreaInner">
                     <div id="LocationLeft">
                         <div id="locationTitle">
@@ -93,7 +97,7 @@ export default function Location(props) {
                             </svg>
                             <div className="locationItemText">
                                 <div className="locationItemTitle">
-                                    Pool Maintenance
+                                    New Pool Construction
                                 </div>
                                 <div className="locationItemDescription">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -110,7 +114,7 @@ export default function Location(props) {
                             </svg>
                             <div className="locationItemText">
                                 <div className="locationItemTitle">
-                                    Pool Maintenance
+                                    Pool Renovation
                                 </div>
                                 <div className="locationItemDescription">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -163,7 +167,7 @@ export default function Location(props) {
                     </div>
                 </div>
             </div>
-            <div id="locationFlagOuter">
+            {/* <div id="locationFlagOuter">
                 <div id="locationFlag">
                     <svg id="flagIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
@@ -180,7 +184,7 @@ export default function Location(props) {
                         BOOK NOW
                     </div>
                 </div>
-            </div>
+            </div> */}
             <Footer />
         </div>
     );
