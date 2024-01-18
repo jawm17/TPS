@@ -70,10 +70,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 10;
-    /* background-color: transparent; */
-    background-color: var(--blueMain);
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    /* background-color: var(--blueMain);
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.151); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.698), rgba(0, 0, 0, 0));
+    /* background-color: var(--blueMain); */
 }
 #headerInner {
     max-width: var(--maxWidthMain);
