@@ -1,22 +1,22 @@
 import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import {Waves1,Waves2} from "../../components/WavesComp";
+import { Waves1, Waves2, Waves3, Waves4 } from "../../components/WavesComp";
 import "./aboutStyle.css";
 export default function About() {
   return (
     <>
       <Header page={"about"} />
-
-      {/* About Content */}
       <div id="aboutContent">
         {/* hero */}
         <div id="aboutHero">
-          <h2>About Us</h2>
-          <p>
-            Redefining luxury, one pool at a time! Call now at (512)200-4244
-          </p>
-          {/* call btn here */}
+          <div id="aboutinnerHero">
+            <h2>About Us</h2>
+            <p>
+              Redefining luxury, one pool at a time! Call now at (512)200-4244
+            </p>
+            {/* call btn here */}
+          </div>
         </div>
         {/* Why we created Texas Pool Services? */}
         <div id="whyConatiner">
@@ -36,7 +36,7 @@ export default function About() {
           </div>
 
           {/* sub */}
-          <h4>Why we created Texas Pool Services?</h4>
+          <h4>THE LEGACY OF EXCELLENCE</h4>
           {/* title */}
           <h3>Why we created Texas Pool Services?</h3>
           {/* store */}
@@ -54,11 +54,12 @@ export default function About() {
         </div>
         {/* Our Service Areas */}
         <div id="ourAboutServiceConatiner">
-                  {/* Wave SVG */}
-          <Waves1 fill="#24337A"/>
+          {/* Wave SVG */}
+          {/* <Waves1 fill="#24337A"/> */}
+          <Waves2 fill="#24337A" />
           <h3>Our Service Areas</h3>
           {/* 1 */}
-          <div>
+          <div className="serviceCards">
             <h4>New Pool Construction</h4>
             <p>
               Austin , Georgetown, Round Rock, Cedar Park, Leander,
@@ -68,7 +69,7 @@ export default function About() {
             </p>
           </div>
           {/* 2 */}
-          <div>
+          <div className="serviceCards">
             <h4>Swimming Pool Renovations</h4>
             <p>
               Austin , Georgetown, Round Rock, Cedar Park, Leander,
@@ -78,7 +79,7 @@ export default function About() {
             </p>
           </div>
           {/* 3 */}
-          <div>
+          <div className="serviceCards">
             <h4>Maintenance Service Areas</h4>
             <p>
               Austin , Georgetown, Round Rock, Cedar Park, Leander,
@@ -86,7 +87,7 @@ export default function About() {
             </p>
           </div>
           {/* 4 */}
-          <div>
+          <div className="serviceCards">
             <h4>Repairs</h4>
             <p>
               Austin , Georgetown, Round Rock, Cedar Park, Leander,
@@ -97,7 +98,7 @@ export default function About() {
           </div>
         </div>
         {/* National Plaster Council */}
-        <div>
+        <div id="nationPlasterConatiner">
           <h3>National Plaster Council</h3>
           <p>
             The NPC professionals have spent years of their lives studying and

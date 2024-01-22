@@ -1,21 +1,45 @@
-
-
-#aboutHero{
-    margin-top: -5vh;
-    padding-top: calc(100px + 5vh);
-    height: 50vh;
-    width: 100vw;
-    background-color: white;
-    background: url(https://www.longhornpools.com/wp-content/uploads/2023/06/pool-service-company-austin.jpg);
-}
 #aboutContent{
     position: relative;
     margin: auto;
+
 }
+#aboutHero{
+    height: 700px;
+    background: url(https://www.longhornpools.com/wp-content/uploads/2023/06/pool-service-company-austin.jpg);
+}
+#aboutinnerHero{
+    width: 100%;
+    height: 100%;
+    padding-top: 22%;
+    background-color: rgba(0, 0, 0, 0.421);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+#aboutHero h2{
+    font-size: 60px;
+    font-weight: 500;
+    padding-bottom: 25px;
+
+}
+#aboutHero p{
+    font-size: 23px;
+    font-weight: 400;
+}
+
 /* why  ================ */
 #whyConatiner{
     position: relative;
-    height: 50vh;
+    min-height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
 }
 #whyConatiner #waveSVGheader{
     width: 100%;
@@ -38,12 +62,44 @@
 #whyConatiner h4, #whyConatiner h3,#whyConatiner p{
     position: relative;
     z-index: 2;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
 }
+#whyConatiner h3{
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: var(--blueMain);
+
+}
+#whyConatiner h4{
+    padding-top: 50PX;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 25px;
+    color: rgb(44, 43, 43);
+
+}
+#whyConatiner p{
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(44, 43, 43);
+    max-width: 70%;
+    min-width: 40%;
+    margin: auto;
+    margin-top: 0;
+}
+
 /* Our Service  ================ */
 #ourAboutServiceConatiner{
     position: relative;
-    height: 50vh;
+    min-height: 50vh;
     background-color: var(--blueMain);
+    display:grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(200px, 1fr));
 }
 #ourAboutServiceConatiner #waveSVGheader{
     background-color: var(--blueMain);
@@ -51,5 +107,60 @@
 #ourAboutServiceConatiner h4, #ourAboutServiceConatiner h3,#ourAboutServiceConatiner p{
     position: relative;
     z-index: 2;
+    text-align: center;
+}
+.serviceCards {
+    padding-top: 100px;
+
+}
+#ourAboutServiceConatiner h3{
     color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+}
+#ourAboutServiceConatiner h4{
+    padding-top: 50PX;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 25px;
+
+}
+#ourAboutServiceConatiner p{
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 400;
+
+
+}
+/* National Plaster Council */
+#nationPlasterConatiner{
+    position: relative;
+    min-height: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+}
+#nationPlasterConatiner h3{
+    color: white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+}
+#nationPlasterConatiner h4{
+    padding-top: 50PX;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 25px;
+
+}
+#nationPlasterConatiner p{
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 400;
+
+
 }
