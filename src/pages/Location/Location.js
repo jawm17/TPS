@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import MapComponent from "../../components/MapComponent";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import CallBtn from "../../components/CallBtn";
 import "./locationStyle.css";
 
 export default function Location(props) {
@@ -65,23 +66,31 @@ export default function Location(props) {
     return (
         <div>
             <Header />
-            <div id="locationHero">
-                <img alt={locationData?.name + " pool"} src={locationData?.image} id="locationHeroImg"></img>
-                <div id="buildsHeroFlex">
-                    <div id="buildsHeroLeft">
-                        <div id="buildsHeroLeftInner">
-                            <div id="buildsHeroTitle">
-                                {locationData?.name}
-                            </div>
-                            <div id="buildsHeroSub">
-                                Swimming Pool Builders in {locationData?.name}
+            <CallBtn />
+
+            <div id="locationHeroOuter">
+                <div id="locationHero">
+                    <img alt={locationData?.name + " pool"} src={locationData?.image} id="locationHeroImg"></img>
+                    <div id="buildsHeroFlex">
+                        <div id="buildsHeroLeft">
+                            <div id="buildsHeroLeftInner">
+                                <div id="buildsHeroTitle">
+                                    {locationData?.name}
+                                </div>
+                                <div id="buildsHeroSub">
+                                    Swimming Pool Builders in {locationData?.name}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <div id="locationArea">
+
                 <div id="locationAreaInner">
+
                     <div id="LocationLeft">
                         <div id="locationTitle">
                             {locationData?.name} services
@@ -93,7 +102,7 @@ export default function Location(props) {
                             </svg>
                             <div className="locationItemText">
                                 <div className="locationItemTitle">
-                                    Pool Maintenance
+                                    New Pool Construction
                                 </div>
                                 <div className="locationItemDescription">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -110,7 +119,7 @@ export default function Location(props) {
                             </svg>
                             <div className="locationItemText">
                                 <div className="locationItemTitle">
-                                    Pool Maintenance
+                                    Pool Renovation
                                 </div>
                                 <div className="locationItemDescription">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

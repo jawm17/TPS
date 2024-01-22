@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import sidebar1 from "../../assets/sidebar1.jpeg";
 import sidebar2 from "../../assets/sidebar2.jpeg";
 import sidebar3 from "../../assets/sidebar3.jpeg";
+import CallBtn from "../../components/CallBtn";
 import "./servicesStyle.css";
 
 export default function Services() {
@@ -11,6 +12,7 @@ export default function Services() {
     return (
         <div>
             <Header page={"services"} />
+            <CallBtn />
             <div id="servicesHero">
                 <img id="serviceHeroImg" src="https://media.angi.com/s3fs-public/man-inspecting-swimming-pool.jpeg" alt="pool service"></img>
                 <div id="buildsHeroFlex">

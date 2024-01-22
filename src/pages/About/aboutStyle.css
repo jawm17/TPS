@@ -36,29 +36,12 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding-bottom: 200px;
+    padding-bottom: 70px;
     /* justify-content: center; */
     /* align-items: center; */
     /* text-align: center; */
 }
-#whyConatiner #waveSVGheader{
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    transform: scaleX(-1);
-    background-color: white;
-    /* background-color: white; */
-    transform: scaley(-1) ;
-}
-#whyConatiner #waveSVGheader svg{
-    position: absolute;
-    bottom: -90px;
-    height: 90px;
-    z-index: 1;
 
-}
 #whyConatiner h4, #whyConatiner h3,#whyConatiner p{
     position: relative;
     z-index: 2;
@@ -86,7 +69,7 @@
     font-size: 18px;
     font-weight: 400;
     color: rgb(44, 43, 43);
-    max-width: 70%;
+    max-width: 60%;
     min-width: 40%;
     margin: auto;
     margin-top: 0;
@@ -95,23 +78,14 @@
 /* Our Service  ================ */
 #ourAboutServiceConatiner{
     position: relative;
-    min-height: 50vh;
-    background-color: var(--blueMain);
-    display:grid;
-    grid-template-columns: 
-    repeat(auto-fit, minmax(200px, 1fr));
-}
-#ourAboutServiceConatiner #waveSVGheader{
-    background-color: var(--blueMain);
+    min-height: 55vh;
+    background-color: var(--blueMain);padding-top: 70px;
+
 }
 #ourAboutServiceConatiner h4, #ourAboutServiceConatiner h3,#ourAboutServiceConatiner p{
     position: relative;
     z-index: 2;
     text-align: center;
-}
-.serviceCards {
-    padding-top: 100px;
-
 }
 #ourAboutServiceConatiner h3{
     color: white;
@@ -132,22 +106,35 @@
     font-size: 18px;
     font-weight: 400;
 
-
 }
+
 /* National Plaster Council */
 #nationPlasterConatiner{
     position: relative;
-    min-height: 400px;
+    min-height: 500px;
+    padding-top: 50px;
     background-color: white;
     display: flex;
-    flex-direction: column;
-    padding-bottom: 200px;
+    gap: 50px;
+    justify-content: center;
 }
+#nationalWords{
+    width: 45%;
+}
+#nationalImg{
+    width: 25%;
+    background: url(https://codypools.com/wp-content/uploads/usmapbase2023.png) no-repeat;
+    background-size: 100%;
+
+}
+
 #nationPlasterConatiner h3{
-    color: white;
-    position: absolute;
+    color: var(--blueMain);
     text-align: center;
-    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 28px;
+    font-weight: 500;
 
 }
 #nationPlasterConatiner h4{
@@ -161,6 +148,244 @@
     line-height: 1.5;
     font-size: 18px;
     font-weight: 400;
+    text-align: center;
 
 
 }
+#nationPlasterConatiner a{
+    text-decoration: none;
+    color: var(--blueMain);
+}
+#nationBtn{
+    width: 150px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: var(--blueMain);
+    transition: all .1s ease-in-out;
+
+}
+#nationBtn:hover{
+    color: var(--blueMain);
+    background-color: white;
+    border: solid var(--blueMain) 2px;
+    width: 155px;
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+#nationalReviewscontainer{
+    position: relative;
+    background-color: var(--blueMain);
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+#nationalReviewscontainer #reviewTitle{
+    color: white;
+}
+#nationalReviewscontainer #reviewSub{
+    color: rgb(215, 214, 214);
+}
+#nationalReviewscontainer .reviewTile{
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#nationalReviewscontainer .reviewQuoteImg{
+    padding-bottom: 15px;
+}
+
+/* SECTION 1 ======================================================= */
+#section1 {
+    position: relative;
+    width: 100vw;
+    padding-bottom: var(--large-spacing);
+    /* height: 100vh; */
+    scroll-margin: 50px;
+    z-index:6;
+  }
+  
+  #section1Flex {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  #section1Area {
+    width: 95%;
+  }
+  
+  #section1TopText {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  #section1HeaderText {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: var(--title-fontWeight);
+    font-size: var(--fs-title);
+    color: var(--blue);
+    font-family: var(--fontMain);
+    text-transform: capitalize;
+    line-height: 1.2;
+  }
+  
+  #section1SubText {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1.8;
+    font-size: var(--fs-ptag);
+    font-family: "SourceSansPro";
+    color: var(--blue);
+  }
+  
+  #section1ImgFlex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  
+  }
+  
+  #section1ImgArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 95%;
+    /* position: absolute;
+      left: 260px; */
+  }
+  
+  .section1Highlight {
+      /* box-shadow: -5px 5px 0px .5px var(--red); */
+      /* border: var(--red) solid 5px; */
+    overflow: hidden;
+    height: 250px;
+    width: 23%;
+    border-radius: 0;
+    object-fit: cover;
+    cursor: pointer;
+    background-size: cover;
+    position: relative;
+    transition: box-shadow .2s ease-in-out;
+    border-radius: 5px;
+  }
+  .section1Highlight:hover {
+      box-shadow: 0px 0px 0px 0px transparent;
+  }
+  .section1Highlight:nth-child(1) {
+  
+    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/New%20con%20rendering.jpg/:/cr=t:16.98%25,l:0%25,w:100%25,h:66.3%25/rs=w:365,h:183,cg:true");
+  }
+  
+  .section1Highlight:nth-child(2) {
+    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/IMG_0977.jpg/:/cr=t:16.67%25,l:0%25,w:100%25,h:66.67%25/rs=w:365,h:183,cg:true");
+  }
+  
+  .section1Highlight:nth-child(3) {
+    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Burke%20Pro.jpg/:/cr=t:16.67%25,l:0%25,w:100%25,h:66.67%25/rs=w:365,h:183,cg:true");
+  }
+  .section1Highlight:nth-child(4) {
+    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Renovation%201.jpg/:/cr=t:33.7%25,l:0%25,w:100%25,h:50%25/rs=w:365,h:183,cg:true");
+  }
+  
+  .highlightFade {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.514) 0%,
+      #14171a00 60%,
+      #14171ada 100%
+    );
+  }
+  
+  .highlightTitle {
+    text-transform: capitalize;
+    color: white;
+    padding: 25px 10px 10px 25px ;
+    font-size: 18px;
+  }
+  
+  .learnMoreHighlight {
+    position: absolute;
+    top: calc(100% - 45px);
+    width: 100%;
+    /* background-color: red; */
+    height: 200px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .highlightInfo {
+    line-height: 1.5;
+    color: white;
+    padding-left: 30px;
+    padding-right: 15px;
+    font-family: "SourceSansPro";
+    margin-top: 45px;
+    font-size: 14px;
+  }
+  
+  .learnMoreBtn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 15px;
+    bottom: 20px;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 500;
+    font-family: var(--fontMain);
+    font-size: var(--fs-small);
+    text-transform: capitalize;
+  }
+  
+  .section1Highlight:hover .learnMoreBtn {
+    color: white;
+  }
+  
+  #learnMoreIcon {
+    width: 35px;
+    margin-left: 10px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .highlightBlur {
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-out;
+    position: relative;
+  }
+  
+  #highlightOpen .highlightBlur {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  #highlightOpen .learnMoreHighlight {
+    top: 10px;
+  }
+  
+  #highlightOpen #learnMoreIcon {
+    /* transform: rot(180deg); */
+    rotate: 180deg;
+  }
+  .footerAbout{
+    position: relative;
+    background-color: white !important;
+    color: var(--blueMain) !important;
+  }
+  .footerAbout #footerBtns{
+    color: var(--blueMain) !important;
+  }
+  .footerAbout #footerText1{
+    color: var(--blueMain) !important;
+  }
+  .footerAbout #footerText2{
+    color: var(--blueMain) !important;
+  }

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer"
+import CallBtn from "../../components/CallBtn";
 import "./buildsStyle.css";
 
 export default function Builds() {
@@ -31,6 +32,7 @@ export default function Builds() {
     return (
         <div>
             <Header page={"builds"} />
+            <CallBtn />
             <div id="buildsSectionHero">
 
                 <div id="slidesArea">
