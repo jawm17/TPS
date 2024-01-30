@@ -1,3 +1,6 @@
+#bottomWave {
+    margin-top: 15px;
+}
 
 #servicesHero {
     width: 100%;
@@ -70,9 +73,14 @@
     padding: 10px;
     background-color: var(--blueMain);
     color: white;
-    width: 120px;
+    width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 45px;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 #servicesSideArea {

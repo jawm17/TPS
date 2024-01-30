@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -6,6 +7,7 @@ import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
 const MapComponent = (props) => {
+  const navigate = useNavigate();
   const [center, setCenter] = useState([30.2672, -97.7431]);
 
   useEffect(() => {
@@ -29,14 +31,14 @@ const MapComponent = (props) => {
   const Location2 = [27.79685292375124, -97.08761306786688] // Palmilla Beach Golf Club // 3 min drive
   const Location3 = [27.80780654696457, -97.0863515205597] // The Phoenix Restaurant & Bar // 4 min drive
   const Location4 = [27.67468665345304, -97.17639163670216] // Mustang Island State Park // 12 min drive
-
+  const location5 = [30.5788, -97.8531];
 
   return (
     <div id="blocker" >
       <div id="blocker2">
 
       </div>
-      <MapContainer zoomControl={false} scrollWheelZoom={false} key={center.toString()} center={center} zoom={10} style={{ width: '100%', height: '100%', borderRadius: 8, position: "relative" }} >
+      <MapContainer zoomControl={false} scrollWheelZoom={false} key={center.toString()} center={center} zoom={8} style={{ width: '100%', height: '100%', borderRadius: 8, position: "relative" }} >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {/* Add other map components, markers, etc. */}
         <Marker position={markerPosition} icon={markerIcon}>
@@ -49,6 +51,16 @@ const MapComponent = (props) => {
         </Marker>
         <Marker position={Location4} icon={markerIcon}>
         </Marker>
+        <Marker position={location5} icon={markerIcon} onClick={() => alert("otay")}>
+        <Popup>
+            <div onClick={() => navigate("/location/6")}>
+              <p>Leander</p>
+              {/* Add additional information or components as needed */}
+            </div>
+          </Popup>
+        </Marker>
+ 
+
       </MapContainer>
     </div>
   );

@@ -16,8 +16,9 @@
     transform: translate(-50%, -50%);
     position: fixed;
     width: 440px;
-    height: 240px;
-    max-width: 380px;
+    height: 280px;
+    max-width: 90vw;
+    width: 380px;
     /* height: 360px; */
     border-radius: 12px;
     background-color: white;
@@ -49,7 +50,7 @@
 #line1 {
     text-align: center;
     color: var(--blueMain);
-    margin-top: 30px;
+    margin-top: 60px;
     font-size: 25px;
     font-weight: bold;
 }
@@ -66,7 +67,7 @@
     margin-left: 20px;
     background-color: var(--blueMain);
     border-radius: 4px;
-    height: 35px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -73,6 +73,11 @@
     font-size: 18px;
 }
 
+#buildsIntroOuter {
+    width: 100%;
+    position: relative;
+}
+
 #buildsIntro {
     padding-top: 80px;
     padding-bottom: 80px;
