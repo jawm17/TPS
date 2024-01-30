@@ -4,13 +4,15 @@
 
 }
 #aboutHero{
-    height: 700px;
-    background: url(https://www.longhornpools.com/wp-content/uploads/2023/06/pool-service-company-austin.jpg);
+    height: 75vh;
+    background: url(https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/wickstrandfront2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #aboutinnerHero{
     width: 100%;
     height: 100%;
-    padding-top: 22%;
+    padding-top: 30vh;
     background-color: rgba(0, 0, 0, 0.421);
 
     display: flex;
@@ -21,93 +23,181 @@
 #aboutHero h2{
     font-size: 60px;
     font-weight: 500;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 
 }
 #aboutHero p{
-    font-size: 23px;
+    font-size: 28px;
     font-weight: 400;
-}
+    text-align: center;
+    line-height:45px;
 
+
+}
+@media only screen and (max-width: 800px) {
+    #aboutHero{
+        height: 65vh;
+    }
+    #aboutinnerHero{
+        padding-top: 30vh;    
+    }
+    #aboutHero h2{
+        font-size: 45px;
+        padding-bottom: 1opx;
+    
+    }
+    #aboutHero p{
+        font-size: 20px;
+        padding: 0 15px;
+        line-height: 30px;
+    }
+}
 /* why  ================ */
 #whyConatiner{
     position: relative;
-    min-height: 400px;
     background-color: white;
-    display: flex;
-    flex-direction: column;
     padding-bottom: 70px;
-    /* justify-content: center; */
-    /* align-items: center; */
+}
+#whyConatinerInner{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.whyDivs1{
+    margin-top: 50px;
+    width: 30%;
+}
+.whyDivs1 img{
+    width: 100%;
+}
+.whyDivs2{
+    width: calc(70% - 100px);
+    padding-top: 100px;
+    padding-left: 100px;
     /* text-align: center; */
 }
-
-#whyConatiner h4, #whyConatiner h3,#whyConatiner p{
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-#whyConatiner h3{
-    font-size: 40px;
-    font-weight: 700;
+.whyDivs2 h3{
+    font-weight: 500;
+    font-size: 2.2rem;
     padding-bottom: 20px;
     color: var(--blueMain);
-
 }
-#whyConatiner h4{
-    padding-top: 50PX;
-    font-size: 20px;
-    font-weight: 500;
-    padding-bottom: 25px;
-    color: rgb(44, 43, 43);
-
+.whyDivs2 p{
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 0px 0px;
 }
-#whyConatiner p{
-    line-height: 1.5;
-    font-size: 18px;
-    font-weight: 400;
-    color: rgb(44, 43, 43);
-    max-width: 60%;
-    min-width: 40%;
-    margin: auto;
-    margin-top: 0;
-}
+@media only screen and (max-width: 800px) {
+    #whyConatiner{
+        padding-bottom: 50px;
+    }
+    #whyConatinerInner{
+        gap: 10px;
+    }
+    .whyDivs1{
+        margin: auto;
+        margin-top: 50px;
+        width: 40%;
+    }
+    .whyDivs2{
+        margin: auto;
+        width: 90%;
+        padding-top: 15px;
+        padding-left: 0;
+        text-align: center;
 
-/* Our Service  ================ */
+    }
+    .whyDivs2 h3{
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    }
+    .whyDivs2 p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0px 0;
+    }
+}
+/* ================================== */
+/* Our Service  */
 #ourAboutServiceConatiner{
     position: relative;
-    min-height: 55vh;
-    background-color: var(--blueMain);padding-top: 70px;
+    padding-bottom: 50px;
+    /* min-height: 55vh; */
 
 }
-#ourAboutServiceConatiner h4, #ourAboutServiceConatiner h3,#ourAboutServiceConatiner p{
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-#ourAboutServiceConatiner h3{
-    color: white;
+#ourAboutServiceConatiner h2{
+    font-size: 36px;
+    font-weight: 500;
     position: absolute;
-    text-align: center;
-    width: 100%;
+    top: 50px;
+    color: white;
 
 }
-#ourAboutServiceConatiner h4{
-    padding-top: 50PX;
+/* cards */
+#serviceCardContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 100px;
+    padding-top: 135px;
+    background-color: var(--blueMain);
+    border-radius: 8px;
+}
+.serviceCard{
+    text-align: center;
+    color: white;
+}
+.serviceCard h4{
+    padding-bottom: 20px;
     font-size: 20px;
     font-weight: 500;
-    padding-bottom: 25px;
-
 }
-#ourAboutServiceConatiner p{
-    line-height: 1.5;
-    font-size: 18px;
-    font-weight: 400;
-
+.serviceCard p{
+    font-size: 16px;
+    padding: 0 15px;
+    line-height: 1.3;
+    font-weight: 300;
 }
-
+@media only screen and (max-width: 800px) {
+    #ourAboutServiceConatiner{
+        min-height: 55vh;
+        padding-top: 70px;
+        margin-bottom: 50px;
+    
+    }
+    #ourAboutServiceConatiner h2{
+        font-size: 1.8rem;
+        top: 50px;
+        color: white;
+    
+    }
+    /* cards */
+    #serviceCardContainer{
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: auto 35px;
+        padding: 120px 25px 75px 25px;
+    }
+    .serviceCard h4{
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .serviceCard p{
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.3;
+    }
+}
+/* ===================================== */
 /* National Plaster Council */
 #nationPlasterConatiner{
     position: relative;
@@ -132,7 +222,7 @@
     color: var(--blueMain);
     text-align: center;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     font-size: 28px;
     font-weight: 500;
 
@@ -147,7 +237,7 @@
 #nationPlasterConatiner p{
     line-height: 1.5;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
 
 
@@ -198,183 +288,75 @@
 #nationalReviewscontainer .reviewQuoteImg{
     padding-bottom: 15px;
 }
-
-/* SECTION 1 ======================================================= */
-#section1 {
-    position: relative;
-    width: 100vw;
-    padding-bottom: var(--large-spacing);
-    /* height: 100vh; */
-    scroll-margin: 50px;
-    z-index:6;
-  }
-  
-  #section1Flex {
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  #section1Area {
-    width: 95%;
-  }
-  
-  #section1TopText {
-    color: white;
-    font-size: 28px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  #section1HeaderText {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: var(--title-fontWeight);
-    font-size: var(--fs-title);
-    color: var(--blue);
-    font-family: var(--fontMain);
-    text-transform: capitalize;
-    line-height: 1.2;
-  }
-  
-  #section1SubText {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 1.8;
-    font-size: var(--fs-ptag);
-    font-family: "SourceSansPro";
-    color: var(--blue);
-  }
-  
-  #section1ImgFlex {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 48px;
-  
-  }
-  
-  #section1ImgArea {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    width: 95%;
-    /* position: absolute;
-      left: 260px; */
-  }
-  
-  .section1Highlight {
-      /* box-shadow: -5px 5px 0px .5px var(--red); */
-      /* border: var(--red) solid 5px; */
-    overflow: hidden;
-    height: 250px;
-    width: 23%;
-    border-radius: 0;
-    object-fit: cover;
-    cursor: pointer;
-    background-size: cover;
-    position: relative;
-    transition: box-shadow .2s ease-in-out;
-    border-radius: 5px;
-  }
-  .section1Highlight:hover {
-      box-shadow: 0px 0px 0px 0px transparent;
-  }
-  .section1Highlight:nth-child(1) {
-  
-    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/New%20con%20rendering.jpg/:/cr=t:16.98%25,l:0%25,w:100%25,h:66.3%25/rs=w:365,h:183,cg:true");
-  }
-  
-  .section1Highlight:nth-child(2) {
-    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/IMG_0977.jpg/:/cr=t:16.67%25,l:0%25,w:100%25,h:66.67%25/rs=w:365,h:183,cg:true");
-  }
-  
-  .section1Highlight:nth-child(3) {
-    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Burke%20Pro.jpg/:/cr=t:16.67%25,l:0%25,w:100%25,h:66.67%25/rs=w:365,h:183,cg:true");
-  }
-  .section1Highlight:nth-child(4) {
-    background-image: url("https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Renovation%201.jpg/:/cr=t:33.7%25,l:0%25,w:100%25,h:50%25/rs=w:365,h:183,cg:true");
-  }
-  
-  .highlightFade {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.514) 0%,
-      #14171a00 60%,
-      #14171ada 100%
-    );
-  }
-  
-  .highlightTitle {
-    text-transform: capitalize;
-    color: white;
-    padding: 25px 10px 10px 25px ;
-    font-size: 18px;
-  }
-  
-  .learnMoreHighlight {
-    position: absolute;
-    top: calc(100% - 45px);
-    width: 100%;
-    /* background-color: red; */
-    height: 200px;
-    transition: all 0.2s ease-out;
-  }
-  
-  .highlightInfo {
-    line-height: 1.5;
-    color: white;
-    padding-left: 30px;
-    padding-right: 15px;
-    font-family: "SourceSansPro";
-    margin-top: 45px;
-    font-size: 14px;
-  }
-  
-  .learnMoreBtn {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    right: 15px;
-    bottom: 20px;
-    color: rgba(255, 255, 255, 0.82);
-    font-weight: 500;
-    font-family: var(--fontMain);
-    font-size: var(--fs-small);
-    text-transform: capitalize;
-  }
-  
-  .section1Highlight:hover .learnMoreBtn {
-    color: white;
-  }
-  
-  #learnMoreIcon {
-    width: 35px;
-    margin-left: 10px;
-    transition: all 0.2s ease-out;
-  }
-  
-  .highlightBlur {
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s ease-out;
-    position: relative;
-  }
-  
-  #highlightOpen .highlightBlur {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  #highlightOpen .learnMoreHighlight {
-    top: 10px;
-  }
-  
-  #highlightOpen #learnMoreIcon {
-    /* transform: rot(180deg); */
-    rotate: 180deg;
-  }
+@media only screen and (max-width: 800px) {
+    #nationPlasterConatiner{
+        padding-top: 0px;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 150px;
+    }
+    #nationalWords{
+        width: 100%;
+        height: 300px;
+    }
+    #nationalImg{
+        width: 100%;
+        height: 300px;
+    
+    }
+    
+    #nationPlasterConatiner h3{
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+    
+    }
+    #nationPlasterConatiner h4{
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    
+    }
+    #nationPlasterConatiner p{
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.3;
+        font-weight: 300;
+    
+    }
+    #nationBtn{
+        width: 120px;
+        height: 50px;
+    
+    }
+    #nationBtn:hover{
+        color: var(--blueMain);
+        background-color: white;
+        border: solid var(--blueMain) 2px;
+        width: 125px;
+        transition: all .1s ease-in-out;
+        cursor: pointer;
+    }
+    #nationalReviewscontainer{
+        position: relative;
+        background-color: var(--blueMain);
+        padding-top: 50px;
+        padding-bottom: 200px;
+    }
+    #nationalReviewscontainer #reviewTitle{
+        color: white;
+    }
+    #nationalReviewscontainer #reviewSub{
+        color: rgb(215, 214, 214);
+    }
+    #nationalReviewscontainer .reviewTile{
+        background-color: white;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    #nationalReviewscontainer .reviewQuoteImg{
+        padding-bottom: 15px;
+    }
+}
+/* footer */
   .footerAbout{
     position: relative;
     background-color: white !important;
