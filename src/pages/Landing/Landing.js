@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import quotation from "../../assets/quotation.png";
 import CallBtn from "../../components/CallBtn";
 import SubmitFormModal from "../../components/SubmitFormModal";
+import laurel from "../../assets/laurel.png"
 // import twilio from 'twilio';
 import "./landingStyle.css";
 
@@ -28,25 +29,25 @@ export default function Landing() {
 
     const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
-  
+
     // const sendSMS = async () => {
     //   const accountSid = 'ACb9ad5b792954db3ef9e5a8b2246eabfa';
     //   const authToken = '';
     //   const client = twilio(accountSid, authToken);
-  
+
     //   try {
     //     const result = await client.messages.create({
     //       body: `New Sale for $${40}`,
     //       from: '+18334801392',
     //       to: "15127848431",
     //     });
-  
+
     //     console.log('Message sent successfully. SID:', result.sid);
     //   } catch (error) {
     //     console.error('Error sending message:', error.message);
     //   }
     // };
-  
+
 
     useEffect(() => {
         scrollBox();
@@ -122,18 +123,62 @@ export default function Landing() {
     return (
         <div>
             <Header page={"landing"} />
-            {formModal ? <SubmitFormModal close={() => setFormModal(false)}/> : null}
+            {formModal ? <SubmitFormModal close={() => setFormModal(false)} /> : null}
             <CallBtn />
             <div id="heroSection">
+                <div id="landingHeroBlur">
+
+                </div>
                 <img id="heroImg" alt="big pool" src="https://pools-by-design.com/wp-content/uploads/2021/04/houston-texas-vacation.jpg"></img>
                 <div id="heroTextArea">
                     <div id="heroTextMain">
-                        Get Your Project Done Right
+                        Texas Pool Services
                     </div>
                     <div id="heroTextSub">
                         Highly trained and specialized professionals ready to serve your needs
                     </div>
+                    <div id="laurelAreaOuter">
+                        <div id="laurelAreaInner">
+                            <div className="laurelFlex">
+                                <img className="laurel" id="laurelLeft" src={laurel}></img>
+                                <div className="laurelTextInner">
+                                    <div className="laurelTextTop">
+                                        A+
+                                    </div>
+                                    <div className="laurelTextBottom">
+                                        Rating from the Better Business Bureau
+                                    </div>
+                                </div>
+                                <img className="laurel" id="laurelRight" src={laurel}></img>
+                            </div>
+                            <div className="laurelFlex">
+                                <img className="laurel" id="laurelLeft" src={laurel}></img>
+                                <div className="laurelTextInner">
+                                    <div className="laurelTextTop">
+                                        2,100+
+                                    </div>
+                                    <div className="laurelTextBottom">
+                                        Customer satisfaction awards - since 2012
+                                    </div>
+                                </div>
+                                <img className="laurel" id="laurelRight" src={laurel}></img>
+                            </div>
+                            <div className="laurelFlex">
+                                <img className="laurel" id="laurelLeft" src={laurel}></img>
+                                <div className="laurelTextInner">
+                                    <div className="laurelTextTop">
+                                        #1
+                                    </div>
+                                    <div className="laurelTextBottom">
+                                        Most reffered pool builder - in markets served
+                                    </div>
+                                </div>
+                                <img className="laurel" id="laurelRight" src={laurel}></img>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div id="heroServiceFlex">
                     <div id="heroService">
                         <div id="heroServiceFlag">
@@ -501,7 +546,7 @@ export default function Landing() {
                     <div id="processVideo">
                         {playing ?
                             <video autoPlay id="processVideoMain" width="320" height="240" controls={false}>
-                                <source src={"https://gz6wrqw5qslqlogz.public.blob.vercel-storage.com/poolVid-AY3dJJ25N9LaFxIyCnixVAYaNVprDx.mp4"} type="video/mp4" />
+                                <source src={"https://firebasestorage.googleapis.com/v0/b/weij-c2efd.appspot.com/o/poolVid.mp4?alt=media&token=435af9cd-58c0-43cf-a152-43bb7cec9298"} type="video/mp4" />
                             </video>
                             :
                             <>

@@ -41,6 +41,54 @@
     padding-top: 20px;
 }
 
+#laurelAreaOuter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+#laurelAreaInner {
+    min-width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.laurelFlex {
+    display: flex;
+    align-items: center;
+}
+
+.laurel {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    height: 85px;
+}
+
+#laurelLeft {
+
+}
+
+#laurelRight {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.laurelTextInner {
+    width: 180px;
+    color: white;
+}
+
+.laurelTextTop {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.laurelTextBottom {
+
+}
+
+
 #LocationLeft {
     width: calc(100% - 500px);
 }

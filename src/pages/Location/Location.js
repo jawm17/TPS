@@ -4,11 +4,18 @@ import MapComponent from "../../components/MapComponent";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CallBtn from "../../components/CallBtn";
+import laurel from "../../assets/laurel.png"
 import "./locationStyle.css";
 
 export default function Location(props) {
     const { location } = useParams();
     const [locationData, setLocationData] = useState(null);
+
+    const [name1, setName1] = useState("");
+    const [email1, setEmail1] = useState("");
+    const [phone1, setPhone1] = useState("");
+    const [zip1, setZip1] = useState("");
+    const [submitForm1, setSubmitForm1] = useState(false);
 
     const locations = [
         {
@@ -176,9 +183,11 @@ export default function Location(props) {
                                 <div id="buildsHeroSub">
                                     Swimming Pool Builders in {locationData?.name}
                                 </div>
+                             
                             </div>
                         </div>
                     </div>
+             
                 </div>
             </div>
 

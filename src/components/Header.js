@@ -59,24 +59,7 @@ export default function Header(props) {
                     <img src={logo} id="headerLogo" alt="pool logo" onClick={() => navigateMobileMenu("/")}></img>
 
                     <div id="headerLinks">
-                        {/* <div className="headerLink" id={props.page === "landing" ? "selectedPage" : ""} onClick={() => navigate("/")}>
-
-                            {props.page !== "landing" ?
-                                <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                                </svg>
-                                :
-
-                                <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                    <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
-                                    <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
-                                </svg>
-                            }
-                            <div>
-                                HOME
-                            </div>
-                        </div> */}
-                        <div className="headerLink" id={props.page === "builds" ? "selectedPage" : ""} onClick={buildsMenuOpen ? () => setBuildsMenuOpen(false) : () => setBuildsMenuOpen(true)} onMouseEnter={() => setBuildsMenuOpen(true)}>
+                        <div className="headerLink" id={props.page === "builds" ? "selectedPage" : ""} onClick={buildsMenuOpen ? () => setBuildsMenuOpen(false) : () => setBuildsMenuOpen(true)} >
                             {props.page !== "builds" ?
                                 <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
@@ -137,7 +120,7 @@ export default function Header(props) {
                                 POOL SERVICES
                             </div>
                         </div>
-                        <div className="headerLink" id={props.page === "remodling" ? "selectedPage" : ""} onClick={locationsOpen ? () => setLocationsOpen(false) : () => setLocationsOpen(true)} onMouseEnter={() => setLocationsOpen(true)}>
+                        <div className="headerLink" id={props.page === "remodling" ? "selectedPage" : ""} onClick={locationsOpen ? () => setLocationsOpen(false) : () => setLocationsOpen(true)}>
                             {props.page !== "remodling" ?
                                 <svg id="headerIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
