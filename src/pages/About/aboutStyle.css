@@ -4,13 +4,15 @@
 
 }
 #aboutHero{
-    height: 700px;
-    background: url(https://www.longhornpools.com/wp-content/uploads/2023/06/pool-service-company-austin.jpg);
+    height: 75vh;
+    background: url(https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/wickstrandfront2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #aboutinnerHero{
     width: 100%;
     height: 100%;
-    padding-top: 22%;
+    padding-top: 30vh;
     background-color: rgba(0, 0, 0, 0.421);
 
     display: flex;
@@ -21,14 +23,35 @@
 #aboutHero h2{
     font-size: 60px;
     font-weight: 500;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 
 }
 #aboutHero p{
-    font-size: 23px;
+    font-size: 28px;
     font-weight: 400;
-}
+    text-align: center;
+    line-height:45px;
 
+
+}
+@media only screen and (max-width: 800px) {
+    #aboutHero{
+        height: 65vh;
+    }
+    #aboutinnerHero{
+        padding-top: 30vh;    
+    }
+    #aboutHero h2{
+        font-size: 45px;
+        padding-bottom: 1opx;
+    
+    }
+    #aboutHero p{
+        font-size: 20px;
+        padding: 0 15px;
+        line-height: 30px;
+    }
+}
 /* why  ================ */
 #whyConatiner{
     position: relative;
@@ -36,46 +59,78 @@
     padding-bottom: 70px;
 }
 #whyConatinerInner{
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     display: flex;
-    /* justify-content: center; */
-    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .whyDivs1{
-    margin-top: 100px;
-    width: 35%;
+    margin-top: 50px;
+    width: 30%;
 }
 .whyDivs1 img{
     width: 100%;
 }
 .whyDivs2{
-    width: 65%;
-    padding-top: 120px;
+    width: calc(70% - 100px);
+    padding-top: 100px;
+    padding-left: 100px;
+    /* text-align: center; */
 }
 .whyDivs2 h3{
     font-weight: 500;
-    font-size: 2rem;
-    padding-bottom: 10px;
+    font-size: 2.2rem;
+    padding-bottom: 20px;
+    color: var(--blueMain);
 }
 .whyDivs2 p{
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
-    padding-left: 15px;
+    padding: 0px 0px;
+}
+@media only screen and (max-width: 800px) {
+    #whyConatiner{
+        padding-bottom: 50px;
+    }
+    #whyConatinerInner{
+        gap: 10px;
+    }
+    .whyDivs1{
+        margin: auto;
+        margin-top: 50px;
+        width: 40%;
+    }
+    .whyDivs2{
+        margin: auto;
+        width: 90%;
+        padding-top: 15px;
+        padding-left: 0;
+        text-align: center;
+
+    }
+    .whyDivs2 h3{
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    }
+    .whyDivs2 p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: 0px 0;
+    }
 }
 /* ================================== */
 /* Our Service  */
 #ourAboutServiceConatiner{
     position: relative;
-    min-height: 55vh;
-    /* background-color: var(--blueMain); */
-    padding-top: 70px;
+    padding-bottom: 50px;
+    /* min-height: 55vh; */
 
 }
 #ourAboutServiceConatiner h2{
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 500;
     position: absolute;
     top: 50px;
     color: white;
@@ -93,7 +148,7 @@
     padding-right: 50px;
     padding-left: 50px;
     padding-bottom: 100px;
-    padding-top: 150px;
+    padding-top: 135px;
     background-color: var(--blueMain);
     border-radius: 8px;
 }
@@ -111,6 +166,36 @@
     padding: 0 15px;
     line-height: 1.3;
     font-weight: 300;
+}
+@media only screen and (max-width: 800px) {
+    #ourAboutServiceConatiner{
+        min-height: 55vh;
+        padding-top: 70px;
+        margin-bottom: 50px;
+    
+    }
+    #ourAboutServiceConatiner h2{
+        font-size: 1.8rem;
+        top: 50px;
+        color: white;
+    
+    }
+    /* cards */
+    #serviceCardContainer{
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: auto 35px;
+        padding: 120px 25px 75px 25px;
+    }
+    .serviceCard h4{
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .serviceCard p{
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.3;
+    }
 }
 /* ===================================== */
 /* National Plaster Council */
@@ -137,7 +222,7 @@
     color: var(--blueMain);
     text-align: center;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     font-size: 28px;
     font-weight: 500;
 
@@ -152,7 +237,7 @@
 #nationPlasterConatiner p{
     line-height: 1.5;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
 
 
@@ -203,6 +288,75 @@
 #nationalReviewscontainer .reviewQuoteImg{
     padding-bottom: 15px;
 }
+@media only screen and (max-width: 800px) {
+    #nationPlasterConatiner{
+        padding-top: 0px;
+        flex-direction: column;
+        gap: 50px;
+        padding-bottom: 150px;
+    }
+    #nationalWords{
+        width: 100%;
+        height: 300px;
+    }
+    #nationalImg{
+        width: 100%;
+        height: 300px;
+    
+    }
+    
+    #nationPlasterConatiner h3{
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+    
+    }
+    #nationPlasterConatiner h4{
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    
+    }
+    #nationPlasterConatiner p{
+        font-size: 16px;
+        padding: 0 15px;
+        line-height: 1.3;
+        font-weight: 300;
+    
+    }
+    #nationBtn{
+        width: 120px;
+        height: 50px;
+    
+    }
+    #nationBtn:hover{
+        color: var(--blueMain);
+        background-color: white;
+        border: solid var(--blueMain) 2px;
+        width: 125px;
+        transition: all .1s ease-in-out;
+        cursor: pointer;
+    }
+    #nationalReviewscontainer{
+        position: relative;
+        background-color: var(--blueMain);
+        padding-top: 50px;
+        padding-bottom: 200px;
+    }
+    #nationalReviewscontainer #reviewTitle{
+        color: white;
+    }
+    #nationalReviewscontainer #reviewSub{
+        color: rgb(215, 214, 214);
+    }
+    #nationalReviewscontainer .reviewTile{
+        background-color: white;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    #nationalReviewscontainer .reviewQuoteImg{
+        padding-bottom: 15px;
+    }
+}
+/* footer */
   .footerAbout{
     position: relative;
     background-color: white !important;

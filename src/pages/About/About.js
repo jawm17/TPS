@@ -40,7 +40,7 @@ export default function About() {
           <div id="aboutinnerHero">
             <h2>About Us</h2>
             <p>
-              Redefining luxury, one pool at a time! Call now at (512)200-4244
+              Redefining luxury, one pool at a time! Call now!<br/> (512) 200 - 4244
             </p>
             {/* call btn here */}
           </div>
@@ -97,7 +97,6 @@ export default function About() {
 
         {/* National Plaster Council */}
         <div id="nationPlasterConatiner">
-          <Wave fill="white" />
           <div id="nationalWords">
             <h3>National Plaster Council</h3>
             <p>
