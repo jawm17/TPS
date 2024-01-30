@@ -21,29 +21,30 @@
     color: white;
 }
 #aboutHero h2{
-    font-size: 60px;
-    font-weight: 500;
-    padding-bottom: 15px;
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 10px;
 
 }
 #aboutHero p{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 400;
     text-align: center;
-    line-height:45px;
+    line-height: 45px;
 
 
 }
 @media only screen and (max-width: 800px) {
     #aboutHero{
-        height: 65vh;
+        height: 600px;
     }
     #aboutinnerHero{
         padding-top: 30vh;    
     }
     #aboutHero h2{
-        font-size: 45px;
+        font-size: 36px;
         padding-bottom: 1opx;
+        margin-top: 20px;
     
     }
     #aboutHero p{
@@ -330,6 +331,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--blueThird);
+    margin-top: -20px;
 }
 
 /* ================================================== */

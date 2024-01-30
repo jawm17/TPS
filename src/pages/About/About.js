@@ -41,15 +41,15 @@ export default function About() {
           <div id="aboutinnerHero">
             <h2>About Us</h2>
             <p>
-              Redefining luxury, one pool at a time! Call now!<br/> (512) 200 - 4244
+              Redefining luxury, one pool at a time! Call now!<br/> 512-820-7434
             </p>
             {/* call btn here */}
           </div>
         </div>
         {/* Why we created Texas Pool Services? */}
         <div id="whyConatiner">
-          <Wave fill="white" />
-          <Wave idName="waveFlip" fill="#ffffff7c" />
+        <Wave fill="#0693e3" />
+            <Wave idName="bottomWave" fill="white" />
           <div id="whyConatinerInner">
           <div className="whyDivs1">
             <img src={Logo}/>

@@ -27,11 +27,18 @@ const MapComponent = (props) => {
   });
 
   const markerPosition = [30.2672, -97.7431]; // Specify the latitude and longitude of the marker position
-  const Location1 = [27.829460881886035, -97.08473664349712]; // Port A Nature Preserve // 8 Min drive
-  const Location2 = [27.79685292375124, -97.08761306786688] // Palmilla Beach Golf Club // 3 min drive
-  const Location3 = [27.80780654696457, -97.0863515205597] // The Phoenix Restaurant & Bar // 4 min drive
-  const Location4 = [27.67468665345304, -97.17639163670216] // Mustang Island State Park // 12 min drive
-  const location5 = [30.5788, -97.8531];
+  const location5 = [30.5788, -97.8531]; // leander
+  const location6 = [30.6333, -97.6772]; // georgetown
+  const location7 = [30.5083, -97.6789]; // Round Rock
+  const location8 = [30.5052, -97.8203]; // Cedar Park
+  const location9 = [30.4394 , -97.6200] // Pflugerville
+  const location10 = [30.9475, -97.5383] // Salado
+  const location11 = [31.1260, -97.9038] // Copperas Cove
+  const location12 = [30.6644, -97.9222] // Liberty Hill
+  const location13 = [30.7583, -98.2283] // Burnet
+  const location14 = [30.5788, -98.2722] // Marble Falls
+  const location15 = [30.1902, -98.0867] // Dripping Springs
+  const location16 = [29.9975, -98.0986] // Wimberley
 
   return (
     <div id="blocker" >
@@ -42,24 +49,109 @@ const MapComponent = (props) => {
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {/* Add other map components, markers, etc. */}
         <Marker position={markerPosition} icon={markerIcon}>
-        </Marker>
-        <Marker position={Location1} icon={markerIcon}>
-        </Marker>
-        {/* <Marker position={Location2} icon={markerIcon}>
-      </Marker> */}
-        <Marker position={Location3} icon={markerIcon}>
-        </Marker>
-        <Marker position={Location4} icon={markerIcon}>
-        </Marker>
-        <Marker position={location5} icon={markerIcon} onClick={() => alert("otay")}>
-        <Popup>
-            <div onClick={() => navigate("/location/6")}>
-              <p>Leander</p>
-              {/* Add additional information or components as needed */}
+          <Popup>
+            <div>
+              <p>Austin</p>
             </div>
           </Popup>
         </Marker>
- 
+
+        <Marker position={location5} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Leander</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location6} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>georgetown</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location7} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Round Rock</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location8} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Cedar Park</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location9} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Pflugerville</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location10} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Salado</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location11} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Copperas Cove</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location12} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Liberty Hill</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location13} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Burnet</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location14} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Marble Falls</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location15} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Dripping Springs</p>
+            </div>
+          </Popup>
+        </Marker>
+
+        <Marker position={location16} icon={markerIcon}>
+          <Popup>
+            <div>
+              <p>Wimberley</p>
+            </div>
+          </Popup>
+        </Marker>
+
 
       </MapContainer>
     </div>

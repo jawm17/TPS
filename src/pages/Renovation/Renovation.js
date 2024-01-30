@@ -9,6 +9,7 @@ import deck from "../../assets/deck.png";
 import paint from "../../assets/paint.png";
 import lifesaver from "../../assets/lifesaver.png";
 import { Wave } from "../../components/WavesComp";
+import ContactForm from "../../components/ContactForm";
 import "./renovationStyle.css";
 
 export default function Renovation() {
@@ -238,32 +239,9 @@ export default function Renovation() {
                 <div id="fullSectionRight">
                 </div>
             </div> */}
-            <div id="formSection">
-                <div id="formInner">
-                    <div id="bookNowTitle">
-                        Contact us
-                    </div>
-                    <div className="homeFormFlex">
-                        <input className="homeFormInput" placeholder="Name"></input>
-                    </div>
-                    <div id="homeFormDoubleInput">
-                        <div className="homeFormFlex">
-                            <input className="homeFormInput" placeholder="Email"></input>
-                        </div>
-                        <div className="homeFormFlex">
-                            <input className="homeFormInput" placeholder="Phone"></input>
-                        </div>
-                    </div>
-                    <div className="homeFormFlex" id="bottomInput">
-                        <input className="homeFormInput" placeholder="Message"></input>
-                    </div>
-                    <div id="submitFormHome">
-                        Submit
-                        <svg id="bookNowIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                </div>
+               <div id="formSection">
+                <Wave fill="#0070ff" />
+                <ContactForm />
             </div>
             <Footer />
         </div>

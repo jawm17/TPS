@@ -216,7 +216,7 @@
 @media only screen and (max-width: 700px) {
     #heroSection {
         width: 100vw;
-        height: calc(100vh - 180px);
+        height: 600px;
         position: relative;
         overflow: hidden;
     }
@@ -1021,6 +1021,14 @@
 /* ================================================== */
 /* Form Section */
 #landBody #formSection {
+    margin-top: 80px;
+    width: 100vw;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--blueThird);
+}
+ #formSection {
     margin-top: 80px;
     width: 100vw;
     padding-bottom: 80px;
