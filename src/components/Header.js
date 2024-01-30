@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-import logo from "../assets/tpsLogo.png";
+import logo from "../assets/TPS_logo2.png";
+import CallBtnModal from "./CallBtnModal";
 import "./styles/headerStyle.css";
 
 export default function Header(props) {
@@ -11,6 +12,8 @@ export default function Header(props) {
     const [dropOpen1, setDropOpen1] = useState(false);
     const [dropOpen2, setDropOpen2] = useState(false);
     const [dropOpen3, setDropOpen3] = useState(false);
+
+    const [callModal, setCallModal] = useState(false);
 
     function navigateMenu(loc) {
         setLocationsOpen(false);
@@ -49,7 +52,9 @@ export default function Header(props) {
                     <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
             </div> */}
+            {callModal ? <CallBtnModal close={() => setCallModal(false)} /> : null}
             <div id="headerMain">
+
                 <div id="headerInner">
                     <img src={logo} id="headerLogo" alt="pool logo" onClick={() => navigateMobileMenu("/")}></img>
 
@@ -150,6 +155,9 @@ export default function Header(props) {
                             </svg>
                             {locationsOpen ?
                                 <div id="locationsMenu" onMouseLeave={() => setLocationsOpen(false)}>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("8")}>
+                                        Austin
+                                    </div>
                                     <div className="locationMenuItem" onClick={() => navigateMenu("1")}>
                                         Marble Falls
                                     </div>
@@ -171,6 +179,52 @@ export default function Header(props) {
                                     <div className="locationMenuItem" onClick={() => navigateMenu("7")}>
                                         Lakeway
                                     </div>
+
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("9")}>
+                                        Georgetown
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("10")}>
+                                        Round Rock
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("11")}>
+                                        Cedar Park
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("12")}>
+                                        Leander
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("13")}>
+                                        Pflugerville
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("15")}>
+                                        Salado
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("16")}>
+                                        Wimberly
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("17")}>
+                                        Liberty Hill
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("18")}>
+                                        Blanco
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("19")}>
+                                        Buda
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("20")}>
+                                        Kyle
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("21")}>
+                                        New Braunfels
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("22")}>
+                                        Bastrop
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("23")}>
+                                        Elgin
+                                    </div>
+                                    <div className="locationMenuItem" onClick={() => navigateMenu("24")}>
+                                        Manor
+                                    </div>
                                 </div>
                                 : null}
                         </div>
@@ -187,7 +241,7 @@ export default function Header(props) {
 
                             ABOUT
                         </div>
-                        <div id="contactBtnHeader" onClick={() => window.location.href = `tel:${5128207434}`}>
+                        <div id="contactBtnHeader" onClick={() => setCallModal(true)}>
                             CALL NOW
                         </div>
                         {menuOpen ?

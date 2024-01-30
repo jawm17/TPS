@@ -1,0 +1,95 @@
+#modalBlur {
+    /* backdrop-filter: blur(5px);  */
+    /* background-color: red; */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+    top: 0px;
+}
+
+#modalMain {
+    z-index: 500000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 440px;
+    height: 240px;
+    max-width: 380px;
+    /* height: 360px; */
+    border-radius: 12px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+#modalTop {
+    height: 50px;
+    width: 100%;
+    /* background-color: var(--blueMain); */
+    display: flex;
+    align-items: center;
+}
+
+#waveTop {
+    transform: rotate(180deg);
+    /* height: 200px; */
+    margin-top: 10px;
+}
+
+#closeModal {
+    width: 25px;
+    position: absolute;
+    right: 15px;
+}
+
+#line1 {
+    text-align: center;
+    color: var(--blueMain);
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#line2 {
+    text-align: center;
+    color: var(--blueMain);
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+#closeModalBtn {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    background-color: var(--blueMain);
+    border-radius: 4px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 550px) {
+    #modalMain {
+        left: 0px;
+        top: auto;
+        bottom: 0px;
+        transform: none;
+        width: calc(100% - 40px);
+        /* height: 360px; */
+        background-color: var(--grayMain);
+        border-radius: 0px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding: 20px;
+        padding-bottom: 20px;
+        
+    }
+}

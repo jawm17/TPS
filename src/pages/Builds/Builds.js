@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer"
 import CallBtn from "../../components/CallBtn";
+import CallBtnModal from "../../components/CallBtnModal";
 import "./buildsStyle.css";
 
 export default function Builds() {
+
+    const [callModal, setCallModal] = useState(false);
 
     let slideIndex = 0;
 
@@ -31,6 +34,7 @@ export default function Builds() {
 
     return (
         <div>
+            {callModal ? <CallBtnModal close={() => setCallModal(false)} /> : null}
             <Header page={"builds"} />
             <CallBtn />
             <div id="buildsSectionHero">
@@ -127,7 +131,7 @@ export default function Builds() {
 
                                 We waterproof all our pools using a micro crystaline technology and bond coat.
                             </div>
-                            <div className="learnMoreBuilds">
+                            <div className="learnMoreBuilds" onClick={() => setCallModal(true)}>
                                 <div>
                                     learn more
                                 </div>
@@ -151,7 +155,7 @@ export default function Builds() {
                             <div className="buildRowDescription">
                                 Geometric pools are a nice way to add character and a modern touch to your backyard paradise. Geometric pools tend to be described as squared, rectangular, or triangular and tend to have sharp clean lines.
                             </div>
-                            <div className="learnMoreBuilds">
+                            <div className="learnMoreBuilds" onClick={() => setCallModal(true)}>
                                 <div>
                                     learn more
                                 </div>
@@ -175,7 +179,7 @@ export default function Builds() {
                             <div className="buildRowDescription">
                                 Freeform pools are more natural in design and flow freely with the space. These designs tend to be utilized in homes with limited space and/or for a more natural environment.
                             </div>
-                            <div className="learnMoreBuilds">
+                            <div className="learnMoreBuilds" onClick={() => setCallModal(true)}>
                                 <div>
                                     learn more
                                 </div>
@@ -199,7 +203,7 @@ export default function Builds() {
                             <div className="buildRowDescription">
                                 Negative edge pools otherwise known as infinity edge give the aesthetics of a vanishing edge. These pools add character and keep from impairing views of properties that are out of grade.
                             </div>
-                            <div className="learnMoreBuilds">
+                            <div className="learnMoreBuilds" onClick={() => setCallModal(true)}>
                                 <div>
                                     learn more
                                 </div>

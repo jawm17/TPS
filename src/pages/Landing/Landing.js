@@ -1,17 +1,83 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import quotation from "../../assets/quotation.png";
 import CallBtn from "../../components/CallBtn";
+import SubmitFormModal from "../../components/SubmitFormModal";
+// import twilio from 'twilio';
 import "./landingStyle.css";
 
 export default function Landing() {
     const navigate = useNavigate();
+    const [playing, setPlaying] = useState(false);
+
+    const [name1, setName1] = useState("");
+    const [email1, setEmail1] = useState("");
+    const [phone1, setPhone1] = useState("");
+    const [zip1, setZip1] = useState("");
+    const [submitForm1, setSubmitForm1] = useState(false);
+
+    const [name2, setName2] = useState("");
+    const [email2, setEmail2] = useState("");
+    const [phone2, setPhone2] = useState("");
+    const [message2, setMessage2] = useState("");
+    const [submitForm2, setSubmitForm2] = useState(false);
+
+    const [formModal, setFormModal] = useState(false);
+
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [message, setMessage] = useState('');
+  
+    // const sendSMS = async () => {
+    //   const accountSid = 'ACb9ad5b792954db3ef9e5a8b2246eabfa';
+    //   const authToken = '';
+    //   const client = twilio(accountSid, authToken);
+  
+    //   try {
+    //     const result = await client.messages.create({
+    //       body: `New Sale for $${40}`,
+    //       from: '+18334801392',
+    //       to: "15127848431",
+    //     });
+  
+    //     console.log('Message sent successfully. SID:', result.sid);
+    //   } catch (error) {
+    //     console.error('Error sending message:', error.message);
+    //   }
+    // };
+  
 
     useEffect(() => {
         scrollBox();
+        scrollBox2();
     }, []);
+
+    useEffect(() => {
+        if (submitForm1) {
+            setName1("");
+            setEmail1("");
+            setPhone1("");
+            setZip1("");
+            setFormModal(true)
+            setTimeout(() => {
+                setSubmitForm1(false);
+            }, 8000);
+        }
+    }, [submitForm1]);
+
+    useEffect(() => {
+        if (submitForm2) {
+            setName2("");
+            setEmail2("");
+            setPhone2("");
+            setMessage2("");
+            setFormModal(true)
+            setTimeout(() => {
+                setSubmitForm2(false);
+            }, 8000);
+        }
+    }, [submitForm2]);
 
 
     function scrollBox() {
@@ -33,10 +99,30 @@ export default function Landing() {
         setInterval(scrollToNextElement, 2500);
     }
 
+    function scrollBox2() {
+        const scrollContainer = document.getElementById("infoSectionReview");
+        let currentIndex = 0;
+        // Function to scroll to the next element
+        function scrollToNextElement() {
+            const scrollWidth = scrollContainer.scrollWidth;
+            const itemWidth = scrollContainer.offsetWidth;
+            currentIndex = (currentIndex + 1) % (scrollWidth / itemWidth);
+            const scrollToPosition = currentIndex * itemWidth;
+            // Scroll to the next element
+            scrollContainer.scrollTo({
+                left: scrollToPosition,
+                behavior: "smooth"
+            });
+        }
+        // Set up a timer to scroll every ten seconds
+        setInterval(scrollToNextElement, 2000);
+    }
+
 
     return (
         <div>
             <Header page={"landing"} />
+            {formModal ? <SubmitFormModal close={() => setFormModal(false)}/> : null}
             <CallBtn />
             <div id="heroSection">
                 <img id="heroImg" alt="big pool" src="https://pools-by-design.com/wp-content/uploads/2021/04/houston-texas-vacation.jpg"></img>
@@ -56,19 +142,28 @@ export default function Landing() {
 
                         <div id="serviceInputs">
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" placeholder="Name"></input>
+                                <input className="serviceInput" placeholder="Name" value={name1} onChange={(e) => setName1(e.target.value)}></input>
                             </div>
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" placeholder="Email"></input>
+                                <input className="serviceInput" type="email" placeholder="Email" value={email1} onChange={(e) => setEmail1(e.target.value)}></input>
                             </div>
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" placeholder="Phone"></input>
+                                <input className="serviceInput" placeholder="Phone" value={phone1} onChange={(e) => setPhone1(e.target.value)}></input>
                             </div>
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" placeholder="ZIP"></input>
+                                <input className="serviceInput" placeholder="ZIP" value={zip1} onChange={(e) => setZip1(e.target.value)}></input>
                             </div>
-                            <div id="heroServiceSubmit">
-                                Submit
+                            <div id="heroServiceSubmit" onClick={name1 && email1 && phone1 && zip1 ? () => setSubmitForm1(true) : null}>
+                                {submitForm1 ?
+                                    <svg id="form1Check" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    :
+                                    <div>
+                                        Submit
+                                    </div>
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -106,7 +201,7 @@ export default function Landing() {
                         <div id="smallGalleryDescription">
                             Immerse yourself in luxury and relaxation. With Texas Pool Services, your dream backyard is just one click away.
                         </div>
-                        <div id="smallGalleryBtn">
+                        <div id="smallGalleryBtn" onClick={() => navigate("/builds")}>
                             learn more
                             <svg id="learnMoreBtnGallery" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                                 <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
@@ -116,19 +211,15 @@ export default function Landing() {
                     <div id="smallGalleryImgArea">
                         <div id="smallGalleryFlex" class="scroll-container">
 
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-18.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-9-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-10-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-11-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-13-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-17-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-swimming-pool-builder-2-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-14-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/texas-custom-pool-builder-bg-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-4-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/05/custom-pool-builder-5-400x284.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://www.longhornpools.com/wp-content/uploads/2023/06/pool-service-company-austin03-1.jpg" class="smallGalleryImg red-square"></img>
-
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
                         </div>
                     </div>
 
@@ -311,7 +402,7 @@ export default function Landing() {
                                         <div>
                                             Learn more
                                         </div>
-                                        <svg id="learnMoreIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <svg id="learnMoreIconMain" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                         </svg>
                                     </div>
@@ -329,7 +420,7 @@ export default function Landing() {
                                         <div>
                                             Learn more
                                         </div>
-                                        <svg id="learnMoreIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <svg id="learnMoreIconMain" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                         </svg>
                                     </div>
@@ -347,7 +438,7 @@ export default function Landing() {
                                         <div>
                                             Learn more
                                         </div>
-                                        <svg id="learnMoreIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <svg id="learnMoreIconMain" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                         </svg>
                                     </div>
@@ -408,14 +499,23 @@ export default function Landing() {
                         </div>
                     </div>
                     <div id="processVideo">
-                        <div id="thumbnailGradient">
-                            <div id="playBtnBg">
-                                <svg id="playBtnIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                    <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </div>
-                        <img id="processVideoThumbnail" src="https://www.thespruce.com/thmb/_FZqg8AROnHRzD1FLXGvd1eyHFw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KeyResidentialFtns-5a9470d218ba010037643a30.jpg"></img>
+                        {playing ?
+                            <video autoPlay id="processVideoMain" width="320" height="240" controls={false}>
+                                <source src={"https://gz6wrqw5qslqlogz.public.blob.vercel-storage.com/poolVid-AY3dJJ25N9LaFxIyCnixVAYaNVprDx.mp4"} type="video/mp4" />
+                            </video>
+                            :
+                            <>
+
+                                <div id="thumbnailGradient">
+                                    <div id="playBtnBg" onClick={() => setPlaying(true)}>
+                                        <svg id="playBtnIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img id="processVideoThumbnail" src="https://www.thespruce.com/thmb/_FZqg8AROnHRzD1FLXGvd1eyHFw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KeyResidentialFtns-5a9470d218ba010037643a30.jpg"></img>
+                            </>
+                        }
                     </div>
                 </div>
             </div>
@@ -433,7 +533,7 @@ export default function Landing() {
                             <div id="fullSub">
                                 Our experienced electricians are highly trained in all aspects of electrical service, from office lighting and security systems to emergency repair.
                             </div>
-                            <div id="fullBookBtn">
+                            <div id="fullBookBtn" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div>
                                     Book now
                                 </div>
@@ -544,20 +644,20 @@ export default function Landing() {
                         Contact us
                     </div>
                     <div className="homeFormFlex">
-                        <input className="homeFormInput" placeholder="Name"></input>
+                        <input className="homeFormInput" placeholder="Name" value={name2} onChange={(e) => setName2(e.target.value)}></input>
                     </div>
                     <div id="homeFormDoubleInput">
                         <div className="homeFormFlex">
-                            <input className="homeFormInput" placeholder="Email"></input>
+                            <input className="homeFormInput" placeholder="Email" value={email2} onChange={(e) => setEmail2(e.target.value)}></input>
                         </div>
                         <div className="homeFormFlex">
-                            <input className="homeFormInput" placeholder="Phone"></input>
+                            <input className="homeFormInput" placeholder="Phone" value={phone2} onChange={(e) => setPhone2(e.target.value)}></input>
                         </div>
                     </div>
                     <div className="homeFormFlex" id="bottomInput">
-                        <input className="homeFormInput" placeholder="Message"></input>
+                        <input className="homeFormInput" placeholder="Message" value={message2} onChange={(e) => setMessage2(e.target.value)}></input>
                     </div>
-                    <div id="submitFormHome">
+                    <div id="submitFormHome" onClick={name2 && email2 && phone2 && message2 ? () => setSubmitForm2(true) : null}>
                         Submit
                         <svg id="bookNowIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                             <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />

@@ -1,0 +1,20 @@
+#line1Form {
+    text-align: center;
+    color: var(--blueMain);
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#line2Form {
+    text-align: center;
+    color: var(--blueMain);
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#waveTop2 {
+    /* transform: rotate(180deg); */
+    /* height: 200px; */
+    margin-top: 20px;
+}
