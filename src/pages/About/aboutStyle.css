@@ -33,24 +33,36 @@
 #whyConatiner{
     position: relative;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    height: 350px;
     padding-bottom: 70px;
+}
+#whyConatinerInner{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
     /* justify-content: center; */
-    /* align-items: center; */
-    /* text-align: center; */
+    gap: 100px;
 }
 .whyDivs1{
-    width: 60%;
-    text-align: center;
+    margin-top: 100px;
+    width: 35%;
 }
 .whyDivs1 img{
-    width: 50%;
+    width: 100%;
 }
 .whyDivs2{
-    width: 40%;
+    width: 65%;
+    padding-top: 120px;
+}
+.whyDivs2 h3{
+    font-weight: 500;
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+.whyDivs2 p{
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-left: 15px;
 }
 /* ================================== */
 /* Our Service  */

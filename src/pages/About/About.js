@@ -49,12 +49,11 @@ export default function About() {
         <div id="whyConatiner">
           <Wave fill="white" />
           <Wave idName="waveFlip" fill="#ffffff7c" />
+          <div id="whyConatinerInner">
           <div className="whyDivs1">
             <img src={Logo}/>
           </div>
           <div className="whyDivs2">
-          {/* sub */}
-          <h4>THE LEGACY OF EXCELLENCE</h4>
           {/* title */}
           <h3>Why we created Texas Pool Services?</h3>
           {/* store */}
@@ -69,6 +68,7 @@ export default function About() {
             longer your hard earned money will last. Call Today to learn the
             Texas Pool Services way!
           </p>
+          </div>
           </div>
         </div>
         {/* Our Service Areas */}
