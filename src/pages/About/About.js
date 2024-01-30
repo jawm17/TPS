@@ -6,7 +6,8 @@ import f from "../../assets/facebook.png";
 import i from "../../assets/instagram.png";
 import y from "../../assets/yelp.png";
 import { Wave } from "../../components/WavesComp";
-import HoverCardDiv from "../../components/HoverCardDiv";
+import ContactForm from "../../components/ContactForm";
+
 import Logo from "../../assets/TPS_logo.png";
 
 import "./aboutStyle.css";
@@ -32,7 +33,7 @@ export default function About() {
     },
   ];
   return (
-    <>
+    <div id="aboutBody">
       <Header page={"about"} />
       <div id="aboutContent">
         {/* hero */}
@@ -96,10 +97,11 @@ export default function About() {
         </div>
 
         {/* National Plaster Council */}
-        <div id="nationPlasterConatiner">
-          <div id="nationalWords">
-            <h3>National Plaster Council</h3>
-            <p>
+          <div id="nationalConatiner">
+          
+          <div className="nationalDivs2">
+          <h3>National Plaster Council</h3>
+          <p>
               The NPC professionals have spent years of their lives studying and
               documenting why things happen, the reactions of cements with
               certain water, the chemical science behind pools, and more. We use
@@ -107,21 +109,29 @@ export default function About() {
               to respond to your pools issues. Which in turns will keep your
               pool looking beautiful for years to come!
             </p>
-            {/* button */}
             <a href="https://www.npconline.org/">
               <div id="nationBtn">LEARN MORE </div>
             </a>
           </div>
-          <div id="nationalImg"></div>
-          {/* footer shit */}
+          <div className="nationalDivs1">
+            <img src="https://codypools.com/wp-content/uploads/usmapbase2023.png"/>
+            {/* <div id="nationalImg"></div> */}
+
+          </div>
         </div>
-        <div id="nationalReviewscontainer">
+      
+        <div id="aboutReviewscontainer" className="reviewsContainers">
           <Wave fill="#24337A" />
           <div id="reviewSub">A Reputation You Can Count On</div>
           <div id="reviewTitle">Explore Some of Our Testimonials!</div>
           <ReviewSection reviews={reviews} />
         </div>
       </div>
+      {/* Form */}
+      <div id="formSection">
+      <Wave fill="#0070ff" />
+                <ContactForm/>
+            </div>
       <div id="footer" className="footerAbout">
         <Wave fill="white" />
         <div id="footerInner">
@@ -152,6 +162,6 @@ export default function About() {
           <div id="footerText2">512 820 7434 | INFO@TEXASPOOLSERVICES.COM</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

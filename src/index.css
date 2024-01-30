@@ -161,5 +161,5 @@ input:-webkit-autofill:active {
   --blueMain: #24337A;
   /* --blueMain: rgba(0, 112, 255, 1); */
   --blueSecond: #24337A;
-  --blueThird: rgba(0, 112, 255, 1);
+  --blueThird: #0070ff;
 }
