@@ -2,6 +2,7 @@
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: white;
+    min-height: 180px;
 }
 .reviewQuoteImg{
     padding-bottom: 15px;
@@ -68,6 +69,13 @@
     color: var(--blueThird);
     /* font-size: 20px; */
     margin-top: 20px;
+    position: absolute;
+    bottom: 50px;
+}
+
+.stars {
+    position: absolute;
+    bottom: 20px;
 }
 
 #reviewStar {

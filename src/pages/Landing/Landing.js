@@ -82,7 +82,7 @@ export default function Landing() {
             });
         }
         // Set up a timer to scroll every ten seconds
-        setInterval(scrollToNextElement, 2500);
+        setInterval(scrollToNextElement, 5600);
     }
 
     function scrollBox2() {
@@ -106,24 +106,24 @@ export default function Landing() {
 
     const reviews = [
         {
-          reviewText:
-            "We are very pleased with the work that Chatham Electric did on our house build. We did not have power to our property till Hans Hubbard installed the ground wire and panel. If you need an electrician we highly recommend him.",
-          reviewUser: "John Taylor",
-          starCount: 5,
+            reviewText:
+                "Thrilled with Texas Pool Services' dedication to quality! They go above and beyond to ensure customer satisfaction.",
+            reviewUser: "Robert Johnson",
+            starCount: 5,
         },
         {
-          reviewText:
-            "We are very pleased with the work that Chatham Electric did on our house build. We did not have power to our property till Hans Hubbard installed the ground wire and panel. If you need an electrician we highly recommend him.",
-          reviewUser: "John Taylor",
-          starCount: 5,
+            reviewText:
+                "Texas Pool Services made owning a pool hassle-free! Their knowledgeable staff keeps our pool pristine year-round.",
+            reviewUser: "Chris Garcia",
+            starCount: 5,
         },
         {
-          reviewText:
-            "We are very pleased with the work that Chatham Electric did on our house build. We did not have power to our property till Hans Hubbard installed the ground wire and panel. If you need an electrician we highly recommend him.",
-          reviewUser: "John Taylor",
-          starCount: 5,
+            reviewText:
+                "Highly recommend Texas Pool Services! Their professionalism and reliability are unparalleled.",
+            reviewUser: "Rachel Evans",
+            starCount: 5,
         },
-      ];
+    ];
 
 
     return (
@@ -232,13 +232,14 @@ export default function Landing() {
             <div id="subHeroSection">
                 <div id="subHeroInner">
                     <div id="subHeroTop">
-                        WELCOME TO TEXAS POOL SERVICES, AUSTIN'S PREMIER LUXURY POOL BUILDERS
+                        WELCOME TO TEXAS POOL SERVICES, AUSTIN'S PREMIER POOL BUILDERS
                     </div>
                     <div id="subHeroMiddle">
-                        <mark id="subHeroBold">Redefining luxury,</mark> one pool at a time.
+                        <mark id="subHeroBold">Creating memories,</mark> one pool at a time.
                     </div>
                     <div id="subHeroBottom">
-                        At Texas Pool Services, we transform backyards into personal paradises. Centrally based in the vibrant city of Austin, Texas, we are at the forefront of custom pool design and construction. We are dedicated to bringing the luxury of the world’s finest resorts directly to your home, creating an oasis of tranquility and enjoyment in your own backyard. <mark id="mobileNone">Our commitment to perfection is reflected in every project, from intimate plunge pools to expansive infinity-edge designs. We specialize in creating uniquely tailored, high-end swimming pools that reflect not only the beauty and ambiance of a five-star resort but also your personal style and preferences. Every Texas Pool Service Pool is a testament to craftsmanship, quality, and attention to detail that is simply unparalleled.</mark>
+                        {/* At Texas Pool Services, we transform backyards into personal paradises. Centrally based in the vibrant city of Austin, Texas, we are at the forefront of custom pool design and construction. We are dedicated to bringing the luxury of the world’s finest resorts directly to your home, creating an oasis of tranquility and enjoyment in your own backyard. <mark id="mobileNone">Our commitment to perfection is reflected in every project, from intimate plunge pools to expansive infinity-edge designs. We specialize in creating uniquely tailored, high-end swimming pools that reflect not only the beauty and ambiance of a five-star resort but also your personal style and preferences. Every Texas Pool Service Pool is a testament to craftsmanship, quality, and attention to detail that is simply unparalleled.</mark> */}
+                        Texas Pool Services is your premier destination for transforming ordinary backyards into extraordinary personal retreats. Located in Austin, Texas, we are pioneers in custom pool design and construction. Our mission is to bring an oasis of tranquility and enjoyment to your own backyard. Our dedication to perfection shines through in every project we undertake, whether it's crafting intimate plunge pools or expansive infinity-edge designs. We specialize in creating uniquely tailored, incredible swimming pools that reflect your personal style and preferences. Each Texas Pool Service Pool is a testament to unparalleled craftsmanship, quality, and attention to detail.
                     </div>
                 </div>
             </div>
@@ -290,13 +291,13 @@ export default function Landing() {
                                     <svg id="clockIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                     </svg>
-                                </div>
-                                <div className="infoSectionItemRight">
                                     <div className="infoSectionItemTitle">
                                         Design & Quality
                                     </div>
+                                </div>
+                                <div className="infoSectionItemRight">
                                     <div className="infoSectionItemSub">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                        Texas Pool Services pioneers innovative design and unwavering quality, crafting aquatic masterpieces that harmonize with your lifestyle. From contemporary marvels to serene natural retreats, our designs cater to diverse tastes, ensuring each creation is as unique as our clients. We prioritize premium materials and cutting-edge techniques for longevity, durability, and visual allure. With AquaCraft Pools, your vision transforms into a timeless sanctuary of relaxation and enjoyment.
                                     </div>
                                 </div>
                             </div>
@@ -306,13 +307,14 @@ export default function Landing() {
                                     <svg id="clockIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
                                     </svg>
-                                </div>
-                                <div className="infoSectionItemRight">
                                     <div className="infoSectionItemTitle">
                                         Years of Experience
                                     </div>
+                                </div>
+                                <div className="infoSectionItemRight">
+
                                     <div className="infoSectionItemSub">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                        With over 20 years of industry leadership, Texas Pool Services is synonymous with excellence. We've continuously refined our craft, innovated, and exceeded expectations, crafting exceptional aquatic spaces. Our commitment to quality and client satisfaction drives us forward, ensuring every pool we create embodies craftsmanship and service excellence. Trust Texas Pool Servies for unmatched experience and excellence in every project.
                                     </div>
                                 </div>
                             </div>
@@ -322,13 +324,14 @@ export default function Landing() {
                                     <svg id="clockIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
                                     </svg>
-                                </div>
-                                <div className="infoSectionItemRight">
                                     <div className="infoSectionItemTitle">
                                         All Our Work Is Guaranteed
                                     </div>
+                                </div>
+                                <div className="infoSectionItemRight">
+
                                     <div className="infoSectionItemSub">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                        At Texas Pool Services, we stand behind our craftsmanship and the quality of our materials. That's why we offer an industry-leading warranty of up to 20 years on select pool installations. This warranty reflects our confidence in the durability and longevity of our pools, providing our clients with peace of mind for years to come. With our comprehensive warranty coverage, you can trust Texas Pool Services to ensure that your investment continues to bring joy and relaxation for generations. Experience the assurance of quality with Texas Pool Services – where your satisfaction is our priority.
                                     </div>
                                 </div>
                             </div>
@@ -341,7 +344,7 @@ export default function Landing() {
                                     <div className="reviewEl">
                                         <img src={quotation} id="quotation" alt="quotation"></img>
                                         <div id="reviewTop">
-                                            Texas Pool Services did an amazing job installing my new pool. I couldn’t be happier with the quality of their work and clean-up.
+                                            Texas Pool Services transformed our backyard into a haven! Their attention to detail and professionalism are unmatched.
                                         </div>
                                         <div className="starsSeond">
                                             <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -361,7 +364,7 @@ export default function Landing() {
                                             </svg>
                                         </div>
                                         <div id="reviewUser">
-                                            Samantha Jones
+                                            Emily and John Parker
                                         </div>
                                         <div id="reviewLocation">
                                             Austin, TX
@@ -370,7 +373,7 @@ export default function Landing() {
                                     <div className="reviewEl">
                                         <img src={quotation} id="quotation" alt="quotation"></img>
                                         <div id="reviewTop">
-                                            Texas Pool Services did an amazing job installing my new pool. I couldn’t be happier with the quality of their work and clean-up.
+                                            Impressed by Texas Pool Services' expertise! They turned our vision into reality with precision and care.
                                         </div>
                                         <div className="starsSeond">
                                             <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -390,16 +393,16 @@ export default function Landing() {
                                             </svg>
                                         </div>
                                         <div id="reviewUser">
-                                            Samantha Jones
+                                            Sarah and Michael Anderson
                                         </div>
                                         <div id="reviewLocation">
-                                            Austin, TX
+                                            Dripping Springs, TX
                                         </div>
                                     </div>
                                     <div className="reviewEl">
                                         <img src={quotation} id="quotation" alt="quotation"></img>
                                         <div id="reviewTop">
-                                            Texas Pool Services did an amazing job installing my new pool. I couldn’t be happier with the quality of their work and clean-up.
+                                            Exceptional service from Texas Pool Services! Our pool has never looked better, thanks to their team.
                                         </div>
                                         <div className="starsSeond">
                                             <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -419,12 +422,42 @@ export default function Landing() {
                                             </svg>
                                         </div>
                                         <div id="reviewUser">
-                                            Samantha Jones
+                                            Lisa Smith
                                         </div>
                                         <div id="reviewLocation">
-                                            Austin, TX
+                                            Leander, TX
                                         </div>
                                     </div>
+
+                                    {/* <div className="reviewEl">
+                                        <img src={quotation} id="quotation" alt="quotation"></img>
+                                        <div id="reviewTop">
+                                            Texas Pool Services delivers excellence every time. We wouldn't trust anyone else with our pool maintenance.
+                                        </div>
+                                        <div className="starsSeond">
+                                            <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                            <svg id="reviewStar" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div id="reviewUser">
+                                            Mark Miller
+                                        </div>
+                                        <div id="reviewLocation">
+                                            Leander, TX
+                                        </div>
+                                    </div> */}
 
                                 </div>
                                 <div id="scrollRight">
@@ -517,7 +550,7 @@ export default function Landing() {
                                 </div>
                             </div>
                             <div className="proccessOptionDescription">
-                                We give customers a 3d visual representation of their pool and what it will look like.                                 We give customers a 3d visual representation of their pool and what it will look like.
+                                Our consultation process is tailored to meet your needs and preferences. During our meeting, we listen carefully to your vision, assess your backyard space, and offer professional recommendations. Through open communication, we collaborate closely with you to develop a personalized plan that fits your style, budget, and timeline. Our aim is to turn your vision into a stunning, functional pool that exceeds your expectations.                                We give customers a 3d visual representation of their pool and what it will look like.
                             </div>
                         </div>
                         <div className="processOption">
@@ -530,7 +563,7 @@ export default function Landing() {
                                 </div>
                             </div>
                             <div className="proccessOptionDescription">
-                                We give customers a 3d visual representation of their pool and what it will look like.                                 We give customers a 3d visual representation of their pool and what it will look like.
+                                At Texas Pool Services, we use 3D modeling to help you see your pool ideas clearly. With advanced technology, we create lifelike digital designs for your pool, letting you explore different features and layouts before construction. This process ensures we match your preferences and expectations, guaranteeing your satisfaction with the final pool design.                              We give customers a 3d visual representation of their pool and what it will look like.
                             </div>
                         </div>
                         <div className="processOption">
@@ -545,28 +578,14 @@ export default function Landing() {
                                 </div>
                             </div>
                             <div className="proccessOptionDescription">
-                                We give customers a 3d visual representation of their pool and what it will look like.                                 We give customers a 3d visual representation of their pool and what it will look like.
+                                At Texas Pool Services, we streamline the pool construction process from start to finish. We kick off by handling all necessary permits and approvals, ensuring compliance with local regulations. Our experienced team then takes charge, overseeing every aspect of the project from excavation to final touches. We work diligently to transform your backyard, coordinating all aspects of construction seamlessly to minimize disruption and maximize efficiency. With a turnkey approach, we manage the entire process, delivering a stunning pool that exceeds your expectations while transforming your backyard into a captivating oasis of relaxation and enjoyment.                                 We give customers a 3d visual representation of their pool and what it will look like.
                             </div>
                         </div>
                     </div>
                     <div id="processVideo">
-                        {playing ?
-                            <video autoPlay id="processVideoMain" width="320" height="240" controls={false}>
-                                <source src={"https://firebasestorage.googleapis.com/v0/b/weij-c2efd.appspot.com/o/poolVid.mp4?alt=media&token=435af9cd-58c0-43cf-a152-43bb7cec9298"} type="video/mp4" />
-                            </video>
-                            :
-                            <>
-
-                                <div id="thumbnailGradient">
-                                    <div id="playBtnBg" onClick={() => setPlaying(true)}>
-                                        <svg id="playBtnIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                            <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img id="processVideoThumbnail" src="https://www.thespruce.com/thmb/_FZqg8AROnHRzD1FLXGvd1eyHFw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/KeyResidentialFtns-5a9470d218ba010037643a30.jpg"></img>
-                            </>
-                        }
+                        <video autoPlay id="processVideoMain" width="320" height="240" controls={false} loop muted>
+                            <source src={"https://firebasestorage.googleapis.com/v0/b/weij-c2efd.appspot.com/o/poolVid.mp4?alt=media&token=435af9cd-58c0-43cf-a152-43bb7cec9298"} type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
@@ -582,7 +601,7 @@ export default function Landing() {
                                 The Best in Texas!
                             </div>
                             <div id="fullSub">
-                                Our experienced electricians are highly trained in all aspects of electrical service, from office lighting and security systems to emergency repair.
+                            Allow our team to transform your pool vision into reality!
                             </div>
                             <div id="fullBookBtn" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div>
@@ -598,14 +617,14 @@ export default function Landing() {
                 <div id="fullSectionRight">
                 </div>
             </div>
-           <div id="landingReviewscontainer" className="reviewsContainers">
-          <div id="reviewSub">A Reputation You Can Count On</div>
-          <div id="reviewTitle">Explore Some of Our Testimonials!</div>
-          <ReviewSection reviews={reviews} />
-        </div>
+            <div id="landingReviewscontainer" className="reviewsContainers">
+                <div id="reviewSub">A Reputation You Can Count On</div>
+                <div id="reviewTitle">Explore Some of Our Testimonials!</div>
+                <ReviewSection reviews={reviews} />
+            </div>
             {/* Form */}
             <div id="formSection">
-                <ContactForm/>
+                <ContactForm />
             </div>
             {/* Footer */}
             <Footer />

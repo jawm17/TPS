@@ -149,6 +149,30 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+div::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
 :root {
   --green: #00fc00;
   --blue: #0b83ff;
