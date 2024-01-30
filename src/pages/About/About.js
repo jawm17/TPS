@@ -41,42 +41,42 @@ export default function About() {
           <div id="aboutinnerHero">
             <h2>About Us</h2>
             <p>
-              Redefining luxury, one pool at a time! Call now!<br/> 512-820-7434
+              Redefining luxury, one pool at a time! Call now!<br /> 512-820-7434
             </p>
             {/* call btn here */}
           </div>
         </div>
         {/* Why we created Texas Pool Services? */}
         <div id="whyConatiner">
-        <Wave fill="#0693e3" />
-            <Wave idName="bottomWave" fill="white" />
+          <Wave fill="#0693e3" />
+          <Wave idName="bottomWave" fill="white" />
           <div id="whyConatinerInner">
-          <div className="whyDivs1">
-            <img src={Logo}/>
-          </div>
-          <div className="whyDivs2">
-          {/* title */}
-          <h3>Why we created Texas Pool Services?</h3>
-          {/* store */}
-          <p>
-            Texas Pool Services was created to fill a void in the Austin area
-            "Pool Company". Most companies focus on one area of excellence but
-            we believe that doing it all sets us apart, so we specialize in it
-            all. Texas Pool Services also believes education in this market is
-            and has been lacking. Most "Pool Guys" will tell you their opinion
-            and not follow the proven science your pool needs. We focus on
-            education, not only ours but yours too! The more we all know the
-            longer your hard earned money will last. Call Today to learn the
-            Texas Pool Services way!
-          </p>
-          </div>
+            <div className="whyDivs1">
+              <img src={Logo} />
+            </div>
+            <div className="whyDivs2">
+              {/* title */}
+              <h3>Why we created Texas Pool Services?</h3>
+              {/* store */}
+              <p>
+                Texas Pool Services was created to fill a void in the Austin area
+                "Pool Company". Most companies focus on one area of excellence but
+                we believe that doing it all sets us apart, so we specialize in it
+                all. Texas Pool Services also believes education in this market is
+                and has been lacking. Most "Pool Guys" will tell you their opinion
+                and not follow the proven science your pool needs. We focus on
+                education, not only ours but yours too! The more we all know the
+                longer your hard earned money will last. Call Today to learn the
+                Texas Pool Services way!
+              </p>
+            </div>
           </div>
         </div>
         {/* Our Service Areas */}
         <div id="ourAboutServiceConatiner">
           {/* <HoverCardDiv /> */}
           <div id="serviceCardContainer">
-          <h2>Our Service Areas</h2>
+            <h2>Our Service Areas</h2>
             <div className="serviceCard">
               <h4>New Pool Construction</h4>
               <p>Austin , Georgetown, Round Rock, Cedar Park, Leander, Pflugerville, Salado, Copperas Cove, Liberty Hill, Burnet, Marble Falls, Dripping Springs, Wimberly, Blanco, Buda, Kyle, New Braunfels, Bastrop, Dale, Elgin, Manor.</p>
@@ -97,11 +97,11 @@ export default function About() {
         </div>
 
         {/* National Plaster Council */}
-          <div id="nationalConatiner">
-          
+        <div id="nationalConatiner">
+
           <div className="nationalDivs2">
-          <h3>National Plaster Council</h3>
-          <p>
+            <h3>National Plaster Council</h3>
+            <p>
               The NPC professionals have spent years of their lives studying and
               documenting why things happen, the reactions of cements with
               certain water, the chemical science behind pools, and more. We use
@@ -114,12 +114,12 @@ export default function About() {
             </a>
           </div>
           <div className="nationalDivs1">
-            <img src="https://codypools.com/wp-content/uploads/usmapbase2023.png"/>
+            <img src="https://codypools.com/wp-content/uploads/usmapbase2023.png" />
             {/* <div id="nationalImg"></div> */}
 
           </div>
         </div>
-      
+
         <div id="aboutReviewscontainer" className="reviewsContainers">
           <Wave fill="#24337A" />
           <div id="reviewSub">A Reputation You Can Count On</div>
@@ -129,9 +129,9 @@ export default function About() {
       </div>
       {/* Form */}
       <div id="formSection">
-      <Wave fill="#0070ff" />
-                <ContactForm/>
-            </div>
+        <Wave fill="#0070ff" />
+        <ContactForm />
+      </div>
       <div id="footer" className="footerAbout">
         <Wave fill="white" />
         <div id="footerInner">

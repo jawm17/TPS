@@ -42,12 +42,12 @@ export default function Services() {
                     <div id="servicesGrid">
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                                Pool Maintenance
+                             Replastering
                             </div>
                             <div className="serviceDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                                We specialize in pool replastering to refresh and restore your pool's appearance and durability. Over time, pool plaster can wear, stain, or damage, diminishing its beauty and function. Our expert team delivers professional results with attention to detail and quality materials, leaving your pool refreshed and inviting for years to come. Trust us for reliable replastering services.
                             </div>
-                            <div className="serviceBtnFlex">
+                            <div className="serviceBtnFlex" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div className="serviceBtn">
                                     Book now
                                 </div>
@@ -55,12 +55,12 @@ export default function Services() {
                         </div>
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                                Pool Maintenance
+                                Weekly Pool Maintenance
                             </div>
                             <div className="serviceDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                            Our weekly pool chemical and cleaning services keep your pool safe and pristine year-round. Our team meticulously balances chemicals, prevents algae growth, and maintains proper pH levels. We also provide thorough cleaning, including skimming, vacuuming, and brushing to remove debris. With our reliable maintenance, enjoy crystal-clear water hassle-free. Trust us to keep your pool sparkling, so you can relax and dive in anytime. 
                             </div>
-                            <div className="serviceBtnFlex">
+                            <div className="serviceBtnFlex" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div className="serviceBtn">
                                     Book now
                                 </div>
@@ -68,12 +68,12 @@ export default function Services() {
                         </div>
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                                Pool Maintenance
+                                Equipment Repair and replacement  
                             </div>
                             <div className="serviceDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                            Our pool equipment repair and replacement services ensure your pool functions flawlessly. Our skilled technicians efficiently handle all tasks, from fixing or replacing pumps to changing out filters, prioritizing quality and precision with top-grade parts and modern techniques. Trust us to restore or replace your pool equipment to optimal condition for uninterrupted enjoyment, handling all needs with professionalism and reliability.
                             </div>
-                            <div className="serviceBtnFlex">
+                            <div className="serviceBtnFlex" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div className="serviceBtn">
                                     Book now
                                 </div>
@@ -81,43 +81,18 @@ export default function Services() {
                         </div>
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                                Pool Maintenance
+                            Pool Equipment enhancements
                             </div>
                             <div className="serviceDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                            Our pool equipment additions and enhancements elevate your pool experience. From energy-efficient pumps to advanced filtration systems and automation capabilities, our expert team delivers top-quality products and seamless installation. With our tailored recommendations, enjoy enhanced efficiency, water clarity, and control over your pool environment. Trust us to revitalize your pool with our comprehensive services.  
                             </div>
-                            <div className="serviceBtnFlex">
+                            <div className="serviceBtnFlex" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div className="serviceBtn">
                                     Book now
                                 </div>
                             </div>
                         </div>
-                        <div className="serviceItem">
-                            <div className="serviceItemTitle">
-                                Pool Maintenance
-                            </div>
-                            <div className="serviceDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                            </div>
-                            <div className="serviceBtnFlex">
-                                <div className="serviceBtn">
-                                    Book now
-                                </div>
-                            </div>
-                        </div>
-                        <div className="serviceItem">
-                            <div className="serviceItemTitle">
-                                Pool Maintenance
-                            </div>
-                            <div className="serviceDescription">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
-                            </div>
-                            <div className="serviceBtnFlex">
-                                <div className="serviceBtn">
-                                    Book now
-                                </div>
-                            </div>
-                        </div>
+                     
                     </div>
                     <div id="servicesSideArea">
                         <div id="servicesForm">

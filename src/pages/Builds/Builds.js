@@ -87,7 +87,7 @@ export default function Builds() {
                     Texas Pool Services, Your Premier Pool Builders
                 </div>
                 <div id="buildsIntroBottom">
-                    Texas Pool Services is the trusted name in pool construction, renowned for creating exceptional swimming pools that surpass expectations. As the leading pool builder in Austin and Buda, we are dedicated to bringing your pool dreams to life. Our team of expert pool builders combines innovative design, quality craftsmanship, and personalized service to deliver pools that exceed your wildest imagination.
+                    At Texas Pool Services, we've built a solid reputation for crafting remarkable swimming pools that exceed expectations. As Austin's premier pool builder and trusted choice in the surrounding regions, we are committed to turning your pool dreams into reality. Our team of seasoned pool builders merges cutting-edge design, superior craftsmanship, and personalized attention to detail, ensuring that the pools we deliver surpass even your wildest imagination.
                 </div>
                 <div id="awardsFlexOuter">
                     <div id="awardsFlex">
@@ -195,14 +195,14 @@ export default function Builds() {
                     </div>
                     <div className="buildRow">
                         <div className="buildRowTitleMobile">
-                            Native Edge Pools
+                            Negative Edge Pools
                         </div>
                         <div className="buildRowLeft">
                             <img className="buildImg" alt="new pool build" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/blob-646fbb9.png/:/cr=t:33.26%25,l:0%25,w:100%25,h:50%25/rs=w:1200,h:600,cg:true"></img>
                         </div>
                         <div className="buildRowRight">
                             <div className="buildRowTitle">
-                                Native Edge Pools
+                                Negative Edge Pools
                             </div>
                             <div className="buildRowDescription">
                                 Negative edge pools otherwise known as infinity edge give the aesthetics of a vanishing edge. These pools add character and keep from impairing views of properties that are out of grade.

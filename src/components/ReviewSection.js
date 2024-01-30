@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import "./styles/reviewCardStyle.css";
 import quotation from "../assets/quotation.png";
 
