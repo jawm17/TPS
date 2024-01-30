@@ -1,4 +1,4 @@
-import "../pages/Landing/landingStyle.css";
+import "./styles/reviewCardStyle.css";
 import quotation from "../assets/quotation.png";
 
 const ReviewTile = ({ reviewText, reviewUser, starCount }) => {

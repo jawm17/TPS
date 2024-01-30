@@ -6,7 +6,8 @@ import f from "../../assets/facebook.png";
 import i from "../../assets/instagram.png";
 import y from "../../assets/yelp.png";
 import { Wave } from "../../components/WavesComp";
-import HoverCardDiv from "../../components/HoverCardDiv";
+import ContactForm from "../../components/ContactForm";
+
 import Logo from "../../assets/TPS_logo.png";
 
 import "./aboutStyle.css";
@@ -32,7 +33,7 @@ export default function About() {
     },
   ];
   return (
-    <>
+    <div id="aboutBody">
       <Header page={"about"} />
       <div id="aboutContent">
         {/* hero */}
@@ -119,13 +120,18 @@ export default function About() {
           </div>
         </div>
       
-        <div id="aboutReviewscontainer">
+        <div id="aboutReviewscontainer" className="reviewsContainers">
           <Wave fill="#24337A" />
           <div id="reviewSub">A Reputation You Can Count On</div>
           <div id="reviewTitle">Explore Some of Our Testimonials!</div>
           <ReviewSection reviews={reviews} />
         </div>
       </div>
+      {/* Form */}
+      <div id="formSection">
+      <Wave fill="#0070ff" />
+                <ContactForm/>
+            </div>
       <div id="footer" className="footerAbout">
         <Wave fill="white" />
         <div id="footerInner">
@@ -156,6 +162,6 @@ export default function About() {
           <div id="footerText2">512 820 7434 | INFO@TEXASPOOLSERVICES.COM</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

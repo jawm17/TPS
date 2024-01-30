@@ -1,0 +1,62 @@
+/* FORM SECTION ====================================================================== */
+#bookNowTitle {
+    margin-top: 65px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+}
+
+#formInner {
+    max-width: 800px;
+    width: 85%;
+}
+
+.homeFormFlex {
+    width: 100%;
+    height: 35px;
+    border: solid 1px var(--blueMain);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: white;
+}
+
+.homeFormInput {
+    width: calc(100% - 4px);
+}
+
+#homeFormDoubleInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#homeFormDoubleInput .homeFormFlex {
+    width: 49%;
+}
+
+#bottomInput {
+    margin-top: 10px;
+    height: 200px;
+    align-items: start;
+}
+
+#submitFormHome {
+    width: calc(100% - 30px);
+    height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    background-color: var(--blueMain);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}

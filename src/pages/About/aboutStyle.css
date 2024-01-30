@@ -308,11 +308,12 @@
         cursor: pointer;
     }
 }
+/* ================================================== */
+/* Reviews */
 #aboutReviewscontainer{
-    position: relative;
     background-color: var(--blueMain);
-    padding-top: 50px;
     padding-bottom: 200px;
+
 }
 #aboutReviewscontainer #reviewTitle{
     color: white;
@@ -320,82 +321,18 @@
 #aboutReviewscontainer #reviewSub{
     color: rgb(215, 214, 214);
 }
-#aboutReviewscontainer .reviewTile{
-    background-color: white;
+/* ================================================== */
+/* Form Section */
+#aboutBody #formSection {
+    position: relative;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--blueThird);
 }
-#aboutReviewscontainer .reviewQuoteImg{
-    padding-bottom: 15px;
-}
-@media only screen and (max-width: 800px) {
-    #nationPlasterConatiner{
-        padding-top: 0px;
-        flex-direction: column;
-        gap: 50px;
-        padding-bottom: 150px;
-    }
-    #nationalWords{
-        width: 100%;
-        height: 300px;
-    }
-    #nationalImg{
-        width: 100%;
-        height: 300px;
-    
-    }
-    
-    #nationPlasterConatiner h3{
-        font-size: 1.8rem;
-        padding-bottom: 15px;
-    
-    }
-    #nationPlasterConatiner h4{
-        font-size: 1.8rem;
-        padding-bottom: 20px;
-    
-    }
-    #nationPlasterConatiner p{
-        font-size: 16px;
-        padding: 0 15px;
-        line-height: 1.3;
-        font-weight: 300;
-    
-    }
-    #nationBtn{
-        width: 120px;
-        height: 50px;
-    
-    }
-    #nationBtn:hover{
-        color: var(--blueMain);
-        background-color: white;
-        border: solid var(--blueMain) 2px;
-        width: 125px;
-        transition: all .1s ease-in-out;
-        cursor: pointer;
-    }
-    #aboutReviewscontainer{
-        position: relative;
-        background-color: var(--blueMain);
-        padding-top: 50px;
-        padding-bottom: 200px;
-    }
-    #aboutReviewscontainer #reviewTitle{
-        color: white;
-    }
-    #aboutReviewscontainer #reviewSub{
-        color: rgb(215, 214, 214);
-    }
-    #aboutReviewscontainer .reviewTile{
-        background-color: white;
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-    #aboutReviewscontainer .reviewQuoteImg{
-        padding-bottom: 15px;
-    }
-}
+
+/* ================================================== */
 /* footer */
   .footerAbout{
     position: relative;
