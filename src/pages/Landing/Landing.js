@@ -258,7 +258,7 @@ export default function Landing() {
 
             <div id="infoSectionOuter">
                 <div id="infoSectionTitle">
-                    Why Choose Us?
+                    Why Choose Us
                 </div>
                 <div id="infoSection">
                     <div id="infoSectionInner">
