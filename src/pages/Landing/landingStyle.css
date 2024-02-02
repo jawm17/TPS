@@ -3,7 +3,6 @@
     height: calc(100vh + 10px);
     position: relative;
     overflow: hidden;
-    
 }
 
 #heroImg {
@@ -216,7 +215,7 @@
 @media only screen and (max-width: 700px) {
     #heroSection {
         width: 100vw;
-        height: 600px;
+        height: calc(100vh - 80px);
         position: relative;
         overflow: hidden;
     }
@@ -475,7 +474,6 @@
 .infoSectionItemLeft {
     color: var(--blueMain);
     /* background-color: red; */
-
     display: flex;
     align-items: center;
 }
@@ -624,6 +622,15 @@
 @media only screen and (max-width: 800px) {
     .infoSectionItemTitle {
         font-size: 22px;
+    }
+
+    .infoSectionItemLeft {
+       justify-content: center;
+       margin-bottom: 20px;
+    }
+
+    .infoSectionItemSub {
+        text-align: center;
     }
 
     #infoSectionReview {

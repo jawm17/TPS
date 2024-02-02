@@ -11,7 +11,6 @@ import axios from "axios";
 import laurel from "../../assets/laurel.png"
 // import twilio from 'twilio';
 import "./landingStyle.css";
-
 export default function Landing() {
     const navigate = useNavigate();
 
@@ -562,7 +561,7 @@ export default function Landing() {
                         </div>
                     </div>
                     <div id="processVideo">
-                        <video autoPlay id="processVideoMain" width="320" height="240" controls={false} loop muted>
+                        <video autoPlay id="processVideoMain" width="320" height="240" muted loop webkit-playsinline playsInline>
                             <source src={"https://firebasestorage.googleapis.com/v0/b/weij-c2efd.appspot.com/o/poolVid.mp4?alt=media&token=435af9cd-58c0-43cf-a152-43bb7cec9298"} type="video/mp4" />
                         </video>
                     </div>
