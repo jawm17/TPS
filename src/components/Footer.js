@@ -14,13 +14,13 @@ export default function Footer() {
                 {/* <img src={logo}></img> */}
                 <div id="logoflex">
                     <div id="logoFlexInner">
-                        <div className="footerLogoBtn">
+                        <div className="footerLogoBtn" onClick={() => window.open("https://www.facebook.com/106786315237401",'_blank')}>
                             <img alt="facebook" className="footerLogoImg" src={f}></img>
                         </div>
-                        <div className="footerLogoBtn">
+                        <div className="footerLogoBtn" onClick={() => window.open("https://www.instagram.com/texaspoolservices",'_blank')}>
                             <img alt="instagram" className="footerLogoImg" src={i}></img>
                         </div>
-                        <div className="footerLogoBtn">
+                        <div className="footerLogoBtn" onClick={() => window.open("https://www.yelp.com/biz/texas-pool-services-austin",'_blank')}>
                             <img alt="yelp" className="footerLogoImg" src={y}></img>
                         </div>
                     </div>
