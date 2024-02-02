@@ -23,12 +23,20 @@
     position: absolute;
 }
 
+#locationHeroTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 64px;
+    font-family: Mafakanev;
+}
+
 #locationArea {
     width: 100vw;
     display: flex;
     justify-content: center;
     padding-bottom: 60px;
     background-color: var(--blueMain);
+    position: relative;
 }
 
 #locationAreaInner {
@@ -234,6 +242,9 @@
 @media only screen and (max-width: 500px) {
     .locationItemDescription {
        font-size: 12px;
+    }
+    #locationHeroTitle {
+        font-size: 48px;
     }
 }
 

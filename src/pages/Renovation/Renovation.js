@@ -196,6 +196,8 @@ export default function Renovation() {
                         <img className="partnersLogo" id="logo2" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/npt-logo.svg/:/cr=t:0%25,l:0.09%25,w:99.82%25,h:100%25/rs=w:288,h:164,cg:true"></img>
                         <img className="partnersLogo" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/pentair.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:200,cg:true"></img>
                         <img className="partnersLogo" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/NPC.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=h:100,cg:true"></img>
+                        <img className="partnersLogo" src="https://cdn.worldvectorlogo.com/logos/hayward.svg"></img>
+                        <img className="partnersLogo" src="https://lirp.cdn-website.com/b0bfdde1/dms3rep/multi/opt/Jandy_Black-960w.png"></img>
                     </div>
                 </div>
             </div>

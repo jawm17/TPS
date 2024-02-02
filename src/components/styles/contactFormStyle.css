@@ -23,10 +23,15 @@
     align-items: center;
     position: relative;
     background-color: white;
+    overflow: hidden;
 }
 
 .homeFormInput {
     width: calc(100% - 4px);
+}
+
+#homeFormInputLarge {
+    height: 100%;
 }
 
 #homeFormDoubleInput {

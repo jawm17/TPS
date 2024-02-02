@@ -7,13 +7,13 @@ import CallBtn from "../../components/CallBtn";
 import ContactForm from "../../components/ContactForm";
 import ReviewSection from "../../components/ReviewSection";
 import SubmitFormModal from "../../components/SubmitFormModal";
+import axios from "axios";
 import laurel from "../../assets/laurel.png"
 // import twilio from 'twilio';
 import "./landingStyle.css";
 
 export default function Landing() {
     const navigate = useNavigate();
-    const [playing, setPlaying] = useState(false);
 
     const [name1, setName1] = useState("");
     const [email1, setEmail1] = useState("");
@@ -22,29 +22,6 @@ export default function Landing() {
     const [submitForm1, setSubmitForm1] = useState(false);
     const [formModal, setFormModal] = useState(false);
 
-
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [message, setMessage] = useState('');
-
-    // const sendSMS = async () => {
-    //   const accountSid = 'ACb9ad5b792954db3ef9e5a8b2246eabfa';
-    //   const authToken = '';
-    //   const client = twilio(accountSid, authToken);
-
-    //   try {
-    //     const result = await client.messages.create({
-    //       body: `New Sale for $${40}`,
-    //       from: '+18334801392',
-    //       to: "15127848431",
-    //     });
-
-    //     console.log('Message sent successfully. SID:', result.sid);
-    //   } catch (error) {
-    //     console.error('Error sending message:', error.message);
-    //   }
-    // };
-
-
     useEffect(() => {
         scrollBox();
         scrollBox2();
@@ -52,19 +29,44 @@ export default function Landing() {
 
     useEffect(() => {
         if (submitForm1) {
-            setName1("");
-            setEmail1("");
-            setPhone1("");
-            setZip1("");
-            setFormModal(true)
+            sendEmail();
+            setFormModal(true);
             setTimeout(() => {
                 setSubmitForm1(false);
             }, 8000);
         }
     }, [submitForm1]);
 
-
-
+    async function sendEmail() {
+        try {
+            const data = {
+                service_id: 'service_9xwmw24',
+                template_id: 'template_cooi9ho',
+                user_id: 'ZDDvovxuOQXk34MJ0',
+                template_params: {
+                    'from_name': name1,
+                    'to_name': 'Adam',
+                    'from_phone': phone1,
+                    'from_email': email1,
+                    'from_zip': zip1
+                }
+            };
+            await axios.post('https://api.emailjs.com/api/v1.0/email/send', data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            setName1("");
+            setEmail1("");
+            setPhone1("");
+            setZip1("");
+        } catch (error) {
+            setName1("");
+            setEmail1("");
+            setPhone1("");
+            setZip1("");
+        }
+    }
 
     function scrollBox() {
         const scrollContainer = document.getElementById("smallGalleryFlex");
@@ -103,46 +105,6 @@ export default function Landing() {
         // Set up a timer to scroll every ten seconds
         setInterval(scrollToNextElement, 2000);
     }
-
-    const reviews = [
-        {
-            reviewText:
-                "Thrilled with Texas Pool Services' dedication to quality! They go above and beyond to ensure customer satisfaction.",
-            reviewUser: "Robert Johnson",
-            starCount: 5,
-        },
-        {
-            reviewText:
-                "Texas Pool Services made owning a pool hassle-free! Their knowledgeable staff keeps our pool pristine year-round.",
-            reviewUser: "Chris Garcia",
-            starCount: 5,
-        },
-        {
-            reviewText:
-                "Highly recommend Texas Pool Services! Their professionalism and reliability are unparalleled.",
-            reviewUser: "Rachel Evans",
-            starCount: 5,
-        },
-        {
-            reviewText:
-                "Thrilled with Texas Pool Services' dedication to quality! They go above and beyond to ensure customer satisfaction.",
-            reviewUser: "Robert Johnson",
-            starCount: 5,
-        },
-        {
-            reviewText:
-                "Texas Pool Services made owning a pool hassle-free! Their knowledgeable staff keeps our pool pristine year-round.",
-            reviewUser: "Chris Garcia",
-            starCount: 5,
-        },
-        {
-            reviewText:
-                "Highly recommend Texas Pool Services! Their professionalism and reliability are unparalleled.",
-            reviewUser: "Rachel Evans",
-            starCount: 5,
-        },
-    ];
-
 
     return (
         <div id="landBody">
@@ -256,7 +218,7 @@ export default function Landing() {
                     </div>
                     <div id="subHeroBottom">
                         {/* At Texas Pool Services, we transform backyards into personal paradises. Centrally based in the vibrant city of Austin, Texas, we are at the forefront of custom pool design and construction. We are dedicated to bringing the luxury of the world’s finest resorts directly to your home, creating an oasis of tranquility and enjoyment in your own backyard. <mark id="mobileNone">Our commitment to perfection is reflected in every project, from intimate plunge pools to expansive infinity-edge designs. We specialize in creating uniquely tailored, high-end swimming pools that reflect not only the beauty and ambiance of a five-star resort but also your personal style and preferences. Every Texas Pool Service Pool is a testament to craftsmanship, quality, and attention to detail that is simply unparalleled.</mark> */}
-                        Texas Pool Services is your premier destination for transforming ordinary backyards into extraordinary personal retreats. Located in Austin, Texas, we are pioneers in custom pool design and construction. Our mission is to bring an oasis of tranquility and enjoyment to your own backyard. Our dedication to perfection shines through in every project we undertake, whether it's crafting intimate plunge pools or expansive infinity-edge designs. We specialize in creating uniquely tailored, incredible swimming pools that reflect your personal style and preferences. Each Texas Pool Service Pool is a testament to unparalleled craftsmanship, quality, and attention to detail.
+                        Texas Pool Services is your premier destination for transforming ordinary backyards into extraordinary personal retreats. Located in Austin, Texas, we are pioneers in custom pool design and construction. Our mission is to bring an oasis of tranquility and enjoyment to your own backyard.<mark id="mobileNone"> Our dedication to perfection shines through in every project we undertake, whether it's crafting intimate plunge pools or expansive infinity-edge designs. We specialize in creating uniquely tailored, incredible swimming pools that reflect your personal style and preferences. Each Texas Pool Service Pool is a testament to unparalleled craftsmanship, quality, and attention to detail.</mark>
                     </div>
                 </div>
             </div>
@@ -279,16 +241,16 @@ export default function Landing() {
                     </div>
                     <div id="smallGalleryImgArea">
                         <div id="smallGalleryFlex" class="scroll-container">
-
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
-                            <img src="https://californiapools.com/wp-content/uploads/2019/11/Local_Why-Cal_bg-1024x614.jpg" class="smallGalleryImg red-square"></img>
+                     
+                            <img src="https://www.aquapools.com/blog/wp-content/uploads/2023/11/Award-Winning-Fiberglass-Pool-Aquamarine-Pools.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.pools123.com/wp-content/uploads/2020/01/pools123-pools-leisure-pools.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://i.pinimg.com/originals/6e/7e/fc/6e7efc288769c02a1fe1cdf7780ee5e3.png" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.poolmagazine.com/wp-content/uploads/2021/04/CODY-A8.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://sanantoniomag.webpublisherpro.com/wp-content/uploads/2021/06/JLBarApril2019-232-copy.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://www.freedompools.com/getattachment/650367bb-404c-48bf-af78-46ff23569ef5/take-a-look-at-the-patented-design-Beach-Pool-exc" class="smallGalleryImg red-square"></img>
+                            <img src="https://crystalpools.com.au/wp-content/uploads/2013/09/bexleyFeature.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://i.pinimg.com/originals/de/1d/5d/de1d5dae7705d9c5ca7a588ece6ad20b.jpg" class="smallGalleryImg red-square"></img>
+                            <img src="https://crystaledgepools.net/wp-content/uploads/2023/06/Latina-3.jpg" class="smallGalleryImg red-square"></img>
                         </div>
                     </div>
 
@@ -493,7 +455,7 @@ export default function Landing() {
                 <div id="serviceSection">
                     <div id="serviceSectionInner">
                         <div className="serviceSectionItem" onClick={() => navigate("/builds")}>
-                            <img className="serviceImg" alt="new pool" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/New%20con%20rendering.jpg/:/cr=t:16.98%25,l:0%25,w:100%25,h:66.3%25/rs=w:730,h:365,cg:true"></img>
+                            <img className="serviceImg" alt="new pool" src="https://crystaledgepools.net/wp-content/uploads/2023/06/Valentina-2.jpg"></img>
                             <div className="serviceInfoArea">
                                 <div>
                                     <div className="serviceTitle">
@@ -510,8 +472,8 @@ export default function Landing() {
                                 </div>
                             </div>
                         </div>
-                        <div className="serviceSectionItem" onClick={() => navigate("/services")}>
-                            <img className="serviceImg" alt="pool renovation" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/IMG_0977.jpg/:/cr=t:16.67%25,l:0%25,w:100%25,h:66.67%25/rs=w:730,h:365,cg:true"></img>
+                        <div className="serviceSectionItem" onClick={() => navigate("/renovation")}>
+                            <img className="serviceImg" alt="pool renovation" src="https://lakesidecustompools.com/wp-content/uploads/2022/09/pool-remodeling-and-renovation.jpeg"></img>
                             <div className="serviceInfoArea">
                                 <div>
                                     <div className="serviceTitle">
@@ -529,7 +491,7 @@ export default function Landing() {
                             </div>
                         </div>
                         <div className="serviceSectionItem" onClick={() => navigate("/services")}>
-                            <img className="serviceImg" alt="pool service" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/Burke%20Pro.jpg/:/cr=t:16.67%25,l:0%25,w:100%25,h:66.67%25/rs=w:730,h:365,cg:true"></img>
+                            <img className="serviceImg" alt="pool service" src="https://poolscouts.com/wp-content/uploads/2022/01/Pool-Maintenance.jpg"></img>
                             <div className="serviceInfoArea">
                                 <div>
                                     <div className="serviceTitle">
@@ -554,36 +516,36 @@ export default function Landing() {
             <div id="buildPreview">
                 <div id="buildPreviewInner">
                     <div id="buildPreviewTitle">
-                        Our Build Process
+                        The Build Process
                     </div>
                     <div id="processOptionsArea">
-                        <div className="processOption">
+                        <div className="processOption" id="processOption1">
                             <div className="processOptionTop">
                                 <svg id="processOptionIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
                                 </svg>
                                 <div>
-                                    consultation
+                                    Consultation
                                 </div>
                             </div>
                             <div className="proccessOptionDescription">
                                 Our consultation process is tailored to meet your needs and preferences. During our meeting, we listen carefully to your vision, assess your backyard space, and offer professional recommendations. Through open communication, we collaborate closely with you to develop a personalized plan that fits your style, budget, and timeline. Our aim is to turn your vision into a stunning, functional pool that exceeds your expectations.                                We give customers a 3d visual representation of their pool and what it will look like.
                             </div>
                         </div>
-                        <div className="processOption">
+                        <div className="processOption" id="processOption2">
                             <div className="processOptionTop">
                                 <svg id="processOptionIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                                 </svg>
                                 <div>
-                                    3d modeling
+                                    3d Modeling
                                 </div>
                             </div>
                             <div className="proccessOptionDescription">
                                 At Texas Pool Services, we use 3D modeling to help you see your pool ideas clearly. With advanced technology, we create lifelike digital designs for your pool, letting you explore different features and layouts before construction. This process ensures we match your preferences and expectations, guaranteeing your satisfaction with the final pool design.                              We give customers a 3d visual representation of their pool and what it will look like.
                             </div>
                         </div>
-                        <div className="processOption">
+                        <div className="processOption" id="processOption3">
                             <div className="processOptionTop">
                                 <svg id="processOptionIcon" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z" />
@@ -591,11 +553,11 @@ export default function Landing() {
                                 </svg>
 
                                 <div>
-                                    pool construction
+                                    Pool Construction
                                 </div>
                             </div>
                             <div className="proccessOptionDescription">
-                                At Texas Pool Services, we streamline the pool construction process from start to finish. We kick off by handling all necessary permits and approvals, ensuring compliance with local regulations. Our experienced team then takes charge, overseeing every aspect of the project from excavation to final touches. We work diligently to transform your backyard, coordinating all aspects of construction seamlessly to minimize disruption and maximize efficiency. With a turnkey approach, we manage the entire process, delivering a stunning pool that exceeds your expectations while transforming your backyard into a captivating oasis of relaxation and enjoyment.                                 We give customers a 3d visual representation of their pool and what it will look like.
+                                At Texas Pool Services, we streamline the pool construction process from start to finish. We kick off by handling all necessary permits and approvals, ensuring compliance with local regulations. Our experienced team then takes charge, overseeing every aspect of the project from excavation to final touches. With a turnkey approach, we manage the entire process, delivering a stunning pool that exceeds your expectations while transforming your backyard into a captivating oasis of relaxation and enjoyment. 
                             </div>
                         </div>
                     </div>
@@ -637,7 +599,7 @@ export default function Landing() {
             <div id="landingReviewscontainer" className="reviewsContainers">
                 <div id="reviewSub">A Reputation You Can Count On</div>
                 <div id="reviewTitle">Explore Some of Our Testimonials!</div>
-                <ReviewSection reviews={reviews} />
+                <ReviewSection />
             </div>
             {/* Form */}
             <div id="formSection">

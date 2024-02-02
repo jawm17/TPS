@@ -1,0 +1,173 @@
+
+
+#aboutSectionMain {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    position: relative;
+    /* background-color: var(--blueMain); */
+}
+
+#aboutSectionInner {
+    margin-top: 65px;
+    max-width: var(--maxWidthMain);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    /* background-color: var(--blueMain); */
+}
+
+#aboutImg {
+    width: 400px;
+    object-fit: cover;
+}
+
+#aboutRight {
+    margin-left: 80px;
+}
+
+#aboutRightTitle {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--blueMain);
+}
+
+#aboutRightDescription {
+    color: #666666;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+#aboutPortfolio {
+    position: relative;
+    background-color: var(--blueMain);
+    padding-top: 20px;
+    padding-bottom: 80px;
+    margin-top: 100px;
+}
+
+#portfolioTitle {
+    margin-top:60px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#portfolioSub {
+    margin-top:20px;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+
+#aboutNPCArea {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    position: relative;
+    /* background-color: var(--blueMain); */
+}
+
+#aboutNPCAreaInner {
+    margin-top: 65px;
+    max-width: var(--maxWidthMain);
+    width: 95%;
+    display: flex;
+    align-items: center;
+    /* background-color: var(--blueMain); */
+}
+
+#aboutLocationsTitle {
+    margin-top:60px;
+    color: var(--blueMain);
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#aboutMapContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#aboutMapContainerInner {
+    width: 90%;
+    margin-left: -40px;
+}
+
+
+.imageSlide {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .splide__pagination {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+    #aboutImg {
+        width: 320px;
+        object-fit: cover;
+    }
+
+    #aboutRightTitle {
+        font-size: 24px;
+    }
+
+    #aboutRightDescription {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #aboutSectionInner {
+        display: block;
+        margin-top: 025px;
+    }
+
+    #aboutRight {
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+    }
+
+    #aboutLeft {
+        display: flex;
+        justify-content: center;
+    }
+
+    #portfolioTitle {
+        font-size: 30px;
+    }
+
+    #portfolioSub {
+        font-size: 16px;
+    }
+
+    #aboutLocationsTitle {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #aboutImg {
+        width: 200px;
+        object-fit: cover;
+    }
+}

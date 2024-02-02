@@ -149,6 +149,18 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none; /*remove the resize handle on the bottom right*/
+}
 body::-webkit-scrollbar {
   display: none;
   width: 0;
@@ -173,6 +185,11 @@ div::-webkit-scrollbar {
   /* Optional: just make scrollbar invisible */
 }
 
+@font-face {
+  font-family: Mafakanev;
+  src: url("/src/assets/Mafakanev.otf") format("opentype");
+}
+
 :root {
   --green: #00fc00;
   --blue: #0b83ff;
@@ -184,6 +201,6 @@ div::-webkit-scrollbar {
 
   --blueMain: #24337A;
   /* --blueMain: rgba(0, 112, 255, 1); */
-  --blueSecond: #24337A;
+  --blueSecond: #83b8d7;
   --blueThird: #0070ff;
 }

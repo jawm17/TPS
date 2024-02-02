@@ -33,7 +33,7 @@
 }
 
 #servicesGrid {
-    width: 100%;
+    width: 65%;
     /* background-color: red; */
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Change this line */
@@ -42,16 +42,17 @@
 
 .serviceItem {
     width: calc(100% - 60px);
-    height: 300px;
+    /* height: 400px; */
     padding: 30px;
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    /* text-align: center; */
+    position: relative;
 }
 
 .serviceItemTitle {
-    text-align: center;
+    /* text-align: center; */
     margin-top: 10px;
     color: var(--blueMain);
     font-weight: 500;
@@ -61,6 +62,7 @@
 .serviceDescription {
     margin-top: 25px;
     line-height: 22px;
+    margin-bottom: 100px;
 }
 
 .serviceBtnFlex {
@@ -73,21 +75,23 @@
     padding: 10px;
     background-color: var(--blueMain);
     color: white;
-    width: 180px;
+    width: calc(100% - 60px);
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 45px;
+    border-radius: 4px;
     cursor: pointer;
     margin-top: 15px;
+    position: absolute;
+    bottom: 25px;
 }
 
 #servicesSideArea {
     width: calc(35% - 55px);
     margin-left: 15px;
     position: relative;
-    display: none;
+    /* display: none; */
     /* background-color: red; */
 }
 
@@ -95,14 +99,17 @@
     width: 100%;
     height: 250px;
     border: solid 1px var(--blueMain);
+    background-color: var(--blueMain);
     border-radius: 8px;
     padding: 20px;
+    color: black;
 }
 
 .serviceFormInputFlex {
     width: 100%;
     height: 35px;
     border: solid 1px var(--blueMain);
+    background-color: white;
     border-radius: 4px;
     margin-top: 15px;
     display: flex;
@@ -119,7 +126,7 @@
     font-weight: 500;
     margin-bottom: 25px;
     font-size: 28px;
-    color: var(--blueMain);
+    color: white;
 }
 
 #serviceFormSubmit {
@@ -129,7 +136,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: var(--blueMain);
+    background-color: var(--blueThird);
     border-radius: 4px;
     margin-top: 20px;
     cursor: pointer;
@@ -139,7 +146,21 @@
     width: 110%;
     margin-left: 5px;
     object-fit: cover;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+#serviceLevelTitle {
+    margin-top: 40px;
+    font-weight: bold;
+    color: var(--blueMain);
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+#levelList {
+    line-height: 24px;
+    margin-left: 30px;
+    margin-top: 15px;
 }
 
 @media only screen and (max-width: 1100px) {

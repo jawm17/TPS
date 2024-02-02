@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import sidebar1 from "../../assets/sidebar1.jpeg";
@@ -7,13 +7,63 @@ import sidebar3 from "../../assets/sidebar3.jpeg";
 import CallBtn from "../../components/CallBtn";
 import { Wave } from "../../components/WavesComp";
 import ContactForm from "../../components/ContactForm";
+import SubmitFormModal from "../../components/SubmitFormModal";
+import axios from "axios";
 import "./servicesStyle.css";
 
 export default function Services() {
+    const [name1, setName1] = useState("");
+    const [email1, setEmail1] = useState("");
+    const [phone1, setPhone1] = useState("");
+    const [zip1, setZip1] = useState("NA");
+    const [submitForm1, setSubmitForm1] = useState(false);
+    const [formModal, setFormModal] = useState(false);
+
+    useEffect(() => {
+        if (submitForm1) {
+            sendEmail();
+            setFormModal(true);
+            setTimeout(() => {
+                setSubmitForm1(false);
+            }, 8000);
+        }
+    }, [submitForm1]);
+
+    async function sendEmail() {
+        try {
+            const data = {
+                service_id: 'service_9xwmw24',
+                template_id: 'template_cooi9ho',
+                user_id: 'ZDDvovxuOQXk34MJ0',
+                template_params: {
+                    'from_name': name1,
+                    'to_name': 'Adam',
+                    'from_phone': phone1,
+                    'from_email': email1,
+                    'from_zip': "NA"
+                }
+            };
+            await axios.post('https://api.emailjs.com/api/v1.0/email/send', data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            setName1("");
+            setEmail1("");
+            setPhone1("");
+            setZip1("");
+        } catch (error) {
+            setName1("");
+            setEmail1("");
+            setPhone1("");
+            setZip1("");
+        }
+    }
 
     return (
         <div>
             <Header page={"services"} />
+            {formModal ? <SubmitFormModal close={() => setFormModal(false)} /> : null}
             <CallBtn />
             <div id="servicesHero">
                 <img id="serviceHeroImg" src="https://media.angi.com/s3fs-public/man-inspecting-swimming-pool.jpeg" alt="pool service"></img>
@@ -42,7 +92,7 @@ export default function Services() {
                     <div id="servicesGrid">
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                             Replastering
+                                Replastering
                             </div>
                             <div className="serviceDescription">
                                 We specialize in pool replastering to refresh and restore your pool's appearance and durability. Over time, pool plaster can wear, stain, or damage, diminishing its beauty and function. Our expert team delivers professional results with attention to detail and quality materials, leaving your pool refreshed and inviting for years to come. Trust us for reliable replastering services.
@@ -58,7 +108,7 @@ export default function Services() {
                                 Weekly Pool Maintenance
                             </div>
                             <div className="serviceDescription">
-                            Our weekly pool chemical and cleaning services keep your pool safe and pristine year-round. Our team meticulously balances chemicals, prevents algae growth, and maintains proper pH levels. We also provide thorough cleaning, including skimming, vacuuming, and brushing to remove debris. With our reliable maintenance, enjoy crystal-clear water hassle-free. Trust us to keep your pool sparkling, so you can relax and dive in anytime. 
+                                Our weekly pool chemical and cleaning services keep your pool safe and pristine year-round. Our team meticulously balances chemicals, prevents algae growth, and maintains proper pH levels. We also provide thorough cleaning, including skimming, vacuuming, and brushing to remove debris. With our reliable maintenance, enjoy crystal-clear water hassle-free.
                             </div>
                             <div className="serviceBtnFlex" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div className="serviceBtn">
@@ -68,10 +118,10 @@ export default function Services() {
                         </div>
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                                Equipment Repair and replacement  
+                                Equipment Repair and replacement
                             </div>
                             <div className="serviceDescription">
-                            Our pool equipment repair and replacement services ensure your pool functions flawlessly. Our skilled technicians efficiently handle all tasks, from fixing or replacing pumps to changing out filters, prioritizing quality and precision with top-grade parts and modern techniques. Trust us to restore or replace your pool equipment to optimal condition for uninterrupted enjoyment, handling all needs with professionalism and reliability.
+                                Our pool equipment repair and replacement services ensure your pool functions flawlessly. Our skilled technicians efficiently handle all tasks, from fixing or replacing pumps to changing out filters, prioritizing quality and precision with top-grade parts and modern techniques. Trust us to restore or replace your pool equipment to optimal condition for uninterrupted enjoyment, handling all needs with professionalism and reliability.
                             </div>
                             <div className="serviceBtnFlex" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div className="serviceBtn">
@@ -81,10 +131,10 @@ export default function Services() {
                         </div>
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                            Pool Equipment enhancements
+                                Pool Equipment enhancements
                             </div>
                             <div className="serviceDescription">
-                            Our pool equipment additions and enhancements elevate your pool experience. From energy-efficient pumps to advanced filtration systems and automation capabilities, our expert team delivers top-quality products and seamless installation. With our tailored recommendations, enjoy enhanced efficiency, water clarity, and control over your pool environment. Trust us to revitalize your pool with our comprehensive services.  
+                                Our pool equipment additions and enhancements elevate your pool experience. From energy-efficient pumps to advanced filtration systems and automation capabilities, our expert team delivers top-quality products and seamless installation. With our tailored recommendations, enjoy enhanced efficiency, water clarity, and control over your pool environment. Trust us to revitalize your pool with our comprehensive services.
                             </div>
                             <div className="serviceBtnFlex" onClick={() => document.getElementById("formSection").scrollIntoView({ behavior: "smooth" })}>
                                 <div className="serviceBtn">
@@ -92,7 +142,7 @@ export default function Services() {
                                 </div>
                             </div>
                         </div>
-                     
+
                     </div>
                     <div id="servicesSideArea">
                         <div id="servicesForm">
@@ -100,21 +150,59 @@ export default function Services() {
                                 Request A Callback
                             </div>
                             <div className="serviceFormInputFlex">
-                                <input placeholder="Name" className="serviceFormInput"></input>
+                                <input onChange={(e) => setName1(e.target.value)} value={name1} placeholder="Name" className="serviceFormInput"></input>
                             </div>
                             <div className="serviceFormInputFlex">
-                                <input placeholder="Email" className="serviceFormInput"></input>
+                                <input onChange={(e) => setEmail1(e.target.value)} value={email1} placeholder="Email" className="serviceFormInput"></input>
                             </div>
                             <div className="serviceFormInputFlex">
-                                <input placeholder="Phone" className="serviceFormInput"></input>
+                                <input onChange={(e) => setPhone1(e.target.value)} value={phone1} placeholder="Phone" className="serviceFormInput"></input>
                             </div>
-                            <div id="serviceFormSubmit">
-                                submit
+                            <div id="serviceFormSubmit" onClick={name1 && email1 && phone1 ? () => setSubmitForm1(true) : null}>
+                                {submitForm1 ?
+                                    <svg id="form1Check" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    :
+                                    <div>
+                                        Submit
+                                    </div>
+                                }
                             </div>
                         </div>
-                        <img src={sidebar1} className="sidebarImg" alt="services"></img>
-                        <img src={sidebar2} className="sidebarImg" alt="services"></img>
-                        <img src={sidebar3} className="sidebarImg" alt="services"></img>
+                        <div id="serviceLevelTitle">
+                            Our Pool Recommendations:
+                        </div>
+                        <div id="levelList">
+                            <ul>
+                                <li>Chlorine: 1.0 – 3.0 ppm.</li>
+                                <li>pH: 7.2 – 7.8.</li>
+                                <li>Total Alkalinity: 80 – 120 ppm.</li>
+                                <li>Calcium Hardness: 200 – 400.</li>
+                                <li>Cyanuric Acid: 30 – 100 ppm.</li>
+                                <li>Total Dissolved Solids: 0 – 5000 ppm. 1500 or less ideal for Chlorine only.</li>
+                                <li>LSI Range -0.10 to +0.20</li>
+                            </ul>
+                        </div>
+                        <div id="serviceLevelTitle">
+                            Weekly Maintenance Includes:
+                        </div>
+                        <div id="levelList">
+                            <ul>
+                                <li>Chemical test and adjustment</li>
+                                <li>Empty skimmer and pump baskets</li>
+                                <li>Backwash filter when necessary</li>
+                                <li>Empty/wash cleaner bag and/or filter</li>
+                                <li>Verify Normal Pool operation</li>
+                                <li>Brush Pool walls, tiles, and steps</li>
+                                <li>Visual inspection and test of equipment</li>
+                                <li>Net swimming pool</li>
+                                <li>Vacuum Swimming Pool</li>
+                                <li>Maintain Salt level. Salt bags are charged at time of addition unless provided.</li>
+                                <li>Provide chemical readouts and notes after service</li>
+                            </ul>
+
+                        </div>
                     </div>
                 </div>
             </div>
