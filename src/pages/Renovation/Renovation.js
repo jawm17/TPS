@@ -107,7 +107,7 @@ export default function Renovation() {
 
                             <img id="renIcon" src={tile}></img>
                             <div className="renItemTitle">
-                                SURFACE REFINISHING
+                                POOL REPLASTER
                             </div>
 
                             <div className="renItemDescription">

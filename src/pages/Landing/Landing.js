@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -8,16 +8,13 @@ import ContactForm from "../../components/ContactForm";
 import ReviewSection from "../../components/ReviewSection";
 import SubmitFormModal from "../../components/SubmitFormModal";
 import axios from "axios";
-import laurel from "../../assets/laurel.png"
+import laurel from "../../assets/laurel.png";
+import emailjs from '@emailjs/browser';
 // import twilio from 'twilio';
 import "./landingStyle.css";
 export default function Landing() {
+    const form = useRef();
     const navigate = useNavigate();
-
-    const [name1, setName1] = useState("");
-    const [email1, setEmail1] = useState("");
-    const [phone1, setPhone1] = useState("");
-    const [zip1, setZip1] = useState("");
     const [submitForm1, setSubmitForm1] = useState(false);
     const [formModal, setFormModal] = useState(false);
 
@@ -26,46 +23,32 @@ export default function Landing() {
         scrollBox2();
     }, []);
 
-    useEffect(() => {
-        if (submitForm1) {
-            sendEmail();
-            setFormModal(true);
-            setTimeout(() => {
-                setSubmitForm1(false);
-            }, 8000);
-        }
-    }, [submitForm1]);
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    async function sendEmail() {
-        try {
-            const data = {
-                service_id: 'service_9xwmw24',
-                template_id: 'template_cooi9ho',
-                user_id: 'ZDDvovxuOQXk34MJ0',
-                template_params: {
-                    'from_name': name1,
-                    'to_name': 'Adam',
-                    'from_phone': phone1,
-                    'from_email': email1,
-                    'from_zip': zip1
-                }
-            };
-            await axios.post('https://api.emailjs.com/api/v1.0/email/send', data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-            setName1("");
-            setEmail1("");
-            setPhone1("");
-            setZip1("");
-        } catch (error) {
-            setName1("");
-            setEmail1("");
-            setPhone1("");
-            setZip1("");
+        // Validate form inputs
+        const inputs = form.current.getElementsByTagName("input");
+        for (const input of inputs) {
+            if (!input.value) {
+                console.log("Please fill out all fields");
+                return;
+            }
         }
-    }
+
+        setSubmitForm1(true);
+        setFormModal(true);
+        setTimeout(() => {
+            setSubmitForm1(false);
+        }, 8000);
+
+        emailjs.sendForm('service_9xwmw24', 'template_cooi9ho', form.current, 'ZDDvovxuOQXk34MJ0')
+            .then((result) => {
+                console.log(result.text);
+                form.current.reset();
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     function scrollBox() {
         const scrollContainer = document.getElementById("smallGalleryFlex");
@@ -170,20 +153,20 @@ export default function Landing() {
                             Request Free Consultation
                         </div>
 
-                        <div id="serviceInputs">
+                        <form id="serviceInputs" ref={form}>
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" placeholder="Name" value={name1} onChange={(e) => setName1(e.target.value)}></input>
+                                <input className="serviceInput" name="from_name" placeholder="Name" ></input>
                             </div>
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" type="email" placeholder="Email" value={email1} onChange={(e) => setEmail1(e.target.value)}></input>
+                                <input className="serviceInput" name="from_email" type="email" placeholder="Email"  ></input>
                             </div>
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" placeholder="Phone" value={phone1} onChange={(e) => setPhone1(e.target.value)}></input>
+                                <input className="serviceInput" name="from_phone" placeholder="Phone" ></input>
                             </div>
                             <div className="serviceInputFlex">
-                                <input className="serviceInput" placeholder="ZIP" value={zip1} onChange={(e) => setZip1(e.target.value)}></input>
+                                <input className="serviceInput" name="from_zip" placeholder="ZIP" ></input>
                             </div>
-                            <div id="heroServiceSubmit" onClick={name1 && email1 && phone1 && zip1 ? () => setSubmitForm1(true) : null}>
+                            <div id="heroServiceSubmit" onClick={(e) => sendEmail(e)}>
                                 {submitForm1 ?
                                     <svg id="form1Check" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -194,7 +177,7 @@ export default function Landing() {
                                     </div>
                                 }
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div id="mobileServiceBtn" onClick={() => window.location.href = `tel:${5128207434}`}>
@@ -240,7 +223,7 @@ export default function Landing() {
                     </div>
                     <div id="smallGalleryImgArea">
                         <div id="smallGalleryFlex" class="scroll-container">
-                     
+
                             <img src="https://www.aquapools.com/blog/wp-content/uploads/2023/11/Award-Winning-Fiberglass-Pool-Aquamarine-Pools.jpg" class="smallGalleryImg red-square"></img>
                             <img src="https://www.pools123.com/wp-content/uploads/2020/01/pools123-pools-leisure-pools.jpg" class="smallGalleryImg red-square"></img>
                             <img src="https://i.pinimg.com/originals/6e/7e/fc/6e7efc288769c02a1fe1cdf7780ee5e3.png" class="smallGalleryImg red-square"></img>
@@ -556,7 +539,7 @@ export default function Landing() {
                                 </div>
                             </div>
                             <div className="proccessOptionDescription">
-                                At Texas Pool Services, we streamline the pool construction process from start to finish. We kick off by handling all necessary permits and approvals, ensuring compliance with local regulations. Our experienced team then takes charge, overseeing every aspect of the project from excavation to final touches. With a turnkey approach, we manage the entire process, delivering a stunning pool that exceeds your expectations while transforming your backyard into a captivating oasis of relaxation and enjoyment. 
+                                At Texas Pool Services, we streamline the pool construction process from start to finish. We kick off by handling all necessary permits and approvals, ensuring compliance with local regulations. Our experienced team then takes charge, overseeing every aspect of the project from excavation to final touches. With a turnkey approach, we manage the entire process, delivering a stunning pool that exceeds your expectations while transforming your backyard into a captivating oasis of relaxation and enjoyment.
                             </div>
                         </div>
                     </div>

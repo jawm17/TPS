@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import sidebar1 from "../../assets/sidebar1.jpeg";
@@ -8,57 +8,41 @@ import CallBtn from "../../components/CallBtn";
 import { Wave } from "../../components/WavesComp";
 import ContactForm from "../../components/ContactForm";
 import SubmitFormModal from "../../components/SubmitFormModal";
+import emailjs from '@emailjs/browser';
 import axios from "axios";
 import "./servicesStyle.css";
 
 export default function Services() {
-    const [name1, setName1] = useState("");
-    const [email1, setEmail1] = useState("");
-    const [phone1, setPhone1] = useState("");
-    const [zip1, setZip1] = useState("NA");
+    const form = useRef();
     const [submitForm1, setSubmitForm1] = useState(false);
     const [formModal, setFormModal] = useState(false);
 
-    useEffect(() => {
-        if (submitForm1) {
-            sendEmail();
-            setFormModal(true);
-            setTimeout(() => {
-                setSubmitForm1(false);
-            }, 8000);
-        }
-    }, [submitForm1]);
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    async function sendEmail() {
-        try {
-            const data = {
-                service_id: 'service_9xwmw24',
-                template_id: 'template_cooi9ho',
-                user_id: 'ZDDvovxuOQXk34MJ0',
-                template_params: {
-                    'from_name': name1,
-                    'to_name': 'Adam',
-                    'from_phone': phone1,
-                    'from_email': email1,
-                    'from_zip': "NA"
-                }
-            };
-            await axios.post('https://api.emailjs.com/api/v1.0/email/send', data, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-            setName1("");
-            setEmail1("");
-            setPhone1("");
-            setZip1("");
-        } catch (error) {
-            setName1("");
-            setEmail1("");
-            setPhone1("");
-            setZip1("");
+        // Validate form inputs
+        const inputs = form.current.getElementsByTagName("input");
+        for (const input of inputs) {
+            if (!input.value) {
+                console.log("Please fill out all fields");
+                return;
+            }
         }
-    }
+
+        setSubmitForm1(true);
+        setFormModal(true);
+        setTimeout(() => {
+            setSubmitForm1(false);
+        }, 8000);
+
+        emailjs.sendForm('service_9xwmw24', 'template_cooi9ho', form.current, 'ZDDvovxuOQXk34MJ0')
+            .then((result) => {
+                console.log(result.text);
+                form.current.reset();
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     return (
         <div>
@@ -118,7 +102,7 @@ export default function Services() {
                         </div>
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                                Equipment Repair and replacement
+                                Equipment Repair and Replacement
                             </div>
                             <div className="serviceDescription">
                                 Our pool equipment repair and replacement services ensure your pool functions flawlessly. Our skilled technicians efficiently handle all tasks, from fixing or replacing pumps to changing out filters, prioritizing quality and precision with top-grade parts and modern techniques. Trust us to restore or replace your pool equipment to optimal condition for uninterrupted enjoyment, handling all needs with professionalism and reliability.
@@ -131,7 +115,7 @@ export default function Services() {
                         </div>
                         <div className="serviceItem">
                             <div className="serviceItemTitle">
-                                Pool Equipment enhancements
+                                Pool Equipment Enhancements
                             </div>
                             <div className="serviceDescription">
                                 Our pool equipment additions and enhancements elevate your pool experience. From energy-efficient pumps to advanced filtration systems and automation capabilities, our expert team delivers top-quality products and seamless installation. With our tailored recommendations, enjoy enhanced efficiency, water clarity, and control over your pool environment. Trust us to revitalize your pool with our comprehensive services.
@@ -145,20 +129,20 @@ export default function Services() {
 
                     </div>
                     <div id="servicesSideArea">
-                        <div id="servicesForm">
+                        <form id="servicesForm" ref={form}>
                             <div id="servicesFormTitle">
                                 Request A Callback
                             </div>
                             <div className="serviceFormInputFlex">
-                                <input onChange={(e) => setName1(e.target.value)} value={name1} placeholder="Name" className="serviceFormInput"></input>
+                                <input placeholder="Name" name="from_name" className="serviceFormInput"></input>
                             </div>
                             <div className="serviceFormInputFlex">
-                                <input onChange={(e) => setEmail1(e.target.value)} value={email1} placeholder="Email" className="serviceFormInput"></input>
+                                <input placeholder="Email" name="from_email" className="serviceFormInput"></input>
                             </div>
                             <div className="serviceFormInputFlex">
-                                <input onChange={(e) => setPhone1(e.target.value)} value={phone1} placeholder="Phone" className="serviceFormInput"></input>
+                                <input placeholder="Phone" name="from_phone" className="serviceFormInput"></input>
                             </div>
-                            <div id="serviceFormSubmit" onClick={name1 && email1 && phone1 ? () => setSubmitForm1(true) : null}>
+                            <div id="serviceFormSubmit" onClick={(e) => sendEmail(e)}>
                                 {submitForm1 ?
                                     <svg id="form1Check" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -169,7 +153,7 @@ export default function Services() {
                                     </div>
                                 }
                             </div>
-                        </div>
+                        </form>
                         <div id="serviceLevelTitle">
                             Our Pool Recommendations:
                         </div>

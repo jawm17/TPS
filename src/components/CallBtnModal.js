@@ -24,7 +24,7 @@ export default function CallBtnModal(props) {
                     CONTACT US
                 </div>
                 <div id="line2">
-                    512-820-7431
+                    512-820-7434
                 </div>
                 <div id="closeModalBtn" onClick={() => props.close()}>
                     close
