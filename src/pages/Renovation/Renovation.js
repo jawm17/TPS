@@ -16,7 +16,7 @@ export default function Renovation() {
 
     function beforeAfter() {
         document.getElementById('compare').style.width = document.getElementById('slider').value + "%";
-      }
+    }
 
     return (
         <div>
@@ -51,32 +51,7 @@ export default function Renovation() {
                         </div>
                     </div>
                 </div>
-                {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,144C640,149,800,139,960,122.7C1120,107,1280,85,1360,74.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
-                {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
-                {/* <svg id="buildWave" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,224L80,202.7C160,181,320,139,480,149.3C640,160,800,224,960,213.3C1120,203,1280,117,1360,74.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
-
-
             </div>
-
-            {/* 
-            <div id="buildsIntro">
-                <div id="buildsIntroTop">
-                    CRAFTING EXTRAORDINARY POOLSCAPES
-                </div>
-                <div id="buildsIntroTitle">
-                    Texas Pool Services, Your Premier Pool Builders
-                </div>
-                <div id="buildsIntroBottom">
-                    Texas Pool Services is the trusted name in pool construction, renowned for creating exceptional swimming pools that surpass expectations. As the leading pool builder in Austin and Buda, we are dedicated to bringing your pool dreams to life. Our team of expert pool builders combines innovative design, quality craftsmanship, and personalized service to deliver pools that exceed your wildest imagination.
-                </div>
-                <div id="awardsFlexOuter">
-                    <div id="awardsFlex">
-                        <img className="awardItem" src="https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/google-guarantee-service-400x403.png"></img>
-                        <img className="awardItem" src="https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/CBPofficial.png"></img>
-                        <img className="awardItem" id="award3" src="https://0f26bd.a2cdn1.secureserver.net/wp-content/uploads/Top502023-150x150.png"></img>
-                    </div>
-                </div>
-            </div> */}
 
             <div id="renSection">
                 <Wave fill="#0693e3" />
@@ -169,22 +144,18 @@ export default function Renovation() {
                     </div>
                 </div>
             </div>
-         
+
             <div id="beforeAfter">
-            <div id="beforeAfterTitle">
+                <div id="beforeAfterTitle">
                     Before and After
                 </div>
                 <div class="container">
                     <figure>
                         <div id="compare"></div>
                     </figure>
-                    <input onInput={() => beforeAfter()} onChange={() => beforeAfter()}  type="range" min="0" max="100" value="50" id="slider" />
+                    <input onInput={() => beforeAfter()} onChange={() => beforeAfter()} type="range" min="0" max="100" value="50" id="slider" />
                 </div>
             </div>
-
-
-
-
 
             <div id="partnersSection">
                 <div id="partnerSectionInner">
@@ -202,46 +173,7 @@ export default function Renovation() {
                 </div>
             </div>
 
-
-
-            {/* <div id="poolRenovationSection">
-                <img id="renovationImg" src="https://www.longhornpools.com/wp-content/uploads/2023/06/pool-renovation-company-austin-tx01.jpg"></img>
-                <div id="renovationImgBlur"></div>
-                <div id="poolRenovationSectionOuter">
-                    <div id="poolRenovationSectionInner">
-
-                    </div>
-                </div>
-                <div id="renovationSectionTitle">
-                    Pool Renovations
-                </div>
-            </div> */}
-            {/* <div id="fullSection">
-                <div id="fullSectionLeft">
-                    <img id="fullSectionImg" alt="inifinity edge pool" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/blob-646fbb9.png/:/cr=t:33.26%25,l:0%25,w:100%25,h:50%25/rs=w:1200,h:600,cg:true"></img>
-                    <div id="fullSectionBlock">
-                        <div>
-                            <div id="fullTitle">
-                                The Best in Texas!
-                            </div>
-                            <div id="fullSub">
-                                Our experienced electricians are highly trained in all aspects of electrical service, from office lighting and security systems to emergency repair.
-                            </div>
-                            <div id="fullBookBtn">
-                                <div>
-                                    Book now
-                                </div>
-                                <svg id="bookNowIcon" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                                    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="fullSectionRight">
-                </div>
-            </div> */}
-               <div id="formSection">
+            <div id="formSection">
                 <Wave fill="#0070ff" />
                 <ContactForm />
             </div>
