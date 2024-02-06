@@ -1,167 +1,95 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import ReviewSection from "../../components/ReviewSection";
-import f from "../../assets/facebook.png";
-import i from "../../assets/instagram.png";
-import y from "../../assets/yelp.png";
+import sidebar1 from "../../assets/sidebar1.jpeg";
+import sidebar2 from "../../assets/sidebar2.jpeg";
+import sidebar3 from "../../assets/sidebar3.jpeg";
+import CallBtn from "../../components/CallBtn";
 import { Wave } from "../../components/WavesComp";
 import ContactForm from "../../components/ContactForm";
-
-import Logo from "../../assets/TPS_logo.png";
-
+import AboutCarousel from "../../components/AboutCarousel";
+import TPS_logo from "../../assets/TPS_logo.png"
+import ReviewSection from "../../components/ReviewSection";
+import MapComponent from "../../components/MapComponent";
 import "./aboutStyle.css";
+
 export default function About() {
-  const reviews = [
-    {
-      reviewText:
-        "We are very pleased with the work that Chatham Electric did on our house build. We did not have power to our property till Hans Hubbard installed the ground wire and panel. If you need an electrician we highly recommend him.",
-      reviewUser: "John Taylor",
-      starCount: 5,
-    },
-    {
-      reviewText:
-        "We are very pleased with the work that Chatham Electric did on our house build. We did not have power to our property till Hans Hubbard installed the ground wire and panel. If you need an electrician we highly recommend him.",
-      reviewUser: "John Taylor",
-      starCount: 5,
-    },
-    {
-      reviewText:
-        "We are very pleased with the work that Chatham Electric did on our house build. We did not have power to our property till Hans Hubbard installed the ground wire and panel. If you need an electrician we highly recommend him.",
-      reviewUser: "John Taylor",
-      starCount: 5,
-    },
-  ];
-  return (
-    <div id="aboutBody">
-      <Header page={"about"} />
-      <div id="aboutContent">
-        {/* hero */}
-        <div id="aboutHero">
-          <div id="aboutinnerHero">
-            <h2>About Us</h2>
-            <p>
-              Redefining luxury, one pool at a time! Call now!<br /> 512-820-7434
-            </p>
-            {/* call btn here */}
-          </div>
-        </div>
-        {/* Why we created Texas Pool Services? */}
-        <div id="whyConatiner">
-          <Wave fill="#0693e3" />
-          <Wave idName="bottomWave" fill="white" />
-          <div id="whyConatinerInner">
-            <div className="whyDivs1">
-              <img src={Logo} />
-            </div>
-            <div className="whyDivs2">
-              {/* title */}
-              <h3>Why we created Texas Pool Services?</h3>
-              {/* store */}
-              <p>
-                Texas Pool Services was created to fill a void in the Austin area
-                "Pool Company". Most companies focus on one area of excellence but
-                we believe that doing it all sets us apart, so we specialize in it
-                all. Texas Pool Services also believes education in this market is
-                and has been lacking. Most "Pool Guys" will tell you their opinion
-                and not follow the proven science your pool needs. We focus on
-                education, not only ours but yours too! The more we all know the
-                longer your hard earned money will last. Call Today to learn the
-                Texas Pool Services way!
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* Our Service Areas */}
-        <div id="ourAboutServiceConatiner">
-          {/* <HoverCardDiv /> */}
-          <div id="serviceCardContainer">
-            <h2>Our Service Areas</h2>
-            <div className="serviceCard">
-              <h4>New Pool Construction</h4>
-              <p>Austin , Georgetown, Round Rock, Cedar Park, Leander, Pflugerville, Salado, Copperas Cove, Liberty Hill, Burnet, Marble Falls, Dripping Springs, Wimberly, Blanco, Buda, Kyle, New Braunfels, Bastrop, Dale, Elgin, Manor.</p>
-            </div>
-            <div className="serviceCard">
-              <h4>New Pool Construction</h4>
-              <p>Austin , Georgetown, Round Rock, Cedar Park, Leander, Pflugerville, Salado, Copperas Cove, Liberty Hill, Burnet, Marble Falls, Dripping Springs, Wimberly, Blanco, Buda, Kyle, New Braunfels, Bastrop, Dale, Elgin, Manor.</p>
-            </div>
-            <div className="serviceCard">
-              <h4>New Pool Construction</h4>
-              <p>Austin , Georgetown, Round Rock, Cedar Park, Leander, Pflugerville, Salado, Copperas Cove, Liberty Hill, Burnet, Marble Falls, Dripping Springs, Wimberly, Blanco, Buda, Kyle, New Braunfels, Bastrop, Dale, Elgin, Manor.</p>
-            </div>
-            <div className="serviceCard">
-              <h4>New Pool Construction</h4>
-              <p>Austin , Georgetown, Round Rock, Cedar Park, Leander, Pflugerville, Salado, Copperas Cove, Liberty Hill, Burnet, Marble Falls, Dripping Springs, Wimberly, Blanco, Buda, Kyle, New Braunfels, Bastrop, Dale, Elgin, Manor.</p>
-            </div>
-          </div>
-        </div>
 
-        {/* National Plaster Council */}
-        <div id="nationalConatiner">
-
-          <div className="nationalDivs2">
-            <h3>National Plaster Council</h3>
-            <p>
-              The NPC professionals have spent years of their lives studying and
-              documenting why things happen, the reactions of cements with
-              certain water, the chemical science behind pools, and more. We use
-              their knowledge and case studies to make sure our staff is trained
-              to respond to your pools issues. Which in turns will keep your
-              pool looking beautiful for years to come!
-            </p>
-            <a href="https://www.npconline.org/">
-              <div id="nationBtn">LEARN MORE </div>
-            </a>
-          </div>
-          <div className="nationalDivs1">
-            <img src="https://codypools.com/wp-content/uploads/usmapbase2023.png" />
-            {/* <div id="nationalImg"></div> */}
-
-          </div>
-        </div>
-
-        <div id="aboutReviewscontainer" className="reviewsContainers">
-          <Wave fill="#24337A" />
-          <div id="reviewSub">A Reputation You Can Count On</div>
-          <div id="reviewTitle">Explore Some of Our Testimonials!</div>
-          <ReviewSection reviews={reviews} />
-        </div>
-      </div>
-      {/* Form */}
-      <div id="formSection">
-        <Wave fill="#0070ff" />
-        <ContactForm />
-      </div>
-      <div id="footer" className="footerAbout">
-        <Wave fill="white" />
-        <div id="footerInner">
-          {/* <img src={logo}></img> */}
-          <div id="logoflex">
-            <div id="logoFlexInner">
-              <div className="footerLogoBtn">
-                <img alt="facebook" className="footerLogoImg" src={f}></img>
-              </div>
-              <div className="footerLogoBtn">
-                <img alt="instagram" className="footerLogoImg" src={i}></img>
-              </div>
-              <div className="footerLogoBtn">
-                <img alt="yelp" className="footerLogoImg" src={y}></img>
-              </div>
+    return (
+        <div>
+            <Header page={"about"} />
+            <CallBtn />
+            <div id="servicesHero">
+                <img id="serviceHeroImg" src="https://img1.wsimg.com/isteam/ip/b9e96004-42fb-4242-b208-1ba222228f42/62033232552__5BD0909A-9EAB-4FAF-8178-C5E502C1C.JPG/:/rs=w:2320,h:1740" alt="pool service"></img>
+                <div id="buildsHeroFlex">
+                    <div id="buildsHeroLeft">
+                        <div id="buildsHeroLeftInner">
+                            <div id="buildsHeroTitle">
+                                About Us
+                            </div>
+                            <div id="buildsHeroSub">
+                                Texas Pool Services is your premier destination for transforming ordinary backyards into extraordinary personal retreats.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div id="footerText1">
-            COPYRIGHT © 2023 TEXAS POOL SERVICES LLC - ALL RIGHTS RESERVED.
-          </div>
-          <div id="footerBtns">
-            <div className="footerBtn">HOME</div>
-            <div className="footerBtn">BUILDS</div>
-            <div className="footerBtn">SERVICES</div>
-            <div className="footerBtn">REMODLING</div>
-            <div className="footerBtn">ABOUT</div>
-          </div>
-          <div id="footerText2">512 820 7434 | INFO@TEXASPOOLSERVICES.COM</div>
+            {/* <svg id="waveItem2" width="100%" height="100%" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 133.7333333333333,125.46666666666667 267.4666666666666,100.93333333333332 436,113 C 604.5333333333334,125.06666666666668 807.8666666666668,173.73333333333332 981,186 C 1154.1333333333332,198.26666666666668 1297.0666666666666,174.13333333333333 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#0693e3" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+            <svg id="waveItem" width="100%" height="100%" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 133.7333333333333,125.46666666666667 267.4666666666666,100.93333333333332 436,113 C 604.5333333333334,125.06666666666668 807.8666666666668,173.73333333333332 981,186 C 1154.1333333333332,198.26666666666668 1297.0666666666666,174.13333333333333 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#fff" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg> */}
+
+            <div id="aboutSectionMain">
+                <Wave fill="#0693e3" />
+                <Wave idName="bottomWave" fill="white" />
+                <div id="aboutSectionInner">
+                    <div id="aboutLeft">
+                        <img id="aboutImg" src={TPS_logo}></img>
+                    </div>
+                    <div id="aboutRight">
+                        <div id="aboutRightTitle">
+                            Why we created Texas Pool Services?
+                        </div>
+                        <div id="aboutRightDescription">
+                            Texas Pool Services was created to fill a void in the Austin area "Pool Company". Most companies focus on one area of excellence but we believe that doing it all sets us apart, so we specialize in it all. Texas Pool Services also believes education in this market is and has been lacking. Most "Pool Guys" will tell you their opinion and not follow the proven science your pool needs. We focus on education, not only ours but yours too! The more we all know the longer your hard earned money will last. Call Today to learn the Texas Pool Services way!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="aboutPortfolio">
+                {/* <Wave fill="var(--blueMain)" /> */}
+                <div id="portfolioTitle">
+                    Our Work
+                </div>
+                <div id="portfolioSub">
+                    At Texas Pool Services we take pride in our exceptional craftsmanship
+                </div>
+                <AboutCarousel />
+            </div>
+            {/* <div id="aboutNPCArea">
+                <div id="aboutNPCAreaInner">
+
+                </div>
+            </div> */}
+            <div id="aboutLocations">
+                <div id="aboutLocationsTitle">
+                    Our Locations
+                </div>
+                <div id="aboutMapContainer">
+                    <div id="aboutMapContainerInner">
+                        <MapComponent />
+                    </div>
+                </div>
+            </div>
+            <div id="landingReviewscontainer" className="reviewsContainersBlue">
+                <div id="reviewSub">A Reputation You Can Count On</div>
+                <div id="reviewTitle">Explore Some of Our Testimonials!</div>
+                <ReviewSection />
+            </div>
+            <div id="formSection">
+                <Wave fill="#0070ff" />
+                <ContactForm />
+            </div>
+            <Footer />
         </div>
-      </div>
-    </div>
-  );
+    );
 }

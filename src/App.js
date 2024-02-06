@@ -8,7 +8,6 @@ import Services from "./pages/Services/Services";
 import Renovation from "./pages/Renovation/Renovation";
 import About from "./pages/About/About";
 import Location from "./pages/Location/Location";
-import About2 from "./pages/About2/About2";
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
           <Route path="/builds" element={<Builds />} />
           <Route path="/renovation" element={<Renovation />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<About2 />} />
+          <Route path="/about" element={<About />} />
           <Route path="/location/:location" element={<Location />} />
         </Routes>
       </Router>
